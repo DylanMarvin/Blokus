@@ -8,8 +8,8 @@ import java.awt.Graphics2D;
 
 
 public class Board {
-    private final static int NUM_ROWS = 8;
-    private final static int NUM_COLUMNS = 8;  
+    private final static int NUM_ROWS = 20;
+    private final static int NUM_COLUMNS = 20;  
     private final static Piece board[][] = new Piece[NUM_ROWS][NUM_COLUMNS];
     
     Board(){

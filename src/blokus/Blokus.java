@@ -32,7 +32,7 @@ public class Blokus extends JFrame implements Runnable {
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
         frame.setLocationRelativeTo(null);
-        frame.setResizable(true);
+        frame.setResizable(false);
     }
 
     public Blokus() {
@@ -106,11 +106,14 @@ public class Blokus extends JFrame implements Runnable {
         }
 //fill background
         
-        g.setColor(Color.black);
+        g.setColor(Color.white);
         g.fillRect(0, 0, Window.xsize, Window.ysize);
 
         int x[] = {Window.getX(0), Window.getX(Window.getWidth2()), Window.getX(Window.getWidth2()), Window.getX(0), Window.getX(0)};
         int y[] = {Window.getY(0), Window.getY(0), Window.getY(Window.getHeight2()), Window.getY(Window.getHeight2()), Window.getY(0)};
+//fill outline
+        g.setColor(Color.BLACK);
+        g.drawRect(Window.WINDOW_BORDER,Window.YTITLE + Window.WINDOW_BORDER, Window.WINDOW_WIDTH-7,Window.WINDOW_HEIGHT-37);
 //fill border
         g.setColor(Color.white);
         g.fillPolygon(x, y, 4);
