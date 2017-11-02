@@ -123,7 +123,8 @@ public class Blokus extends JFrame implements Runnable {
             return;
         }
         
-   
+        Board.Draw(g);
+        
         gOld.drawImage(image, 0, 0, null);
     }
 
