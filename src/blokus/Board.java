@@ -41,14 +41,10 @@ public class Board {
             if (true != (xpixel-Window.getX(0) > 0 && ypixel-Window.getY(0) > 0 && xpixel-Window.getX(0) < xdelta*NUM_COLUMNS && ypixel-Window.getY(0) < ydelta*NUM_ROWS))
             {                
 
-                {
-                    
-                    for (int i = 0;i>-1 && board[i][zcol] != null;i--);
-
-                    
+                {                                      
+                    board[zrow][zcol].one(board);
                 }
-              
-        
+                     
         }
     }
 

@@ -32,8 +32,7 @@ public class Piece{
         return (random);
     }
 
-    public void draw(Graphics2D g,int _row,int _column,
-    int xdelta,int ydelta) {
+    public void draw(Graphics2D g,int _row,int _column,int xdelta,int ydelta) {
         row = _row;
         column = _column;
         g.setColor(color); 
