@@ -1,16 +1,16 @@
 package blokus;
 class Window {
-    static final int XBORDER = 30 + 133; //30
-    static final int YBORDER = 30 + 133; //30
+    static final int XBORDER = 180; //30 + 150
+    static final int YBORDER = 180; //30 + 150
     
     static final int YTITLE = 30; //30
-    static final int WINDOW_BORDER = 3; //8
-    static final int WINDOW_WIDTH =  840 + 150; //840
-    static final int WINDOW_HEIGHT = 860 + 150; //860
+    static final int WINDOW_BORDER = 8; //8
+    static final int WINDOW_WIDTH =  990; //840 + 150
+    static final int WINDOW_HEIGHT = 1010; //860 + 150
+    
     static int xsize = -1;
     static int ysize = -1;
-
-
+    
 /////////////////////////////////////////////////////////////////////////
     public static int getX(int x) {
         return (x + XBORDER + WINDOW_BORDER);
