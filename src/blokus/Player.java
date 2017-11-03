@@ -38,12 +38,7 @@ public class Player {
     public Color getColor(){
         return color;
     }
-    public int getPoints(){
-        return points;
-    }
-    public void setPoints(int _points){
-        points = _points;
-    }
+
     public int getPlayerNum(){
         return playerNum;
     }
@@ -56,13 +51,7 @@ public class Player {
             return players[1];
         
     }   
-    public static void AddPoints(int player, int _points){
-        players[player].points += _points;
-    }
-    
-    public static int GetPoints(int player){
-        return players[player].points;
-    }
+
     public static Player GetNextPlayer(){             
         return players[(currentTurn.getPlayerNum()+1)];
     }
