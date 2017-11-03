@@ -5,8 +5,8 @@ class Window {
     
     static final int YTITLE = 30; //30
     static final int WINDOW_BORDER = 8; //8
-    static final int WINDOW_WIDTH =  990; //840 + 150
-    static final int WINDOW_HEIGHT = 1010; //860 + 150
+    static final int WINDOW_WIDTH =  840; //840 + 150
+    static final int WINDOW_HEIGHT = 860; //860 + 150
     
     static int xsize = -1;
     static int ysize = -1;

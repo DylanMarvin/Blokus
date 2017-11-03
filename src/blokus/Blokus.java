@@ -122,14 +122,18 @@ public class Blokus extends JFrame implements Runnable {
         g.drawPolyline(x, y, 5);
 //draw 4 sections
         g.setColor(Color.black);
-        g.drawLine(0, Window.YTITLE + Window.WINDOW_BORDER-5 + Window.YBORDER-3, Window.XBORDER+8, Window.YTITLE + Window.WINDOW_BORDER-5 + Window.YBORDER-3);
-///////////////////
-
-
+        g.drawLine(0, Window.YTITLE + Window.WINDOW_BORDER-5 + Window.YBORDER-3, Window.XBORDER+8, 
+                   Window.YTITLE + Window.WINDOW_BORDER-5 + Window.YBORDER-3);
 /////////////////////
-
-
-//////////////////////
+        g.drawLine(Window.XBORDER + Window.getHeight2() + 10, Window.YTITLE + 3,
+                   Window.XBORDER + Window.getHeight2() + 10, Window.YTITLE + Window.WINDOW_BORDER-5 + Window.YBORDER-3);
+/////////////////////
+        g.drawLine(Window.XBORDER + 8, Window.YTITLE + Window.WINDOW_BORDER-5 + Window.YBORDER-3 + Window.getHeight2(), 
+                   Window.XBORDER + 8, Window.YTITLE + Window.WINDOW_BORDER-5 + Window.YBORDER-3 + Window.getHeight2() + Window.XBORDER + 8);
+/////////////////////
+        g.drawLine(Window.XBORDER + Window.getWidth2() + 8, Window.YTITLE + Window.WINDOW_BORDER-5 + Window.YBORDER-3 + Window.getHeight2(), 
+                   Window.XBORDER + Window.getWidth2() + 20 + Window.XBORDER, Window.YTITLE + Window.WINDOW_BORDER-5 + Window.YBORDER-3 + Window.getHeight2());
+/////////////////////
         if (animateFirstTime) {
             gOld.drawImage(image, 0, 0, null);
             return;
