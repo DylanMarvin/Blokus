@@ -42,7 +42,7 @@ public class Board {
             {                
 
                 {                                      
-                    board[zrow][zcol].one(board);
+                    //board[zrow][zcol].one(board);
                 }
                      
         }

@@ -7,7 +7,7 @@ import java.awt.Graphics2D;
 public class Piece {
 
     public static enum Block {
-        ONE, TWO, THREE, Four, Five, 
+        ONE, TWO, I3, I4, I5, 
     };
 
     private Color color;
@@ -19,7 +19,7 @@ public class Piece {
     Piece(Color _color, Block _block) {
         color = _color;
         block = _block;
-        random = (int) (Math.random() * 4 + 1);
+        
 
     }
 
@@ -27,20 +27,13 @@ public class Piece {
         return (color);
     }
 
-    int getRandom() {
-        return (random);
-    }
 
     public void draw(Graphics2D g, int _row, int _column, int xdelta, int ydelta) {
         row = _row;
         column = _column;
         g.setColor(color);
-        g.fillRect(Window.getX(column * xdelta),
-                Window.getY(row * ydelta), xdelta, ydelta);
+        g.fillRect(Window.getX(column * xdelta),Window.getY(row * ydelta), xdelta, ydelta);
         g.setColor(Color.white);
-        g.setFont(new Font("Arial", Font.BOLD, 25));
-        g.drawString("" + random, Window.getX(column * xdelta) + 30,
-                Window.getY(row * ydelta) + 35);
 
     }
 

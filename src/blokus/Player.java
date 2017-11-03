@@ -7,7 +7,6 @@ public class Player {
     private static Player currentTurn;
     private static int numPlayers;
     private static Player players[] = new Player[4];
-    private int points;
     private Color color;
     private int playerNum;
     
