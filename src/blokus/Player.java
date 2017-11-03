@@ -5,15 +5,16 @@ import java.awt.Color;
 
 public class Player {
     private static Player currentTurn;
-    private static int numPlayers;
+    private static int numPlayers = 4;
     private static Player players[] = new Player[4];
     private Color color;
     private int playerNum;
     
     public static void Reset(){
-        if(players[0] == null){
-            for(int i = 0;i<numPlayers;i++){
-                players[i] = new Player(i);
+        
+        if(players[0] == null){     
+            for(int i = 0;i<numPlayers;i++){               
+                players[i] = new Player(i);   
             }
         }   
         currentTurn = players[0];
@@ -44,12 +45,7 @@ public class Player {
     }
     
     public static Player GetCurrentPlayer(){
-        
-        if(currentTurn == players[0])
-            return players[0];
-        else 
-            return players[1];
-        
+       return currentTurn;     
     }   
 
     public static Player GetNextPlayer(){             

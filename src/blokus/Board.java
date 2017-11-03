@@ -46,7 +46,7 @@ public class Board {
 //                    board[zrow][zcol] = new Piece(Color.black);
                 }
                      
-        }
+            }
     }
 
     public static void CheckWin() {

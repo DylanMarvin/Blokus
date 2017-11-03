@@ -1,4 +1,8 @@
 package blokus;
+
+import java.awt.Graphics2D;
+import java.awt.Image;
+
 class Window {
     static final int XBORDER = 180; //30 + 150
     static final int YBORDER = 180; //30 + 150
@@ -8,6 +12,11 @@ class Window {
     static final int WINDOW_WIDTH =  840; //840 + 150
     static final int WINDOW_HEIGHT = 860; //860 + 150
     
+    public static enum GameState{
+        Menu,Menu2,InGame
+    };
+    
+        
     static int xsize = -1;
     static int ysize = -1;
     
@@ -26,5 +35,7 @@ class Window {
     }
     public static int getHeight2() {
         return (ysize - 2 * YBORDER - WINDOW_BORDER - YTITLE);
-    }    
+    }  
+    
+ 
 }

@@ -24,6 +24,9 @@ public class Blokus extends JFrame implements Runnable {
     boolean animateFirstTime = true;
     Image image;
     Graphics2D g;
+    
+    private Window.GameState gameState = Window.GameState.Menu;
+    Image menu1;
 
 
     public static void main(String[] args) {
@@ -78,6 +81,7 @@ public class Blokus extends JFrame implements Runnable {
                 } else if (e.VK_LEFT == e.getKeyCode()) {
                 } else if (e.VK_RIGHT == e.getKeyCode()) {
                 } else if (e.VK_ESCAPE == e.getKeyCode()) {
+                    gameState = Window.GameState.InGame;
                     reset();
                 }
                 repaint();
@@ -104,6 +108,13 @@ public class Blokus extends JFrame implements Runnable {
             g.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
                     RenderingHints.VALUE_ANTIALIAS_ON);
         }
+        if(gameState == Window.GameState.Menu){
+           g.drawImage(menu1,0,0,Window.WINDOW_WIDTH,Window.WINDOW_HEIGHT,this);
+        }
+        else if(gameState == Window.GameState.Menu2){
+            
+        }
+        else if(gameState == Window.GameState.InGame){
 //fill background
         
         g.setColor(Color.white);
@@ -111,15 +122,16 @@ public class Blokus extends JFrame implements Runnable {
 
         int x[] = {Window.getX(0), Window.getX(Window.getWidth2()), Window.getX(Window.getWidth2()), Window.getX(0), Window.getX(0)};
         int y[] = {Window.getY(0), Window.getY(0), Window.getY(Window.getHeight2()), Window.getY(Window.getHeight2()), Window.getY(0)};
-//draw outline
-        g.setColor(Color.BLACK);
-        g.drawRect(Window.WINDOW_BORDER-5,Window.YTITLE + Window.WINDOW_BORDER-5, Window.WINDOW_WIDTH-7,Window.WINDOW_HEIGHT-37);
+
 //fill border
         g.setColor(Color.white);
         g.fillPolygon(x, y, 4);
 // draw border
         g.setColor(Color.black);
         g.drawPolyline(x, y, 5);
+//draw outline
+        g.setColor(Color.BLACK);
+        g.drawRect(Window.WINDOW_BORDER-5,Window.YTITLE + Window.WINDOW_BORDER-5, Window.WINDOW_WIDTH-7,Window.WINDOW_HEIGHT-37);
 //draw 4 sections
         g.setColor(Color.black);
         g.drawLine(0, Window.YTITLE + Window.WINDOW_BORDER-5 + Window.YBORDER-3, Window.XBORDER+8, 
@@ -140,6 +152,7 @@ public class Blokus extends JFrame implements Runnable {
         }
         
         Board.Draw(g);
+        }
         
         gOld.drawImage(image, 0, 0, null);
     }
@@ -161,7 +174,7 @@ public class Blokus extends JFrame implements Runnable {
     
 /////////////////////////////////////////////////////////////////////////
     public void reset() {
-        
+        Player.Reset();
     }
 /////////////////////////////////////////////////////////////////////////
     public void animate() {
@@ -172,12 +185,12 @@ public class Blokus extends JFrame implements Runnable {
                 Window.xsize = getSize().width;
                 Window.ysize = getSize().height;
             }
-
+            menu1 = Toolkit.getDefaultToolkit().getImage("./menu1.jpg");
             reset();
-
+            
         }
-                  
-        
+              
+               
     }
 
 ////////////////////////////////////////////////////////////////////////////
