@@ -43,7 +43,7 @@ public class Blokus extends JFrame implements Runnable {
 
          
                 if (e.BUTTON1 == e.getButton()) {                    
-                    
+                      
                 }
 
                 if (e.BUTTON3 == e.getButton()) {

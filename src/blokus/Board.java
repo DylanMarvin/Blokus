@@ -36,13 +36,14 @@ public class Board {
         
         zcol = (xpixel-Window.getX(0))/xdelta;
         zrow = (ypixel-Window.getY(0))/ydelta;
-        Color currentColor = Player.GetCurrentPlayer().getColor();
+     
+        
         
             if (true != (xpixel-Window.getX(0) > 0 && ypixel-Window.getY(0) > 0 && xpixel-Window.getX(0) < xdelta*NUM_COLUMNS && ypixel-Window.getY(0) < ydelta*NUM_ROWS))
             {                
 
                 {                                      
-                    //board[zrow][zcol].one(board);
+//                    board[zrow][zcol] = new Piece(Color.black);
                 }
                      
         }
