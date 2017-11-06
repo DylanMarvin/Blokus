@@ -162,17 +162,17 @@ public class Blokus extends JFrame implements Runnable {
 //draw outline
         g.setColor(Color.BLACK);
         g.drawRect(Window.WINDOW_BORDER-5,Window.YTITLE + Window.WINDOW_BORDER-5, Window.WINDOW_WIDTH-7,Window.WINDOW_HEIGHT-37);
-//draw 4 sections
+//draw 4 sections (Top Left)
         g.setColor(Color.black);
         g.drawLine(0, Window.YTITLE + Window.WINDOW_BORDER-5 + Window.YBORDER-3, Window.XBORDER+8, 
                    Window.YTITLE + Window.WINDOW_BORDER-5 + Window.YBORDER-3);
-/////////////////////
-        g.drawLine(Window.XBORDER + Window.getHeight2() + 10, Window.YTITLE + 3,
-                   Window.XBORDER + Window.getHeight2() + 10, Window.YTITLE + Window.WINDOW_BORDER-5 + Window.YBORDER-3);
-/////////////////////
+///////////////////// (Top Right)
+        g.drawLine(Window.XBORDER + Window.getHeight2() + 8, Window.YTITLE + 3,
+                   Window.XBORDER + Window.getHeight2() + 8, Window.YTITLE + Window.WINDOW_BORDER-5 + Window.YBORDER-3);
+///////////////////// (Bottom Left)
         g.drawLine(Window.XBORDER + 8, Window.YTITLE + Window.WINDOW_BORDER-5 + Window.YBORDER-3 + Window.getHeight2(), 
                    Window.XBORDER + 8, Window.YTITLE + Window.WINDOW_BORDER-5 + Window.YBORDER-3 + Window.getHeight2() + Window.XBORDER + 8);
-/////////////////////
+///////////////////// (Bottom Right)
         g.drawLine(Window.XBORDER + Window.getWidth2() + 8, Window.YTITLE + Window.WINDOW_BORDER-5 + Window.YBORDER-3 + Window.getHeight2(), 
                    Window.XBORDER + Window.getWidth2() + 20 + Window.XBORDER, Window.YTITLE + Window.WINDOW_BORDER-5 + Window.YBORDER-3 + Window.getHeight2());
 /////////////////////
@@ -182,8 +182,11 @@ public class Blokus extends JFrame implements Runnable {
             return;
         }
         
+        Outside_Pieces.drawPiece1(-350, -150, 0, g);
         Board.Draw(g);
         }
+        
+        
         
         gOld.drawImage(image, 0, 0, null);
     }

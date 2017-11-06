@@ -9,8 +9,8 @@ class Window {
     
     static final int YTITLE = 30; //30
     static final int WINDOW_BORDER = 8; //8
-    static final int WINDOW_WIDTH =  840; //840 + 150
-    static final int WINDOW_HEIGHT = 860; //860 + 150
+    static final int WINDOW_WIDTH = 2*(WINDOW_BORDER + XBORDER) + 500;
+    static final int WINDOW_HEIGHT = YTITLE + WINDOW_BORDER + 2 * YBORDER + 500;
     
     public static enum GameState{
         Menu,Menu2,InGame

@@ -13,8 +13,28 @@ public abstract class Outside_Pieces extends Piece{
         super(color, block,0,0);
     }
     
-    public void drawPiece1(){
+    public void drawAll(){
         
+    }
+    
+    public static void drawPlayerNames(int xpos,int ypos,double rot,Graphics g,Player name){
+        g.translate(xpos,ypos);
+        
+        
+        
+        g.translate(-xpos,-ypos);
+    }
+    
+    public static void drawPiece1(int xpos,int ypos,double rot,Graphics g){
+        g.translate(xpos,ypos);
+        
+        g.setColor(Color.BLACK);
+        int xvals4[] = {400,400,600,600,400};          
+        int yvals4[] = {400,200,200,400,400};
+        System.out.println("Test");       
+        g.fillPolygon(xvals4,yvals4,xvals4.length);
+        
+        g.translate(-xpos,-ypos);
     }
     public void drawPiece2(){
         
