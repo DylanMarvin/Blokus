@@ -43,10 +43,27 @@ public class Blokus extends JFrame implements Runnable {
             public void mousePressed(MouseEvent e) {
                 int xpos = e.getX();
                 int ypos = e.getY();
+                
+                System.out.println("Xpos:" + xpos + " Ypos:" + ypos);
 
          
                 if (e.BUTTON1 == e.getButton()) {                    
-                      Board.AddPiecePixel(e.getX(),e.getY()); 
+
+                     //Board.AddPiecePixel(e.getX(),e.getY()); 
+                    if(gameState == Window.GameState.Menu){
+                        if(xpos >= 270 && xpos <= 570 && ypos >= 600 && ypos <= 650){
+                            gameState = Window.GameState.InGame;
+                        }
+                        if(xpos >= 270 && xpos <= 570 && ypos >= 680 && ypos <= 730){
+                            System.exit(0);
+                        }
+                    if(gameState == Window.GameState.Menu2){
+                        
+                    }
+                    
+                    }  
+                    
+
                 }
 
                 if (e.BUTTON3 == e.getButton()) {
@@ -81,7 +98,6 @@ public class Blokus extends JFrame implements Runnable {
                 } else if (e.VK_LEFT == e.getKeyCode()) {
                 } else if (e.VK_RIGHT == e.getKeyCode()) {
                 } else if (e.VK_ESCAPE == e.getKeyCode()) {
-                    gameState = Window.GameState.InGame;
                     reset();
                 }
                 repaint();
@@ -110,9 +126,18 @@ public class Blokus extends JFrame implements Runnable {
         }
         if(gameState == Window.GameState.Menu){
            g.drawImage(menu1,0,0,Window.WINDOW_WIDTH,Window.WINDOW_HEIGHT,this);
+           
+           g.setColor(Color.white);
+           g.fillRoundRect(270, 600, 300, 50, 10, 10);
+           g.fillRoundRect(270, 680, 300, 50, 10, 10);
+           
+           g.setColor(Color.black);
+           g.setFont(new Font("Arial", Font.PLAIN, 40));
+           g.drawString("Play", 380, 638);
+           g.drawString("Quit", 380, 718);
         }
         else if(gameState == Window.GameState.Menu2){
-            
+            g.drawImage(menu1,0,0,Window.WINDOW_WIDTH,Window.WINDOW_HEIGHT,this);
         }
         else if(gameState == Window.GameState.InGame){
 //fill background
