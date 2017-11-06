@@ -182,7 +182,7 @@ public class Blokus extends JFrame implements Runnable {
             return;
         }
         
-        Outside_Pieces.drawPiece1(-350, -150, 0, g);
+        Outside_Pieces.drawPiece1(50, 50, 0, g);
         Board.Draw(g);
         }
         
