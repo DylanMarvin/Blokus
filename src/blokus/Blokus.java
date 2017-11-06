@@ -49,7 +49,7 @@ public class Blokus extends JFrame implements Runnable {
          
                 if (e.BUTTON1 == e.getButton()) {                    
 
-                     //Board.AddPiecePixel(e.getX(),e.getY()); 
+                    
                     if(gameState == Window.GameState.Menu){
                         if(xpos >= 270 && xpos <= 570 && ypos >= 600 && ypos <= 650){
                             gameState = Window.GameState.InGame;
@@ -57,11 +57,16 @@ public class Blokus extends JFrame implements Runnable {
                         if(xpos >= 270 && xpos <= 570 && ypos >= 680 && ypos <= 730){
                             System.exit(0);
                         }
-                    if(gameState == Window.GameState.Menu2){
+                    }
+                    else if(gameState == Window.GameState.Menu2){
                         
                     }
+                    else if(gameState == Window.GameState.InGame){
+                         Board.AddPiecePixel(e.getX(),e.getY()); 
+                    }
                     
-                    }  
+                    
+                
                     
 
                 }
