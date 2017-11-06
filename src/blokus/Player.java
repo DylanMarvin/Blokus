@@ -47,6 +47,14 @@ public class Player {
     public static Player GetCurrentPlayer(){
        return currentTurn;     
     }   
+      public static Player switchPlayer(){
+            if(currentTurn == players[0]){
+                currentTurn = players[1];
+            }
+            else
+                currentTurn = players[0];
+           return(currentTurn);
+       }
 
     public static Player GetNextPlayer(){             
         return players[(currentTurn.getPlayerNum()+1)];

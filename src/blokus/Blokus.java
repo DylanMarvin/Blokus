@@ -46,7 +46,7 @@ public class Blokus extends JFrame implements Runnable {
 
          
                 if (e.BUTTON1 == e.getButton()) {                    
-                      
+                      Board.AddPiecePixel(e.getX(),e.getY()); 
                 }
 
                 if (e.BUTTON3 == e.getButton()) {
@@ -146,6 +146,7 @@ public class Blokus extends JFrame implements Runnable {
         g.drawLine(Window.XBORDER + Window.getWidth2() + 8, Window.YTITLE + Window.WINDOW_BORDER-5 + Window.YBORDER-3 + Window.getHeight2(), 
                    Window.XBORDER + Window.getWidth2() + 20 + Window.XBORDER, Window.YTITLE + Window.WINDOW_BORDER-5 + Window.YBORDER-3 + Window.getHeight2());
 /////////////////////
+
         if (animateFirstTime) {
             gOld.drawImage(image, 0, 0, null);
             return;

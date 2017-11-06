@@ -16,24 +16,28 @@ public class Piece {
     private int row;
     private int column;
 
-    Piece(Color _color, Block _block) {
+    Piece(Color _color, Block _block, int _row, int _column) {
         color = _color;
         block = _block;
-        
+        row = _row;
+        column = _column;
 
     }
 
     Color getColor() {
         return (color);
     }
+    Block getBlock(){
+        return(block);
+    }
 
 
     public void draw(Graphics2D g, int _row, int _column, int xdelta, int ydelta) {
-        row = _row;
-        column = _column;
+        
+     
         g.setColor(color);
-        g.fillRect(Window.getX(column * xdelta),Window.getY(row * ydelta), xdelta, ydelta);
-        g.setColor(Color.white);
+        g.fillRect(Window.getX(_column * xdelta),Window.getY(_row * ydelta), xdelta, ydelta);
+       
 
     }
 
@@ -153,7 +157,7 @@ public class Piece {
                 public void Z4(Piece board[][]) {
         board[row][column] = this;
         board[row ][column-1] = this;
-        board[row+1][column - 1] = this;
+        board[row+1][column - 1] = this; 
          board[row+1][column - 2] = this;
     }
      public void Z5(Piece board[][]) {

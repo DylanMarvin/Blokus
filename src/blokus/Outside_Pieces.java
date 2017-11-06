@@ -7,10 +7,10 @@ import java.awt.geom.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-public class Outside_Pieces extends Piece{
+public abstract class Outside_Pieces extends Piece{
     
     Outside_Pieces(Color color, Block block){
-        super(color, block);
+        super(color, block,0,0);
     }
     
     public void drawPiece1(){
