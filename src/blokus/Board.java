@@ -49,7 +49,7 @@ public class Board {
 //            
             // Piece piece = new Piece(Color.black,Piece.Block.V3);
             //         piece.V3(board);
-            Piece piece = new Piece(Player.GetCurrentPlayer().getColor(), Piece.Block.N, zrow, zcol);
+            Piece piece = new Piece(Player.GetCurrentPlayer().getColor(), Piece.Block.V5, zrow, zcol);
             
             if (piece.getBlock() == Piece.Block.ONE) {                
                 board[zrow][zcol] = piece;                
@@ -76,6 +76,43 @@ public class Board {
             if (piece.getBlock() == Piece.Block.N) {                
             piece.N(board);
             }
+            if (piece.getBlock() == Piece.Block.O) {                
+            piece.O(board);
+            }
+            if (piece.getBlock() == Piece.Block.W) {                
+            piece.W(board);
+            }
+            if (piece.getBlock() == Piece.Block.T4) {                
+            piece.T4(board);
+            }
+            if (piece.getBlock() == Piece.Block.T5) {                
+            piece.T5(board);
+            }
+            if (piece.getBlock() == Piece.Block.U) {                
+            piece.U(board);
+            }
+            if (piece.getBlock() == Piece.Block.V3) {                
+            piece.V3(board);
+            }
+            if (piece.getBlock() == Piece.Block.V5) {                
+            piece.V5(board);
+            }
+             if (piece.getBlock() == Piece.Block.F) {                
+            piece.F(board);
+            }
+            if (piece.getBlock() == Piece.Block.X) {                
+            piece.X(board);
+            }
+            if (piece.getBlock() == Piece.Block.Y) {                
+            piece.Y(board);
+            }if (piece.getBlock() == Piece.Block.Z4) {                
+            piece.Z4(board);
+            }
+            if (piece.getBlock() == Piece.Block.Z5) {                
+            piece.Z5(board);
+            }
+            
+            
             
             System.out.println(zrow);
             System.out.println(zcol);
@@ -107,3 +144,5 @@ public class Board {
         }        
     }
 }
+
+       

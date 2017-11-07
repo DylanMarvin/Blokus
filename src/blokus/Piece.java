@@ -47,72 +47,80 @@ public class Piece {
 
     public void Two(Piece board[][]) {
         board[row][column] = this;
-        board[row + 1][column] = this;
+        board[row][column+1] = this;
     }
 
     public void I3(Piece board[][]) {
         board[row][column] = this;
-        board[row + 1][column] = this;
-        board[row + -1][column] = this;
+        board[row][column + 1] = this;
+        board[row][column - 1] = this;
     }
     public void I4(Piece board[][]) {
         board[row][column] = this;
-        board[row + 1][column] = this;
-        board[row + 2][column] = this;
-        board[row + 3][column] = this;
+        board[row ][column + 1] = this;
+        board[row ][column+2] = this;
+        board[row ][column+3] = this;
     }
      public void I5(Piece board[][]) {
         board[row][column] = this;
-        board[row + 1][column] = this;
-        board[row + 2][column] = this;
-        board[row - 1][column] = this;
-        board[row - 2][column] = this;
+        board[row ][column + 1] = this;
+        board[row ][column+2] = this;
+        board[row ][column+3] = this;
+         board[row ][column+4] = this;
     }
      public void V3(Piece board[][]) {
         board[row][column] = this;
-        board[row + 1][column] = this;
         board[row][column + 1] = this;
+        board[row - 1][column ] = this;
     }
     public void L4(Piece board[][]) {
         board[row][column] = this;
-        board[row + 1][column] = this;
-        board[row + 2][column] = this;
+        board[row - 1][column] = this;
+        board[row - 2][column] = this;
         board[row][column + 1] = this;
     }
      public void L5(Piece board[][]) {
         board[row][column] = this;
-        board[row + 1][column] = this;
-        board[row + 2][column] = this;
-        board[row + 3][column] = this;
+        board[row - 1][column] = this;
+        board[row - 2][column] = this;
+        board[row - 3][column] = this;
         board[row][column + 1] = this;
     }
       public void T4(Piece board[][]) {
         board[row][column] = this;
-        board[row][column - 1] = this;
-        board[row - 1][column] = this;
-        board[row + 1][column] = this;
+        board[row +1 ][column ] = this;
+        board[row +2 ][column ] = this;
+        board[row ][column - 1] = this;
+        board[row ][column + 1] = this;
     }
        public void T5(Piece board[][]) {
         board[row][column] = this;
-        board[row][column - 1] = this;
-        board[row][column - 2] = this;
-        board[row - 1][column] = this;
-        board[row + 1][column] = this;
+        board[row +1][column ] = this;
+        board[row +2][column] = this;
+        board[row ][column +1] = this;
+        board[row ][column - 1] = this;
     }
         public void O(Piece board[][]) {
         board[row][column] = this;
-        board[row + 1][column] = this;
-        board[row][column + 1] = this;
-        board[row + 1][column + 1] = this;
+        board[row ][column - 1] = this;
+        board[row +1][column ] = this;
+        board[row + 1][column - 1] = this;
     }
          public void W(Piece board[][]) {
         board[row][column] = this;
-        board[row][column - 1] = this;
+        board[row ][column - 1] = this;
         board[row + 1][column -1] = this;
         board[row + 1][column -2] = this;
         board[row + 2][column -2] = this;
     }
-          public void U(Piece board[][]) {
+         public void U(Piece board[][]) {
+        board[row][column] = this;
+        board[row ][column +1] = this;
+        board[row ][column - 1] = this;
+        board[row - 1][column - 1] = this;
+        board[row - 1][column + 1] = this;
+    }
+          public void UR(Piece board[][]) {
         board[row][column] = this;
         board[row + 1][column] = this;
         board[row - 1][column] = this;
@@ -135,42 +143,43 @@ public class Piece {
     }
              public void Y(Piece board[][]) {
         board[row][column] = this;
-        board[row + 1][column] = this;
+        board[row][column+1] = this;
         board[row+1][column+1] = this;
-        board[row + 2][column] = this;
-        board[row + 3][column] = this;
+        board[row ][column +2] = this;
+        board[row ][column +3] = this;
     }
               public void F(Piece board[][]) {
         board[row][column] = this;
-        board[row + 1][column] = this;
-        board[row][column + 1] = this;
-        board[row - 1][column] = this;
-        board[row - 1][column - 1] = this;
+        board[row ][column +1] = this;
+        board[row-1][column ] = this;
+        board[row ][column-1] = this;
+        board[row + 1][column - 1] = this;
     }
                public void N(Piece board[][]) {
         board[row][column] = this;
-        board[row + 1][column] = this;
-        board[row + 1][column + 1] = this;
-        board[row + 2][column + 1] = this;
-        board[row + 3][column + 1] = this;
+        board[row ][column +1] = this;
+        board[row - 1][column + 1] = this;
+        board[row - 1][column + 2] = this;
+        board[row - 1][column + 3] = this;
     }
                 public void Z4(Piece board[][]) {
-        board[row][column] = this;
-        board[row ][column-1] = this;
-        board[row+1][column - 1] = this; 
-         board[row+1][column - 2] = this;
+        
+                          board[row][column] = this;
+        board[row -1][column] = this;
+        board[row-1][column -1] = this; 
+         board[row-2][column -1] = this;
     }
      public void Z5(Piece board[][]) {
-        board[row][column] = this;
-        board[row ][column-1] = this;
-        board[row+1][column - 1] = this;
-        board[row+2][column - 1] = this;
-         board[row+2][column - 2] = this;
+         board[row][column] = this;
+        board[row -1][column] = this;
+        board[row -1][column-1] = this;
+        board[row-1][column -2] = this; 
+         board[row-2][column -2] = this;
     }
        public void V5(Piece board[][]) {
         board[row][column] = this;
-        board[row + 1][column] = this;
-        board[row + 2][column ] = this;
+        board[row - 1][column] = this;
+        board[row - 2][column ] = this;
         board[row][column + 1] = this;
         board[row][column + 2] = this;
     }
