@@ -27,6 +27,9 @@ public class Blokus extends JFrame implements Runnable {
     
     private Window.GameState gameState = Window.GameState.Menu;
     Image menu1;
+    
+    Color color;
+    Color color2;
 
 
     public static void main(String[] args) {
@@ -46,30 +49,29 @@ public class Blokus extends JFrame implements Runnable {
                 
                 System.out.println("Xpos:" + xpos + " Ypos:" + ypos);
 
-         
-                if (e.BUTTON1 == e.getButton()) {                    
-
+                if (e.BUTTON1 == e.getButton()) {
                     
                     if(gameState == Window.GameState.Menu){
-                        if(xpos >= 270 && xpos <= 570 && ypos >= 600 && ypos <= 650){
-                            gameState = Window.GameState.InGame;
-                        }
-                        if(xpos >= 270 && xpos <= 570 && ypos >= 680 && ypos <= 730){
-                            System.exit(0);
-                        }
+
+                            if(xpos >= 270 && xpos <= 570 && ypos >= 600 && ypos <= 650){
+                                gameState = Window.GameState.InGame;
+                            }
+                            if(xpos >= 270 && xpos <= 570 && ypos >= 680 && ypos <= 730){
+                                System.exit(0);
+                            }
+                        
                     }
                     else if(gameState == Window.GameState.Menu2){
                         
                     }
                     else if(gameState == Window.GameState.InGame){
-                         Board.AddPiecePixel(e.getX(),e.getY()); 
-                    }
+                            Board.AddPiecePixel(e.getX(),e.getY()); 
+                        }
                     
-                    
-                
-                    
-
                 }
+                                   
+                    
+               
 
                 if (e.BUTTON3 == e.getButton()) {
                     reset();
@@ -90,7 +92,21 @@ public class Blokus extends JFrame implements Runnable {
 
     addMouseMotionListener(new MouseMotionAdapter() {
       public void mouseMoved(MouseEvent e) {
-
+            int xpos = e.getX();
+            int ypos = e.getY();
+            
+          if(xpos >= 270 && xpos <= 570 && ypos >= 600 && ypos <= 650){
+                color = Color.yellow;
+            }
+          else{
+                color = Color.white;
+          }
+          if(xpos >= 270 && xpos <= 570 && ypos >= 680 && ypos <= 730){
+              color2 = Color.yellow;
+          }
+          else{
+              color2 = Color.white;
+          }
         repaint();
       }
     });
@@ -132,8 +148,9 @@ public class Blokus extends JFrame implements Runnable {
         if(gameState == Window.GameState.Menu){
            g.drawImage(menu1,0,0,Window.WINDOW_WIDTH,Window.WINDOW_HEIGHT,this);
            
-           g.setColor(Color.white);
+           g.setColor(color);
            g.fillRoundRect(270, 600, 300, 50, 10, 10);
+           g.setColor(color2);
            g.fillRoundRect(270, 680, 300, 50, 10, 10);
            
            g.setColor(Color.black);
@@ -182,7 +199,8 @@ public class Blokus extends JFrame implements Runnable {
             return;
         }
         
-        Outside_Pieces.drawPiece1(50, 50, 0, g);
+        Outside_Pieces piece = new Outside_Pieces(Player.getPlayer(1).getPlayerNum()); 
+        piece.drawAll(50, 20, g);
         Board.Draw(g);
         }
         
@@ -209,6 +227,10 @@ public class Blokus extends JFrame implements Runnable {
 /////////////////////////////////////////////////////////////////////////
     public void reset() {
         Player.Reset();
+        Board.Reset();
+        gameState = Window.GameState.Menu;
+        color = Color.white;
+        color2 = Color.white;
     }
 /////////////////////////////////////////////////////////////////////////
     public void animate() {
@@ -219,7 +241,7 @@ public class Blokus extends JFrame implements Runnable {
                 Window.xsize = getSize().width;
                 Window.ysize = getSize().height;
             }
-            menu1 = Toolkit.getDefaultToolkit().getImage("./menu1.jpg");
+            menu1 = Toolkit.getDefaultToolkit().getImage("assets/images/menu1.jpg");
             reset();
             
         }
