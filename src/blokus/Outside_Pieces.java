@@ -36,6 +36,12 @@ public class Outside_Pieces extends Player {
         drawPieceV3(xpos+gapDistance,ypos,0,g);
         gapDistance+=40;
         drawPieceL4(xpos+gapDistance,ypos,0,g);
+        gapDistance+=40;
+        drawPieceL5(xpos+gapDistance,ypos,0,g);
+        gapDistance+=30;
+        drawPieceT4(xpos+gapDistance,ypos,0,g);
+        gapDistance+=50;
+        drawPieceT5(xpos+gapDistance,ypos,0,g);
         
         g.translate(-xpos, -ypos);
     }
@@ -93,19 +99,31 @@ public class Outside_Pieces extends Player {
         drawCube(xpos,ypos,g);  
         drawCube(xpos,ypos+10,g); 
         drawCube(xpos,ypos+20,g); 
-        drawCube(xpos+10,ypos+10+10,g); 
+        drawCube(xpos+10,ypos+20,g); 
     }
 
-    public void drawPieceL5() {
-
+    public void drawPieceL5(int xpos, int ypos, double rot, Graphics g) {
+        drawCube(xpos,ypos,g);  
+        drawCube(xpos,ypos+10,g); 
+        drawCube(xpos,ypos+20,g); 
+        drawCube(xpos,ypos+30,g);
+        drawCube(xpos+10,ypos+30,g); 
     }
 
-    public void drawPieceT4() {
-
+    public void drawPieceT4(int xpos, int ypos, double rot, Graphics g) {
+        drawCube(xpos,ypos,g);  
+        drawCube(xpos+10,ypos,g); 
+        drawCube(xpos+10,ypos+10,g); 
+        drawCube(xpos+20,ypos,g);
+        
     }
 
-    public void drawPieceT5() {
-
+    public void drawPieceT5(int xpos, int ypos, double rot, Graphics g) {
+        drawCube(xpos,ypos,g);  
+        drawCube(xpos+10,ypos,g); 
+        drawCube(xpos+10,ypos+10,g); 
+        drawCube(xpos+10,ypos+20,g); 
+        drawCube(xpos+20,ypos,g);
     }
 
     public void drawPieceO() {
