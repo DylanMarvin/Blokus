@@ -200,8 +200,8 @@ public class Blokus extends JFrame implements Runnable {
         }
         
         Outside_Pieces piece = new Outside_Pieces(Player.getPlayer(1).getPlayerNum()); 
-        piece.drawAll(50, 20, g);
-        Board.Draw(g);
+        piece.drawAll(20, 50, g);
+        Board.Draw(g);    
         }
         
         
