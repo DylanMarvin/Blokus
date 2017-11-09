@@ -1,4 +1,3 @@
-
 package blokus;
 
 import java.awt.Color;
@@ -20,18 +19,22 @@ import javax.swing.*;
 
 public class Blokus extends JFrame implements Runnable {
 
-    
     boolean animateFirstTime = true;
     Image image;
     Graphics2D g;
-    
+
     private Window.GameState gameState = Window.GameState.Menu;
     Image menu1;
     Image board;
-    
+    Image menu2;
+
     Color color;
     Color color2;
 
+    Color colorOne;
+    Color colorTwo;
+    Color colorThree;
+    Color colorFour;
 
     public static void main(String[] args) {
         Blokus frame = new Blokus();
@@ -47,70 +50,109 @@ public class Blokus extends JFrame implements Runnable {
             public void mousePressed(MouseEvent e) {
                 int xpos = e.getX();
                 int ypos = e.getY();
-                
+
                 System.out.println("Xpos:" + xpos + " Ypos:" + ypos);
 
                 if (e.BUTTON1 == e.getButton()) {
-                    
-                    if(gameState == Window.GameState.Menu){
 
-                            if(xpos >= 270 && xpos <= 570 && ypos >= 600 && ypos <= 650){
-                                gameState = Window.GameState.InGame;
-                            }
-                            if(xpos >= 270 && xpos <= 570 && ypos >= 680 && ypos <= 730){
-                                System.exit(0);
-                            }
+                    if (gameState == Window.GameState.Menu) {
+
+                        if (xpos >= 270 && xpos <= 570 && ypos >= 600 && ypos <= 650) {
+                            gameState = Window.GameState.Menu2;
+                        }
+                        if (xpos >= 270 && xpos <= 570 && ypos >= 680 && ypos <= 730) {
+                            System.exit(0);
+                        }
                         
-                    }
-                    else if(gameState == Window.GameState.Menu2){
-                        
+
                     }
                     else if(gameState == Window.GameState.InGame){
                             Board.AddPiecePixel(e.getX(),e.getY(),Piece.Block.ONE); 
+
+
+                    } 
+                    else if (gameState == Window.GameState.Menu2) {
+                        if(xpos >= 5 && xpos <= 440 && ypos >= 5 && ypos <= 450){
+                             gameState = Window.GameState.InGame;
                         }
-                    
+                        if(xpos >= 5 && xpos <= 440 && ypos >= 450 && ypos <= 895){
+                             gameState = Window.GameState.InGame;
+                        }
+                        if(xpos >= 450 && xpos <= 865 && ypos >= 25 && ypos <= 450){
+                             gameState = Window.GameState.InGame;
+                        }
+                        if(xpos >= 450 && xpos <= 865 && ypos >= 450 && ypos <= 895){
+                             gameState = Window.GameState.InGame;
+
+                        }
+
+                    } else if (gameState == Window.GameState.InGame) {
+                        Board.AddPiecePixel(e.getX(), e.getY(),Piece.Block.ONE);
+                    }
+
                 }
-                                   
-                    
-               
 
                 if (e.BUTTON3 == e.getButton()) {
                     reset();
                 }
                 //System.out.println("Xpos: " + xpos + "  Ypos: " + ypos);
-               
+
                 repaint();
             }
         });
-            
 
-    addMouseMotionListener(new MouseMotionAdapter() {
-      public void mouseDragged(MouseEvent e) {
+        addMouseMotionListener(new MouseMotionAdapter() {
+            public void mouseDragged(MouseEvent e) {
 
-        repaint();
-      }
-    });
-
-    addMouseMotionListener(new MouseMotionAdapter() {
-      public void mouseMoved(MouseEvent e) {
-            int xpos = e.getX();
-            int ypos = e.getY();
-            
-          if(xpos >= 270 && xpos <= 570 && ypos >= 600 && ypos <= 650){
-                color = Color.yellow;
+                repaint();
             }
-          else{
-                color = Color.white;
-          }
-          if(xpos >= 270 && xpos <= 570 && ypos >= 680 && ypos <= 730){
-              color2 = Color.yellow;
-          }
-          else{
-              color2 = Color.white;
-          }
-        repaint();
-      }
-    });
+        });
+
+        addMouseMotionListener(new MouseMotionAdapter() {
+            public void mouseMoved(MouseEvent e) {
+                int xpos = e.getX();
+                int ypos = e.getY();
+
+                if (xpos >= 270 && xpos <= 570 && ypos >= 600 && ypos <= 650) {
+                    color = Color.yellow;
+                } else {
+                    color = Color.white;
+                }
+                if (xpos >= 270 && xpos <= 570 && ypos >= 680 && ypos <= 730) {
+                    color2 = Color.yellow;
+                } else {
+                    color2 = Color.white;
+                }
+                 if(xpos >= 5 && xpos <= 440 && ypos >= 5 && ypos <= 450){
+                             colorOne = Color.YELLOW;
+                        }
+                 else {
+                    colorOne = Color.white;
+                }
+                        if(xpos >= 5 && xpos <= 440 && ypos >= 450 && ypos <= 895){
+                               colorFour = Color.YELLOW;
+                        }
+                        else {
+                    colorFour = Color.white;
+                }
+                        if(xpos >= 450 && xpos <= 865 && ypos >= 25 && ypos <= 450){
+                                 colorTwo = Color.YELLOW;
+                        }
+                        else {
+                    colorTwo = Color.white;
+                }
+                        if(xpos >= 450 && xpos <= 865 && ypos >= 450 && ypos <= 895){
+                                  colorThree = Color.YELLOW;
+                        }
+                        else {
+                    colorThree = Color.white;
+                }
+          
+//          System.out.println(xpos);
+//          System.out.println(ypos);
+                repaint();
+            }
+        });
 
         addKeyListener(new KeyAdapter() {
 
@@ -130,13 +172,16 @@ public class Blokus extends JFrame implements Runnable {
     }
     Thread relaxer;
 ////////////////////////////////////////////////////////////////////////////
+
     public void init() {
         requestFocus();
     }
 ////////////////////////////////////////////////////////////////////////////
+
     public void destroy() {
     }
 ////////////////////////////////////////////////////////////////////////////
+
     public void paint(Graphics gOld) {
         if (image == null || Window.xsize != getSize().width || Window.ysize != getSize().height) {
             Window.xsize = getSize().width;
@@ -146,68 +191,76 @@ public class Blokus extends JFrame implements Runnable {
             g.setRenderingHint(RenderingHints.KEY_ANTIALIASING,
                     RenderingHints.VALUE_ANTIALIAS_ON);
         }
-        if(gameState == Window.GameState.Menu){
-           g.drawImage(menu1,0,0,Window.WINDOW_WIDTH,Window.WINDOW_HEIGHT,this);
-           
-           g.setColor(color);
-           g.fillRoundRect(270, 600, 300, 50, 10, 10);
-           g.setColor(color2);
-           g.fillRoundRect(270, 680, 300, 50, 10, 10);
-           
-           g.setColor(Color.black);
-           g.setFont(new Font("Arial", Font.PLAIN, 40));
-           g.drawString("Play", 380, 638);
-           g.drawString("Quit", 380, 718);
-        }
-        else if(gameState == Window.GameState.Menu2){
-            g.drawImage(menu1,0,0,Window.WINDOW_WIDTH,Window.WINDOW_HEIGHT,this);
-        }
-        else if(gameState == Window.GameState.InGame){
-//fill background
-        
-        g.setColor(Color.white);
-        g.fillRect(0, 0, Window.xsize, Window.ysize);
+        if (gameState == Window.GameState.Menu) {
+            g.drawImage(menu1, 0, 0, Window.WINDOW_WIDTH, Window.WINDOW_HEIGHT, this);
 
-        int x[] = {Window.getX(0), Window.getX(Window.getWidth2()), Window.getX(Window.getWidth2()), Window.getX(0), Window.getX(0)};
-        int y[] = {Window.getY(0), Window.getY(0), Window.getY(Window.getHeight2()), Window.getY(Window.getHeight2()), Window.getY(0)};
+            g.setColor(color);
+            g.fillRoundRect(270, 600, 300, 50, 10, 10);
+            g.setColor(color2);
+            g.fillRoundRect(270, 680, 300, 50, 10, 10);
+
+            g.setColor(Color.black);
+            g.setFont(new Font("Arial", Font.PLAIN, 40));
+            g.drawString("Play", 380, 638);
+            g.drawString("Quit", 380, 718);
+        } else if (gameState == Window.GameState.Menu2) {
+            g.setColor(Color.black);
+            g.drawImage(menu2, 1, 1, Window.WINDOW_WIDTH, Window.WINDOW_HEIGHT, this);
+            g.setFont(new Font("Arial", Font.PLAIN, 65));
+            g.drawString("Select Number of Players", 80, 100);
+            g.setColor(colorOne);
+            g.setFont(new Font("Arial", Font.BOLD, 150));
+            g.drawString("1", 150, 275);
+             g.setColor(colorTwo);
+            g.drawString("2", 600, 275);
+             g.setColor(colorThree);
+            g.drawString("3", 600, 700);
+             g.setColor(colorFour);
+            g.drawString("4", 150, 700);
+        } else if (gameState == Window.GameState.InGame) {
+//fill background
+
+            g.setColor(Color.white);
+            g.fillRect(0, 0, Window.xsize, Window.ysize);
+
+            int x[] = {Window.getX(0), Window.getX(Window.getWidth2()), Window.getX(Window.getWidth2()), Window.getX(0), Window.getX(0)};
+            int y[] = {Window.getY(0), Window.getY(0), Window.getY(Window.getHeight2()), Window.getY(Window.getHeight2()), Window.getY(0)};
 
 //fill border
-        g.setColor(Color.white);
-        g.fillPolygon(x, y, 4);
+            g.setColor(Color.white);
+            g.fillPolygon(x, y, 4);
 // draw border
-        g.setColor(Color.black);
-        g.drawPolyline(x, y, 5);
+            g.setColor(Color.black);
+            g.drawPolyline(x, y, 5);
 //draw outline
-        g.setColor(Color.BLACK);
-        g.drawRect(Window.WINDOW_BORDER-5,Window.YTITLE + Window.WINDOW_BORDER-5, Window.WINDOW_WIDTH-7,Window.WINDOW_HEIGHT-37);
+            g.setColor(Color.BLACK);
+            g.drawRect(Window.WINDOW_BORDER - 5, Window.YTITLE + Window.WINDOW_BORDER - 5, Window.WINDOW_WIDTH - 7, Window.WINDOW_HEIGHT - 37);
 //draw 4 sections (Top Left)
-        g.setColor(Color.black);
-        g.drawLine(0, Window.YTITLE + Window.WINDOW_BORDER-5 + Window.YBORDER-3, Window.XBORDER+8, 
-                   Window.YTITLE + Window.WINDOW_BORDER-5 + Window.YBORDER-3);
+            g.setColor(Color.black);
+            g.drawLine(0, Window.YTITLE + Window.WINDOW_BORDER - 5 + Window.YBORDER - 3, Window.XBORDER + 8,
+                    Window.YTITLE + Window.WINDOW_BORDER - 5 + Window.YBORDER - 3);
 ///////////////////// (Top Right)
-        g.drawLine(Window.XBORDER + Window.getHeight2() + 8, Window.YTITLE + 3,
-                   Window.XBORDER + Window.getHeight2() + 8, Window.YTITLE + Window.WINDOW_BORDER-5 + Window.YBORDER-3);
+            g.drawLine(Window.XBORDER + Window.getHeight2() + 8, Window.YTITLE + 3,
+                    Window.XBORDER + Window.getHeight2() + 8, Window.YTITLE + Window.WINDOW_BORDER - 5 + Window.YBORDER - 3);
 ///////////////////// (Bottom Left)
-        g.drawLine(Window.XBORDER + 8, Window.YTITLE + Window.WINDOW_BORDER-5 + Window.YBORDER-3 + Window.getHeight2(), 
-                   Window.XBORDER + 8, Window.YTITLE + Window.WINDOW_BORDER-5 + Window.YBORDER-3 + Window.getHeight2() + Window.XBORDER + 8);
+            g.drawLine(Window.XBORDER + 8, Window.YTITLE + Window.WINDOW_BORDER - 5 + Window.YBORDER - 3 + Window.getHeight2(),
+                    Window.XBORDER + 8, Window.YTITLE + Window.WINDOW_BORDER - 5 + Window.YBORDER - 3 + Window.getHeight2() + Window.XBORDER + 8);
 ///////////////////// (Bottom Right)
-        g.drawLine(Window.XBORDER + Window.getWidth2() + 8, Window.YTITLE + Window.WINDOW_BORDER-5 + Window.YBORDER-3 + Window.getHeight2(), 
-                   Window.XBORDER + Window.getWidth2() + 20 + Window.XBORDER, Window.YTITLE + Window.WINDOW_BORDER-5 + Window.YBORDER-3 + Window.getHeight2());
+            g.drawLine(Window.XBORDER + Window.getWidth2() + 8, Window.YTITLE + Window.WINDOW_BORDER - 5 + Window.YBORDER - 3 + Window.getHeight2(),
+                    Window.XBORDER + Window.getWidth2() + 20 + Window.XBORDER, Window.YTITLE + Window.WINDOW_BORDER - 5 + Window.YBORDER - 3 + Window.getHeight2());
 /////////////////////
-  
-        if (animateFirstTime) {
-            gOld.drawImage(image, 0, 0, null);
-            return;
+
+            if (animateFirstTime) {
+                gOld.drawImage(image, 0, 0, null);
+                return;
+            }
+
+            Outside_Pieces piece = new Outside_Pieces(Player.getPlayer(1).getPlayerNum());
+            piece.drawAll(20, 50, g);
+            Board.Draw(g, board, this);
+
         }
-        
-        Outside_Pieces piece = new Outside_Pieces(Player.getPlayer(1).getPlayerNum()); 
-        piece.drawAll(20, 50, g);
-        Board.Draw(g,board,this);    
-        
-        }
-        
-        
-        
+
         gOld.drawImage(image, 0, 0, null);
     }
 
@@ -225,7 +278,7 @@ public class Blokus extends JFrame implements Runnable {
             }
         }
     }
-    
+
 /////////////////////////////////////////////////////////////////////////
     public void reset() {
         Player.Reset();
@@ -235,6 +288,7 @@ public class Blokus extends JFrame implements Runnable {
         color2 = Color.white;
     }
 /////////////////////////////////////////////////////////////////////////
+
     public void animate() {
 
         if (animateFirstTime) {
@@ -245,11 +299,11 @@ public class Blokus extends JFrame implements Runnable {
             }
             menu1 = Toolkit.getDefaultToolkit().getImage("assets/images/menu1.jpg");
             board = Toolkit.getDefaultToolkit().getImage("assets/images/board.png");
+            menu2 = Toolkit.getDefaultToolkit().getImage("assets/images/menu2.jpg");
             reset();
-            
+
         }
-              
-               
+
     }
 
 ////////////////////////////////////////////////////////////////////////////
@@ -260,6 +314,7 @@ public class Blokus extends JFrame implements Runnable {
         }
     }
 ////////////////////////////////////////////////////////////////////////////
+
     public void stop() {
         if (relaxer.isAlive()) {
             relaxer.stop();
