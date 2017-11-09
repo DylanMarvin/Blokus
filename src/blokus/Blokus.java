@@ -66,7 +66,7 @@ public class Blokus extends JFrame implements Runnable {
                         
                     }
                     else if(gameState == Window.GameState.InGame){
-                            Board.AddPiecePixel(e.getX(),e.getY()); 
+                            Board.AddPiecePixel(e.getX(),e.getY(),Piece.Block.ONE); 
                         }
                     
                 }

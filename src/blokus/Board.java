@@ -27,7 +27,7 @@ public class Board {
         
     }
     
-    public static void AddPiecePixel(int xpixel, int ypixel) {
+    public static void AddPiecePixel(int xpixel, int ypixel,Piece.Block block) {
         
         int ydelta = Window.getHeight2() / NUM_ROWS;
         int xdelta = Window.getWidth2() / NUM_COLUMNS;
@@ -48,28 +48,32 @@ public class Board {
 //           board[zrow][zcol] = null;
 //            }
 //            
-            // Piece piece = new Piece(Color.black,Piece.Block.V3);
-            //         piece.V3(board);
-            Piece piece = new Piece(Player.GetCurrentPlayer().getColor(), Piece.Block.V5, zrow, zcol);
+
+            Piece piece = new Piece(Player.GetCurrentPlayer().getColor(), block, zrow, zcol);
             
-            if (piece.getBlock() == Piece.Block.ONE) {                
-                board[zrow][zcol] = piece;                
-                
+            if (piece.getBlock() == Piece.Block.ONE) { 
+                if(checkPieceH(zrow,zcol,1) && checkPieceV(zrow,zcol,1))
+                    board[zrow][zcol] = piece;                                  
             }
-            if (piece.getBlock() == Piece.Block.TWO) {                
-                piece.Two(board);
+            if (piece.getBlock() == Piece.Block.TWO) {
+                if(checkPieceH(zrow,zcol,2) && checkPieceV(zrow,zcol,2))
+                    piece.Two(board);
             }
-            if (piece.getBlock() == Piece.Block.I3) {                
-                piece.I3(board);
+            if (piece.getBlock() == Piece.Block.I3) { 
+                if(checkPieceH(zrow,zcol,3 ) && checkPieceV(zrow,zcol,3))
+                    piece.I3(board);
             }
-            if (piece.getBlock() == Piece.Block.I4) {                
-                piece.I4(board);
+            if (piece.getBlock() == Piece.Block.I4) {         
+                if(checkPieceH(zrow,zcol,4) && checkPieceV(zrow,zcol,4))
+                    piece.I4(board);
             }
-            if (piece.getBlock() == Piece.Block.I5) {                
-                piece.I5(board);
+            if (piece.getBlock() == Piece.Block.I5) {  
+                if(checkPieceH(zrow,zcol,5) && checkPieceV(zrow,zcol,5))
+                    piece.I5(board);
             }
-            if (piece.getBlock() == Piece.Block.L4) {                
-                piece.L4(board);
+            if (piece.getBlock() == Piece.Block.L4) {
+                if(checkPieceL(zrow,zcol,4))
+                    piece.L4(board);
             }
             if (piece.getBlock() == Piece.Block.L5) {                
                 piece.L5(board);
@@ -118,6 +122,44 @@ public class Board {
             System.out.println(zrow);
             System.out.println(zcol);
         }
+    }
+    private static boolean checkPieceH(int zrow,int zcol,int val){
+        for(int i = 0;i<val;i++){
+            if(zcol+i == NUM_COLUMNS){
+                return false;
+            }
+            if(board[zrow][zcol+i] != null){
+                       return false;
+            }    
+        }
+        return(true);
+    }
+     private static boolean checkPieceL(int zrow,int zcol,int val){
+        for(int j = 0;j<2;j++){
+                if(zrow+j == NUM_ROWS){
+                    return false;
+                }
+            for(int i = 0;i<val;i++){
+                if(zcol+i == NUM_COLUMNS){
+                    return false;
+                }
+                if(board[zrow+j][zcol+i] != null){
+                           return false;
+                }    
+            }
+        }
+        return(true);
+    }
+    private static boolean checkPieceV(int zrow,int zcol,int val){
+        for(int i = 0;i<val;i++){
+            if(zrow+i == NUM_ROWS){
+                return false;
+            }
+            if(board[zrow+1][zcol] != null){
+                       return false;
+            }    
+        }
+        return(true);
     }
     
     public static void Draw(Graphics2D g,Image image,Blokus obj) {
