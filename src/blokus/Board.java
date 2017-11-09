@@ -49,11 +49,17 @@ public class Board {
 //            }
 //            
 
+
             Piece piece = new Piece(Player.GetCurrentPlayer().getColor(), block, zrow, zcol);
             
             if (piece.getBlock() == Piece.Block.ONE) { 
                 if(checkPieceH(zrow,zcol,1) && checkPieceV(zrow,zcol,1))
                     board[zrow][zcol] = piece;                                  
+            }
+            
+            if (piece.getBlock() == Piece.Block.ONE) {                
+                board[zrow][zcol] = piece;          
+
             }
             if (piece.getBlock() == Piece.Block.TWO) {
                 if(checkPieceH(zrow,zcol,2) && checkPieceV(zrow,zcol,2))

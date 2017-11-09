@@ -23,50 +23,55 @@ public class Outside_Pieces extends Player {
         g.translate(-xpos, -ypos);
     }
     
-public void drawAll(int xpos, int ypos, Graphics2D g) {
-        int gapDistance = 30;
-
-        drawPiece1(xpos,ypos,0,3,3,g);
-        drawPiece2(xpos+gapDistance,ypos,0,1,1,g);
-        gapDistance+=40;
-        drawPiecei3(xpos+gapDistance,ypos,0,0,0,g);
-        gapDistance+=50;
-        drawPiecei4(xpos+gapDistance,ypos,0,0,0,g);
-        gapDistance+=60;
-        drawPiecei5(xpos+gapDistance,ypos,0,0,0,g);
-        gapDistance+=70;
-        drawPieceV3(xpos+gapDistance,ypos,0,0,0,g);
-        gapDistance+=40;
-        drawPieceL4(xpos+gapDistance,ypos,0,0,0,g);
-        gapDistance+=40;
-        drawPieceL5(xpos+gapDistance,ypos,0,0,0,g);
-        gapDistance+=30;
-        drawPieceT4(xpos+gapDistance,ypos,0,0,0,g);
-        gapDistance+=50;
-        drawPieceT5(xpos+gapDistance,ypos,0,0,0,g);
-        gapDistance+=50;
-        drawPieceO(xpos+gapDistance,ypos,0,0,0,g);
-        gapDistance+=40;
-        drawPieceW(xpos+gapDistance,ypos,0,0,0,g);
-        gapDistance+=50;
-        drawPieceU(xpos+gapDistance,ypos,0,0,0,g);
-        gapDistance = 0;
-        drawPieceX(xpos,ypos+50,0,0,0,g);
-        gapDistance += 40;
-        drawPieceP(xpos+gapDistance,ypos+50,0,0,0,g);
-        gapDistance += 40;
-        drawPieceY(xpos+gapDistance,ypos+50,0,0,0,g);
-        gapDistance += 70;
-        drawPieceF(xpos+gapDistance,ypos+50,0,0,0,g);
-        gapDistance += 40;
-        drawPieceN(xpos+gapDistance,ypos+50,0,0,0,g);
-        gapDistance += 60;
-        drawPieceZ4(xpos+gapDistance,ypos+50,0,0,0,g);
-        gapDistance += 40;
-        drawPieceZ5(xpos+gapDistance,ypos+50,0,0,0,g);
-        gapDistance += 40;
-        drawPieceV5(xpos+gapDistance,ypos+50,0,0,0,g);
+public void drawAll(int xpos, int ypos, double xscale,double yscale, Graphics2D g) {
+        int gapXDistance = 15;
+        int gapYDistance = 15;
         
+        g.scale( xscale , yscale );
+
+        drawPiece1(xpos,ypos,0,1,1,g);
+        drawPiece2(xpos+gapXDistance,ypos,0,1,1,g);
+        gapXDistance+=25;
+        drawPiecei3(xpos+gapXDistance,ypos,0,1,1,g);
+        gapXDistance+=35;
+        drawPiecei4(xpos+gapXDistance,ypos,0,1,1,g);
+        gapXDistance+=45;
+        drawPiecei5(xpos+gapXDistance,ypos,0,1,1,g);
+        gapXDistance+=55;
+        drawPieceV3(xpos+gapXDistance,ypos,0,1,1,g);
+        gapXDistance+=25;
+        drawPieceL4(xpos+gapXDistance,ypos,0,1,1,g);
+        gapXDistance+=25;
+        drawPieceL5(xpos+gapXDistance,ypos,0,1,1,g);
+        gapXDistance+=20;
+        drawPieceT4(xpos+gapXDistance,ypos,0,1,1,g);
+        gapXDistance+=40;
+        drawPieceT5(xpos+gapXDistance,ypos,0,1,1,g);
+        drawPieceO(xpos,ypos+gapYDistance,0,1,1,g);
+        gapXDistance=0;
+        gapXDistance+=25;
+        drawPieceW(xpos+gapXDistance,ypos+gapYDistance,0,1,1,g);
+        gapXDistance+=35;
+        drawPieceU(xpos+gapXDistance,ypos+gapYDistance,0,1,1,g);
+        gapXDistance+=45;
+        drawPieceX(xpos+gapXDistance,ypos+gapYDistance,0,0,0,g);
+        gapXDistance += 25;
+        drawPieceP(xpos+gapXDistance,ypos+gapYDistance,0,0,0,g);
+        gapXDistance += 25;
+        drawPieceY(xpos+gapXDistance,ypos+25,0,0,0,g);
+        gapXDistance += 115;
+        drawPieceF(xpos+10,ypos+42,0,0,0,g);
+        gapXDistance = 0;
+        gapXDistance += 35;
+        drawPieceN(xpos+gapXDistance,ypos+52,0,0,0,g);
+        gapXDistance += 50;
+        drawPieceZ4(xpos+gapXDistance,ypos+42,0,0,0,g);
+        gapXDistance += 60;
+        drawPieceZ5(xpos+gapXDistance,ypos+42,0,0,0,g);
+        gapXDistance += 50;
+        drawPieceV5(xpos+gapXDistance,ypos+42,0,0,0,g);
+        
+        g.scale( 1.0/xscale,1.0/yscale );
         
     }
 
@@ -79,9 +84,9 @@ public void drawAll(int xpos, int ypos, Graphics2D g) {
         g.setColor(getColor());
         int xvals4[] = {-5,5,5,-5,-5};
         int yvals4[] = {-5,-5,5,5,-5};
-        
         g.fillPolygon(xvals4, yvals4, xvals4.length);
-        g.setColor(Color.white);
+        
+        g.setColor(Color.LIGHT_GRAY);
         g.drawPolygon(xvals4, yvals4, xvals4.length);
         
         g.scale( 1.0/xscale,1.0/yscale );
@@ -102,7 +107,6 @@ public void drawAll(int xpos, int ypos, Graphics2D g) {
     }
 
     public void drawPiece2(int xpos, int ypos, double rot, double xscale,double yscale,Graphics2D g) {
-        g.translate(xpos,ypos);
         g.rotate(rot  * Math.PI/180.0);
         g.scale( xscale , yscale );
         
@@ -111,7 +115,6 @@ public void drawAll(int xpos, int ypos, Graphics2D g) {
         
         g.scale( 1.0/xscale,1.0/yscale );
         g.rotate(-rot  * Math.PI/180.0);
-        g.translate(-xpos,-ypos);
     }
 
     public void drawPiecei3(int xpos, int ypos, double rot, double xscale,double yscale,Graphics2D g) {
