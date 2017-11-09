@@ -47,6 +47,17 @@ public class Player {
     public static Player GetCurrentPlayer(){
        return currentTurn;     
     }   
+    public static void switchTurns(){
+        int val = currentTurn.getPlayerNum();
+        val++;
+        if(val <= 4){
+            currentTurn = Player.getPlayer(val);
+        }
+        else{
+            val = 1;
+            currentTurn = Player.getPlayer(val);
+        }
+    }
       public static Player switchPlayer(){
             if(currentTurn == players[0]){
                 currentTurn = players[1];

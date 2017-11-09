@@ -3,6 +3,7 @@ package blokus;
 import java.awt.Color;
 import java.awt.Font;
 import java.awt.Graphics2D;
+import java.awt.Image;
 
 public class Board {
     
@@ -119,7 +120,7 @@ public class Board {
         }
     }
     
-    public static void Draw(Graphics2D g) {
+    public static void Draw(Graphics2D g,Image image,Blokus obj) {
         int ydelta = Window.getHeight2() / NUM_ROWS;
         int xdelta = Window.getWidth2() / NUM_COLUMNS;
 
@@ -134,6 +135,7 @@ public class Board {
             g.drawLine(Window.getX(zi * xdelta), Window.getY(0),
                     Window.getX(zi * xdelta), Window.getY(Window.getHeight2()));
         }
+       g.drawImage(image,Window.getX(0),Window.getY(0),Window.getWidth2(),Window.getHeight2(),obj);
         
         for (int zi = 0; zi < NUM_ROWS; zi++) {
             for (int zx = 0; zx < NUM_COLUMNS; zx++) {
@@ -141,8 +143,9 @@ public class Board {
                     board[zi][zx].draw(g, zi, zx, xdelta, ydelta);
                 }
             }
-        }        
+        }
     }
+
 }
 
        

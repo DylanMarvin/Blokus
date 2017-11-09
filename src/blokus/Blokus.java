@@ -27,6 +27,7 @@ public class Blokus extends JFrame implements Runnable {
     
     private Window.GameState gameState = Window.GameState.Menu;
     Image menu1;
+    Image board;
     
     Color color;
     Color color2;
@@ -193,7 +194,7 @@ public class Blokus extends JFrame implements Runnable {
         g.drawLine(Window.XBORDER + Window.getWidth2() + 8, Window.YTITLE + Window.WINDOW_BORDER-5 + Window.YBORDER-3 + Window.getHeight2(), 
                    Window.XBORDER + Window.getWidth2() + 20 + Window.XBORDER, Window.YTITLE + Window.WINDOW_BORDER-5 + Window.YBORDER-3 + Window.getHeight2());
 /////////////////////
-
+  
         if (animateFirstTime) {
             gOld.drawImage(image, 0, 0, null);
             return;
@@ -201,7 +202,8 @@ public class Blokus extends JFrame implements Runnable {
         
         Outside_Pieces piece = new Outside_Pieces(Player.getPlayer(1).getPlayerNum()); 
         piece.drawAll(20, 50, g);
-        Board.Draw(g);    
+        Board.Draw(g,board,this);    
+        
         }
         
         
@@ -242,6 +244,7 @@ public class Blokus extends JFrame implements Runnable {
                 Window.ysize = getSize().height;
             }
             menu1 = Toolkit.getDefaultToolkit().getImage("assets/images/menu1.jpg");
+            board = Toolkit.getDefaultToolkit().getImage("assets/images/board.png");
             reset();
             
         }
