@@ -262,10 +262,21 @@ public class Blokus extends JFrame implements Runnable {
             return;
         }
         
-        Outside_Pieces piece = new Outside_Pieces(Player.getPlayer(1).getPlayerNum()); 
-        piece.drawAll(12, 27, 2.1, 2.1, g);
+        Outside_Pieces piece = new Outside_Pieces(Player.getPlayer(1).getPlayerNum());
+        //(xpos,ypos,rot,xscale,yscale,g)
+        //Top Outside Pieces
+        piece.drawAll(12, 27, 0, 2.1, 2.1, g);
+        //Right Outside Pieces
+        piece.drawAll(26, -403, 90, 2.1, 2.1, g);
+        //Bottom Outside Pieces
+        piece.drawAll(-406, -417, 180, 2.1, 2.1, g);
+        //Left Outside Pieces
+        piece.drawAll(-417, 12, 270, 2.1, 2.1, g);
+        
+        
+        
+        
         Board.Draw(g,board,this);
-
         }
 
         gOld.drawImage(image, 0, 0, null);
