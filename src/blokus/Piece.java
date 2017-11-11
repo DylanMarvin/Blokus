@@ -37,6 +37,7 @@ public class Piece {
      
         g.setColor(color);
         g.fillRect(Window.getX(_column * xdelta),Window.getY(_row * ydelta), xdelta, ydelta);
+        
        
 
     }
@@ -75,16 +76,16 @@ public class Piece {
     }
     public void L4(Piece board[][]) {
         board[row][column] = this;
-        board[row - 1][column] = this;
-        board[row - 2][column] = this;
-        board[row][column + 1] = this;
+        board[row + 1][column] = this;
+        board[row + 2][column] = this;
+        board[row + 2][column + 1] = this;
     }
      public void L5(Piece board[][]) {
         board[row][column] = this;
-        board[row - 1][column] = this;
-        board[row - 2][column] = this;
-        board[row - 3][column] = this;
-        board[row][column + 1] = this;
+        board[row + 1][column] = this;
+        board[row + 2][column] = this;
+        board[row + 3][column] = this;
+        board[row + 3][column + 1] = this;
     }
       public void T4(Piece board[][]) {
         board[row][column] = this;
@@ -102,16 +103,16 @@ public class Piece {
     }
         public void O(Piece board[][]) {
         board[row][column] = this;
-        board[row ][column - 1] = this;
-        board[row +1][column ] = this;
-        board[row + 1][column - 1] = this;
+        board[row ][column + 1] = this;
+        board[row +1][column] = this;
+        board[row + 1][column + 1] = this;
     }
          public void W(Piece board[][]) {
         board[row][column] = this;
-        board[row ][column - 1] = this;
-        board[row + 1][column -1] = this;
-        board[row + 1][column -2] = this;
-        board[row + 2][column -2] = this;
+        board[row + 1 ][column] = this;
+        board[row + 1][column + 1] = this;
+        board[row + 2][column + 1] = this;
+        board[row + 2][column + 2] = this;
     }
          public void U(Piece board[][]) {
         board[row][column] = this;

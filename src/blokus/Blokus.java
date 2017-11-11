@@ -66,11 +66,6 @@ public class Blokus extends JFrame implements Runnable {
                         
 
                     }
-                    else if(gameState == Window.GameState.InGame){
-                            Board.AddPiecePixel(e.getX(),e.getY(),Piece.Block.ONE); 
-
-
-                    } 
                     else if (gameState == Window.GameState.Menu2) {
                         if(xpos >= 5 && xpos <= 440 && ypos >= 5 && ypos <= 450){
                              gameState = Window.GameState.InGame;
@@ -87,7 +82,7 @@ public class Blokus extends JFrame implements Runnable {
                         }
 
                     } else if (gameState == Window.GameState.InGame) {
-                        Board.AddPiecePixel(e.getX(), e.getY(),Piece.Block.ONE);
+                        Board.AddPiecePixel(e.getX(), e.getY(),Piece.Block.W);
                     }
 
                 }
@@ -261,22 +256,10 @@ public class Blokus extends JFrame implements Runnable {
             gOld.drawImage(image, 0, 0, null);
             return;
         }
-        
-        Outside_Pieces piece = new Outside_Pieces(Player.getPlayer(1).getPlayerNum());
-        //(xpos,ypos,rot,xscale,yscale,g)
-        //Top Outside Pieces
-        piece.drawAll(12, 27, 0, 2.1, 2.1, g);
-        //Right Outside Pieces
-        piece.drawAll(26, -403, 90, 2.1, 2.1, g);
-        //Bottom Outside Pieces
-        piece.drawAll(-406, -417, 180, 2.1, 2.1, g);
-        //Left Outside Pieces
-        piece.drawAll(-417, 12, 270, 2.1, 2.1, g);
-        
-        
-        
-        
+
         Board.Draw(g,board,this);
+        Player.Draw(g, this);
+
         }
 
         gOld.drawImage(image, 0, 0, null);

@@ -53,45 +53,66 @@ public class Board {
             Piece piece = new Piece(Player.GetCurrentPlayer().getColor(), block, zrow, zcol);
             
             if (piece.getBlock() == Piece.Block.ONE) { 
-                if(checkPieceH(zrow,zcol,1) && checkPieceV(zrow,zcol,1))
-                    board[zrow][zcol] = piece;                                  
+                if(checkPieceH(zrow,zcol,1) && checkPieceV(zrow,zcol,1)){
+                    board[zrow][zcol] = piece;                           
+                    Player.switchTurns();
+                }
             }
             
-            if (piece.getBlock() == Piece.Block.ONE) {                
-                board[zrow][zcol] = piece;          
-
-            }
             if (piece.getBlock() == Piece.Block.TWO) {
-                if(checkPieceH(zrow,zcol,2) && checkPieceV(zrow,zcol,2))
+                if(checkPieceH(zrow,zcol,2) && checkPieceV(zrow,zcol,2)){
                     piece.Two(board);
+                    Player.switchTurns();
+                }
             }
             if (piece.getBlock() == Piece.Block.I3) { 
-                if(checkPieceH(zrow,zcol,3 ) && checkPieceV(zrow,zcol,3))
+                if(checkPieceH(zrow,zcol,3 ) && checkPieceV(zrow,zcol,3)){
                     piece.I3(board);
+                        Player.switchTurns();
+                }
             }
             if (piece.getBlock() == Piece.Block.I4) {         
-                if(checkPieceH(zrow,zcol,4) && checkPieceV(zrow,zcol,4))
+                if(checkPieceH(zrow,zcol,4) && checkPieceV(zrow,zcol,4)){
                     piece.I4(board);
+                    Player.switchTurns();
+                }
             }
             if (piece.getBlock() == Piece.Block.I5) {  
-                if(checkPieceH(zrow,zcol,5) && checkPieceV(zrow,zcol,5))
+                if(checkPieceH(zrow,zcol,5) && checkPieceV(zrow,zcol,5)){
                     piece.I5(board);
+                    Player.switchTurns();
+                }
             }
             if (piece.getBlock() == Piece.Block.L4) {
-                if(checkPieceL(zrow,zcol,4))
+                if(checkPieceL(zrow,zcol,3)){
                     piece.L4(board);
+                    Player.switchTurns();
+                }
             }
-            if (piece.getBlock() == Piece.Block.L5) {                
-                piece.L5(board);
+            if (piece.getBlock() == Piece.Block.L5) { 
+                if(checkPieceL(zrow,zcol,4)){
+                    piece.L5(board);
+                    Player.switchTurns();
+                }
             }
-            if (piece.getBlock() == Piece.Block.N) {                
-            piece.N(board);
+            if (piece.getBlock() == Piece.Block.N) {        
+                if(checkPieceN(zrow,zcol,4)){
+                    piece.N(board);
+                    Player.switchTurns();
+                }
             }
-            if (piece.getBlock() == Piece.Block.O) {                
-            piece.O(board);
+            if (piece.getBlock() == Piece.Block.O) { 
+                if(checkPieceO(zrow,zcol,2)){
+                    piece.O(board);
+                    Player.switchTurns();
+                }           
             }
-            if (piece.getBlock() == Piece.Block.W) {                
-            piece.W(board);
+            if (piece.getBlock() == Piece.Block.W) {  
+                if(checkPieceW(zrow,zcol,2)){
+                    piece.W(board);
+                    Player.switchTurns();
+                }           
+            
             }
             if (piece.getBlock() == Piece.Block.T4) {                
             piece.T4(board);
@@ -140,33 +161,101 @@ public class Board {
         }
         return(true);
     }
-     private static boolean checkPieceL(int zrow,int zcol,int val){
-        for(int j = 0;j<2;j++){
-                if(zrow+j == NUM_ROWS){
+    private static boolean checkPieceV(int zrow,int zcol,int val){
+        for(int i = 0;i<val;i++){
+            if(zrow+i == NUM_ROWS){
+                return false;
+            }
+            if(board[zrow+i][zcol] != null){
+                       return false;
+            }    
+        }
+        return(true);
+    }
+    private static boolean checkPieceL(int zrow,int zcol,int val){
+        
+            for(int j = 0;j<2;j++){
+                    if(zcol+j == NUM_COLUMNS){
+                        return false;
+                    }               
+                for(int i = 0;i<val;i++){
+                    if(zrow+i == NUM_ROWS){
+                        return false;
+                    }
+                    if(j >0){
+                        i = val-1;
+                    }
+                    if(board[zrow+i][zcol+j] != null){
+                               return false;
+                    }    
+                }
+            }
+            return true;
+        }
+    private static boolean checkPieceO(int zrow,int zcol,int val){
+        for(int j = 0;j<val;j++){
+            if(zcol+j == NUM_COLUMNS){
                     return false;
                 }
             for(int i = 0;i<val;i++){
-                if(zcol+i == NUM_COLUMNS){
+                if(zrow+i == NUM_ROWS){
                     return false;
                 }
-                if(board[zrow+j][zcol+i] != null){
+                if(board[zrow+i][zcol+j] != null){
                            return false;
                 }    
             }
         }
         return(true);
     }
-    private static boolean checkPieceV(int zrow,int zcol,int val){
-        for(int i = 0;i<val;i++){
-            if(zrow+i == NUM_ROWS){
-                return false;
+    
+    private static boolean checkPieceN(int zrow,int zcol,int val){
+        
+            for(int j = 0;j>-2;j--){
+                    if(zrow+j == -1){
+                        return false;
+                    }               
+                    if(j == 0){
+                        for(int i = 0;i<val/2;i++){
+                            if(zcol+i == NUM_COLUMNS){
+                                return false;
+                            }
+                            if(board[zrow+j][zcol+i] != null){
+                                       return false;
+                            }    
+                        }
+                    }
+                    else if(j<0){
+                        for(int i = 0;i<val;i++){
+                            if(zcol+i == NUM_COLUMNS){
+                                return false;
+                            }
+                            if(board[zrow+j][zcol+i] != null){
+                                       return false;
+                            }    
+                        }
+                    }
             }
-            if(board[zrow+1][zcol] != null){
-                       return false;
-            }    
+            return true;
+        }
+    
+    private static boolean checkPieceW(int zrow,int zcol,int val){
+        for(int j = 0;j<val;j++){
+            if(zcol+j == NUM_COLUMNS){
+                    return false;
+                }
+            for(int i = 0;i<val;i++){
+                if(zrow+i == NUM_ROWS){
+                    return false;
+                }
+                if(board[zrow+i][zcol+j] != null){
+                           return false;
+                }    
+            }
         }
         return(true);
     }
+    
     
     public static void Draw(Graphics2D g,Image image,Blokus obj) {
         int ydelta = Window.getHeight2() / NUM_ROWS;

@@ -99,7 +99,6 @@ public void drawAll(int xpos, int ypos,double rot, double xscale,double yscale, 
         g.rotate(rot  * Math.PI/180.0);
         g.scale( xscale , yscale );
         
-        g.setColor(getColor());
         drawCube(xpos,ypos,0,1,1,g); 
 
         g.scale( 1.0/xscale,1.0/yscale );
