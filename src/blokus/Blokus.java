@@ -84,8 +84,33 @@ public class Blokus extends JFrame implements Runnable {
 
                     } else if (gameState == Window.GameState.InGame) {
                         /////////
-                        
-                        
+                        if(xpos >= 15 && xpos <= 35 && ypos >= 45 && ypos <= 65){
+                             System.out.println("ONE");
+                        }
+                        else if(xpos >= 45 && xpos <= 88 && ypos >= 47 && ypos <= 65){
+                             System.out.println("TWO");
+                        }
+                        else if(xpos >= 98 && xpos <= 160 && ypos >= 47 && ypos <= 65){
+                             System.out.println("I3");
+                        }
+                        else if(xpos >= 170 && xpos <= 255 && ypos >= 47 && ypos <= 65){
+                             System.out.println("I4");
+                        }
+                        else if(xpos >= 265 && xpos <= 370 && ypos >= 47 && ypos <= 65){
+                             System.out.println("I5");
+                        }
+                        else if(xpos >= 380 && xpos <= 420 && ypos >= 47 && ypos <= 88){
+                             System.out.println("V3");
+                        }
+                        else if(xpos >= 435 && xpos <= 475 && ypos >= 47 && ypos <= 109){
+                             System.out.println("L4");
+                        }
+                        else if(xpos >= 487 && xpos <= 530 && ypos >= 47 && ypos <= 130){
+                             System.out.println("L5");
+                        }      
+                        else if(xpos >= 487 && xpos <= 530 && ypos >= 47 && ypos <= 130){
+                             System.out.println("");
+                        }
                         
                         
                         /////////
