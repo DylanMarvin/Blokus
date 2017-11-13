@@ -108,10 +108,18 @@ public class Blokus extends JFrame implements Runnable {
                         else if(xpos >= 487 && xpos <= 530 && ypos >= 47 && ypos <= 130){
                              System.out.println("L5");
                         }      
-                        else if(xpos >= 487 && xpos <= 530 && ypos >= 47 && ypos <= 130){
-                             System.out.println("");
+                        else if(xpos >= 540 && xpos <= 600 && ypos >= 47 && ypos <= 110){
+                             System.out.println("T5");
                         }
-                        
+                        else if(xpos >= 613 && xpos <= 675 && ypos >= 47 && ypos <= 88){
+                             System.out.println("T4");
+                        }
+                        else if(xpos >= 15 && xpos <= 55 && ypos >= 75 && ypos <= 115){
+                             System.out.println("O");
+                        }
+                        else if(xpos >= 68 && xpos <= 130 && ypos >= 75 && ypos <= 140){
+                             System.out.println("W");
+                        }
                         
                         /////////
                         if(xpos >= 840 && xpos <= 860 && ypos >= 44 && ypos <= 66){
