@@ -66,7 +66,7 @@ public void drawAll(int xpos, int ypos,double rot, double xscale,double yscale, 
         gapXDistance += 35;
         drawPieceN(xpos+gapXDistance,ypos+52,0,0,0,g);
         gapXDistance += 50;
-        drawPieceZ4(xpos+gapXDistance,ypos+42,0,0,0,g);
+        drawPieceZ4(xpos+gapXDistance-5,ypos+42,0,0,0,g);
         gapXDistance += 60;
         drawPieceZ5(xpos+gapXDistance+140,ypos+42,0,0,0,g);
         gapXDistance += 50;
