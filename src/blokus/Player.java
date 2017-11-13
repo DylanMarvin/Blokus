@@ -52,11 +52,12 @@ public class Player {
         if(playerNum == 1)
             Pieces.drawAll(12, 27, 0, 2.1, 2.1, g);
         else if(playerNum == 2)
-            Pieces.drawAll(26, -403, 90, 2.1, 2.1, g);
+            Pieces.drawAll(26, -405, 90, 2.1, 2.1, g);
         else if(playerNum == 3)
-            Pieces.drawAll(-406, -417, 180, 2.1, 2.1, g);
+            Pieces.drawAll(100,350,0,2.1,2.1,g);
+            //Pieces.drawAll(-406, -417, 180, 2.1, 2.1, g);
         else if(playerNum == 4)
-            Pieces.drawAll(-417, 12, 270, 2.1, 2.1, g);
+            Pieces.drawAll(-415, 12, 270, 2.1, 2.1, g);
         
     }
     public Color getColor(){
