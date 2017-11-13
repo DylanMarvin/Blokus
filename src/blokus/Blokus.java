@@ -41,6 +41,7 @@ public class Blokus extends JFrame implements Runnable {
         frame.setSize(Window.WINDOW_WIDTH, Window.WINDOW_HEIGHT);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setVisible(true);
+        frame.setTitle("Blokus");
         frame.setLocationRelativeTo(null);
         frame.setResizable(false);
     }
@@ -82,7 +83,25 @@ public class Blokus extends JFrame implements Runnable {
                         }
 
                     } else if (gameState == Window.GameState.InGame) {
-                        Board.AddPiecePixel(e.getX(), e.getY(),Piece.Block.W);
+                        /////////
+                        
+                        
+                        
+                        
+                        /////////
+                        
+                        
+                        
+                        
+                        
+                        /////////
+                        
+                        
+                        
+                        
+                        
+                        /////////
+                        Board.AddPiecePixel(e.getX(), e.getY(),Piece.Block.ONE);
                     }
 
                 }
