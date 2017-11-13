@@ -150,106 +150,120 @@ public class Blokus extends JFrame implements Runnable {
                         
                         
                         /////////
-                        if(xpos >= 840 && xpos <= 860 && ypos >= 44 && ypos <= 66){
-                            System.out.println("Works");
-                        }
-                        if(xpos >= 840 && xpos <= 860 && ypos >= 76 && ypos <= 118){
-                            System.out.println("Works");
-                        }
-                        if(xpos >= 840 && xpos <= 860 && ypos >= 129 && ypos <= 192){
-                            System.out.println("Works");
-                        }
-                        if(xpos >= 840 && xpos <= 860 && ypos >= 202 && ypos <= 286){
-                            System.out.println("Works");
-                        }
-                        if(xpos >= 840 && xpos <= 860 && ypos >= 296 && ypos <= 402){
-                            System.out.println("Works");
-                        }
-                        if(xpos >= 820 && xpos <= 860 && ypos >= 411 && ypos <= 452){
-                            System.out.println("Works");
-                        }
-                        if(xpos >= 800 && xpos <= 860 && ypos >= 464 && ypos <= 507){
-                            System.out.println("Works");
-                        }
-                        if(xpos >= 777 && xpos <= 860 && ypos >= 516 && ypos <= 558){
-                            System.out.println("Works");
-                        }
-                        if(xpos >= 800 && xpos <= 860 && ypos >= 571 && ypos <= 632){
-                            System.out.println("Works");
-                        }
-                        if(xpos >= 820 && xpos <= 860 && ypos >= 643 && ypos <= 706){
-                            System.out.println("Works");
-                        }
-                        if(xpos >= 820 && xpos <= 860 && ypos >= 643 && ypos <= 706){
-                            System.out.println("Works");
+                        if(Player.GetCurrentPlayer() == Player.getPlayer(2)){
+                            if(xpos >= 840 && xpos <= 860 && ypos >= 44 && ypos <= 66){
+                                System.out.println("ONE");
+                            }
+                            else if(xpos >= 840 && xpos <= 860 && ypos >= 76 && ypos <= 118){
+                                System.out.println("TWO");
+                            }
+                            else if(xpos >= 840 && xpos <= 860 && ypos >= 129 && ypos <= 192){
+                                System.out.println("I3");
+                            }
+                            else if(xpos >= 840 && xpos <= 860 && ypos >= 202 && ypos <= 286){
+                                System.out.println("I4");
+                            }
+                            else if(xpos >= 840 && xpos <= 860 && ypos >= 296 && ypos <= 402){
+                                System.out.println("I5");
+                            }
+                            else if(xpos >= 820 && xpos <= 860 && ypos >= 411 && ypos <= 452){
+                                System.out.println("V3");
+                            }
+                            else if(xpos >= 800 && xpos <= 860 && ypos >= 464 && ypos <= 507){
+                                System.out.println("L4");
+                            }
+                            else if(xpos >= 777 && xpos <= 860 && ypos >= 516 && ypos <= 558){
+                                System.out.println("L5");
+                            }
+                            else if(xpos >= 800 && xpos <= 860 && ypos >= 571 && ypos <= 632){
+                                System.out.println("T5");
+                            }
+                            else if(xpos >= 820 && xpos <= 860 && ypos >= 643 && ypos <= 706){
+                                System.out.println("T4");
+                            }
+                            else if(xpos >= 787 && xpos <= 830 && ypos >= 44 && ypos <= 86){
+                                System.out.println("O");
+                            }
+                            else if(xpos >= 766 && xpos <= 830 && ypos >= 97 && ypos <= 158){
+                                System.out.println("W");
+                            }
+                            else if(xpos >= 787 && xpos <= 830 && ypos >= 170 && ypos <= 234){
+                                System.out.println("U");
+                            }
+                            else if(xpos >= 766 && xpos <= 830 && ypos >= 245 && ypos <= 305){
+                                System.out.println("UR");
+                            }
+                            else if(xpos >= 766 && xpos <= 830 && ypos >= 318 && ypos <= 360){
+                                System.out.println("X");
+                            }
+                            else if(xpos >= 766 && xpos <= 808 && ypos >= 369 && ypos <= 453){
+                                System.out.println("P");
+                            }
+                            else if(xpos >= 709 && xpos <= 773 && ypos >= 44 && ypos <= 107){
+                                System.out.println("Y");
+                            }
+                            else if(xpos >= 709 && xpos <= 773 && ypos >= 44 && ypos <= 107){
+                                System.out.println("F");
+                            }
+                            else if(xpos >= 709 && xpos <= 751 && ypos >= 117 && ypos <= 202){
+                                System.out.println("N");
+                            }
+                            else if(xpos >= 709 && xpos <= 773 && ypos >= 211 && ypos <= 253){
+                                System.out.println("Z4");
+                            }
+                            else if(xpos >= 709 && xpos <= 773 && ypos >= 570 && ypos <= 632){
+                                System.out.println("V5");
+                            }
+                            else if(xpos >= 709 && xpos <= 773 && ypos >= 643 && ypos <= 706){
+                                System.out.println("Z5");
+                            }
                         }
                         /////////
-                        
-                        if(xpos >= 15 && xpos <= 35 && ypos >= 860 && ypos <= 885){
-                            System.out.println("ONE");
-                        }
-                        else if(xpos >= 15 && xpos <= 35 && ypos >= 808 && ypos <= 850){
-                            System.out.println("TWO");
-                        }
-                        else if(xpos >= 15 && xpos <= 35 && ypos >= 735 && ypos <= 800){
-                            System.out.println("I3");
-                        }
-                         else if(xpos >= 15 && xpos <= 35 && ypos >= 640 && ypos <= 725){
-                            System.out.println("I4");
-                        }
-                          else if(xpos >= 15 && xpos <= 35 && ypos >= 525 && ypos <= 630){
-                            System.out.println("I5");
-                        }
-                         else   if(xpos >= 15 && xpos <= 55 && ypos >= 475 && ypos <= 510){
-                            System.out.println("V3");
-                        }
-                          else if(xpos >= 15 && xpos <= 75 && ypos >= 420 && ypos <= 460 ){
-                            System.out.println("L4");
-                        }
-                          else if(xpos >= 15 && xpos <= 100 && ypos >= 370 && ypos <= 400 ){
-                            System.out.println("L5");
-                        }
-                            else if(xpos >= 15 && xpos <= 80 && ypos >= 305 && ypos <= 370 ){
-                            System.out.println("T5");
-                        }
-                          else if(xpos >= 15 && xpos <= 60 && ypos >= 220 && ypos <= 280 ){
-                            System.out.println("T4");
-                        }
-                         
-                           
-                            else if(xpos >= 50 && xpos <= 85 && ypos >= 840 && ypos <= 880 ){
-                            System.out.println("O");
-                        }
-                             else if(xpos >= 50 && xpos <= 85 && ypos >= 840 && ypos <= 880 ){
-                            System.out.println("W");
-                        }
-                              else if(xpos >= 50 && xpos <= 90 && ypos >= 700 && ypos <= 760 ){
-                            System.out.println("U");
-                        }
-                                else if(xpos >= 50 && xpos <= 110 && ypos >= 620 && ypos <= 680 ){
-                            System.out.println("X");
-                        }
-                                else   if(xpos >= 50 && xpos <= 110 && ypos >= 620 && ypos <= 680 ){
-                            System.out.println("P");
-                        }
-                                   else  if(xpos >= 65 && xpos <= 111 && ypos >= 475 && ypos <= 555 ){
-                            System.out.println("Y");
+                        if(Player.GetCurrentPlayer() == Player.getPlayer(4)){
+                            if (xpos >= 15 && xpos <= 35 && ypos >= 860 && ypos <= 885) {
+                                System.out.println("ONE");
+                            } else if (xpos >= 15 && xpos <= 35 && ypos >= 808 && ypos <= 850) {
+                                System.out.println("TWO");
+                            } else if (xpos >= 15 && xpos <= 35 && ypos >= 735 && ypos <= 800) {
+                                System.out.println("I3");
+                            } else if (xpos >= 15 && xpos <= 35 && ypos >= 640 && ypos <= 725) {
+                                System.out.println("I4");
+                            } else if (xpos >= 15 && xpos <= 35 && ypos >= 525 && ypos <= 630) {
+                                System.out.println("I5");
+                            } else if (xpos >= 15 && xpos <= 55 && ypos >= 475 && ypos <= 510) {
+                                System.out.println("V3");
+                            } else if (xpos >= 15 && xpos <= 75 && ypos >= 420 && ypos <= 460) {
+                                System.out.println("L4");
+                            } else if (xpos >= 15 && xpos <= 100 && ypos >= 370 && ypos <= 400) {
+                                System.out.println("L5");
+                            } else if (xpos >= 15 && xpos <= 80 && ypos >= 305 && ypos <= 370) {
+                                System.out.println("T5");
+                            } else if (xpos >= 15 && xpos <= 60 && ypos >= 220 && ypos <= 280) {
+                                System.out.println("T4");
+                            } else if (xpos >= 50 && xpos <= 85 && ypos >= 840 && ypos <= 880) {
+                                System.out.println("O");
+                            } else if (xpos >= 50 && xpos <= 85 && ypos >= 840 && ypos <= 880) {
+                                System.out.println("W");
+                            } else if (xpos >= 50 && xpos <= 90 && ypos >= 700 && ypos <= 760) {
+                                System.out.println("U");
+                            } else if (xpos >= 50 && xpos <= 110 && ypos >= 620 && ypos <= 680) {
+                                System.out.println("X");
+                            } else if (xpos >= 50 && xpos <= 110 && ypos >= 620 && ypos <= 680) {
+                                System.out.println("P");
+                            } else if (xpos >= 65 && xpos <= 111 && ypos >= 475 && ypos <= 555) {
+                                System.out.println("Y");
 
-                                     }
-                        else   if(xpos >= 100 && xpos <= 165 && ypos >= 820 && ypos <= 880 ){
-                            System.out.println("F");
-                        }
-                         else   if(xpos >= 125 && xpos <= 165 && ypos >= 725 && ypos <= 805 ){
-                            System.out.println("N");
-                        }
-                        else   if(xpos >= 105 && xpos <= 165 && ypos >= 660 && ypos <= 700 ){
-                            System.out.println("Z4");
-                        }
-                        else   if(xpos >= 100 && xpos <= 165 && ypos >= 295 && ypos <= 360 ){
-                            System.out.println("V5");
-                        }
-                         else   if(xpos >= 100 && xpos <= 165 && ypos >= 220 && ypos <= 285 ){
-                            System.out.println("Z5");
+                            } else if (xpos >= 100 && xpos <= 165 && ypos >= 820 && ypos <= 880) {
+                                System.out.println("F");
+                            } else if (xpos >= 125 && xpos <= 165 && ypos >= 725 && ypos <= 805) {
+                                System.out.println("N");
+                            } else if (xpos >= 105 && xpos <= 165 && ypos >= 660 && ypos <= 700) {
+                                System.out.println("Z4");
+                            } else if (xpos >= 100 && xpos <= 165 && ypos >= 295 && ypos <= 360) {
+                                System.out.println("V5");
+                            } else if (xpos >= 100 && xpos <= 165 && ypos >= 220 && ypos <= 285) {
+                                System.out.println("Z5");
+                            }
                         }
                         /////////
                         Board.AddPiecePixel(e.getX(), e.getY(),Piece.Block.ONE);
