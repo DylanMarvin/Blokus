@@ -45,9 +45,9 @@ public void drawAll(int xpos, int ypos,double rot, double xscale,double yscale, 
         gapXDistance+=25;
         drawPieceL5(xpos+gapXDistance,ypos,0,1,1,g);
         gapXDistance+=20;
-        drawPieceT4(xpos+gapXDistance,ypos,0,1,1,g);
+        drawPieceT5(xpos+gapXDistance+5,ypos,0,1,1,g);
         gapXDistance+=40;
-        drawPieceT5(xpos+gapXDistance,ypos,0,1,1,g);
+        drawPieceT4(xpos+gapXDistance,ypos,0,1,1,g);
         drawPieceO(xpos,ypos+gapYDistance,0,1,1,g);
         gapXDistance=0;
         gapXDistance+=25;
@@ -68,9 +68,9 @@ public void drawAll(int xpos, int ypos,double rot, double xscale,double yscale, 
         gapXDistance += 50;
         drawPieceZ4(xpos+gapXDistance,ypos+42,0,0,0,g);
         gapXDistance += 60;
-        drawPieceZ5(xpos+gapXDistance,ypos+42,0,0,0,g);
+        drawPieceZ5(xpos+gapXDistance+140,ypos+42,0,0,0,g);
         gapXDistance += 50;
-        drawPieceV5(xpos+gapXDistance,ypos+42,0,0,0,g);
+        drawPieceV5(xpos+gapXDistance+55,ypos+42,0,0,0,g);
         
         g.scale( 1.0/xscale,1.0/yscale );
         g.rotate(-rot  * Math.PI/180.0);
