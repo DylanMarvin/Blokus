@@ -138,16 +138,16 @@ public class Blokus extends JFrame implements Runnable {
                     color2 = Color.white;
                 }
                  if(xpos >= 5 && xpos <= 440 && ypos >= 5 && ypos <= 450){
-                             colorOne = Color.YELLOW;
+                             colorTwo = Color.YELLOW;
                         }
                  else {
-                    colorOne = Color.white;
+                    colorTwo = Color.white;
                 }
                         if(xpos >= 5 && xpos <= 440 && ypos >= 450 && ypos <= 895){
-                               colorFour = Color.YELLOW;
+                               colorThree = Color.YELLOW;
                         }
                         else {
-                    colorFour = Color.white;
+                    colorThree = Color.white;
                 }
                         if(xpos >= 450 && xpos <= 865 && ypos >= 25 && ypos <= 450){
                                  colorTwo = Color.YELLOW;
@@ -156,10 +156,10 @@ public class Blokus extends JFrame implements Runnable {
                     colorTwo = Color.white;
                 }
                         if(xpos >= 450 && xpos <= 865 && ypos >= 450 && ypos <= 895){
-                                  colorThree = Color.YELLOW;
+                                  colorFour = Color.YELLOW;
                         }
                         else {
-                    colorThree = Color.white;
+                    colorFour = Color.white;
                 }
           
 //          System.out.println(xpos);
@@ -224,13 +224,13 @@ public class Blokus extends JFrame implements Runnable {
             g.drawString("Select Number of Players", 80, 100);
             g.setColor(colorOne);
             g.setFont(new Font("Arial", Font.BOLD, 150));
-            g.drawString("1", 150, 275);
+            
              g.setColor(colorTwo);
-            g.drawString("2", 600, 275);
+            g.drawString("2", 400, 275);
              g.setColor(colorThree);
-            g.drawString("3", 600, 700);
+            g.drawString("3", 150, 700);
              g.setColor(colorFour);
-            g.drawString("4", 150, 700);
+            g.drawString("4", 600, 700);
         } else if (gameState == Window.GameState.InGame) {
 //fill background
 
