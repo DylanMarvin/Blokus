@@ -11,7 +11,8 @@ public class Player {
     private static Player players[] = new Player[4];
     private Color color;
     private int playerNum;
-    private Outside_Pieces Pieces;
+    private Outside_Pieces Pieces; 
+    private int numPieces;
     
     public static void Reset(){
         
@@ -26,21 +27,18 @@ public class Player {
     
     Player(int _num){       
         playerNum = _num;
+        numPieces = 21;
         if(playerNum == 1){
-            color = Color.blue; 
-            System.out.println(_num + "Blue Player");
+            color = Color.blue;            
         }
         else if(playerNum == 2){
-            color = Color.yellow;  
-            System.out.println(_num + "Red Player");
+            color = Color.yellow; 
         }
         else if(playerNum == 3){
             color = Color.red;          
-            System.out.println(_num + "Yellow Player");
         }
         else if(playerNum == 4){
-            color = Color.green;
-            System.out.println(_num + "Green Player");            
+            color = Color.green;          
         }
         
     }

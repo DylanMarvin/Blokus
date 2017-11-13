@@ -115,33 +115,33 @@ public class Board {
             
             }
             if (piece.getBlock() == Piece.Block.T4) {                
-            piece.T4(board);
+                piece.T4(board);
             }
             if (piece.getBlock() == Piece.Block.T5) {                
-            piece.T5(board);
+                piece.T5(board);
             }
             if (piece.getBlock() == Piece.Block.U) {                
-            piece.U(board);
+                piece.U(board);
             }
             if (piece.getBlock() == Piece.Block.V3) {                
-            piece.V3(board);
+                piece.V3(board);
             }
             if (piece.getBlock() == Piece.Block.V5) {                
-            piece.V5(board);
+                piece.V5(board);
             }
              if (piece.getBlock() == Piece.Block.F) {                
-            piece.F(board);
+                piece.F(board);
             }
             if (piece.getBlock() == Piece.Block.X) {                
-            piece.X(board);
+                piece.X(board);
             }
             if (piece.getBlock() == Piece.Block.Y) {                
-            piece.Y(board);
+                piece.Y(board);
             }if (piece.getBlock() == Piece.Block.Z4) {                
-            piece.Z4(board);
+                piece.Z4(board);
             }
             if (piece.getBlock() == Piece.Block.Z5) {                
-            piece.Z5(board);
+                piece.Z5(board);
             }
             
             
