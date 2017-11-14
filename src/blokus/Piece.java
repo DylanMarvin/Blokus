@@ -51,7 +51,7 @@ public class Piece {
     public void I3(Piece board[][]) {
         board[row][column] = this;
         board[row][column + 1] = this;
-        board[row][column - 1] = this;
+        board[row][column + 2] = this;
     }
 
     public void I4(Piece board[][]) {
@@ -71,8 +71,8 @@ public class Piece {
 
     public void V3(Piece board[][]) {
         board[row][column] = this;
-        board[row][column + 1] = this;
-        board[row - 1][column] = this;
+        board[row + 1][column + 1] = this;
+        board[row + 1][column] = this;
     }
 
     public void L4(Piece board[][]) {
@@ -92,18 +92,17 @@ public class Piece {
 
     public void T4(Piece board[][]) {
         board[row][column] = this;
-        board[row + 1][column] = this;
-        board[row + 2][column] = this;
-        board[row][column - 1] = this;
-        board[row][column + 1] = this;
+        board[row + 1][column+1] = this;       
+        board[row][column +1] = this;
+        board[row][column + 2] = this;
     }
 
     public void T5(Piece board[][]) {
         board[row][column] = this;
-        board[row + 1][column] = this;
-        board[row + 2][column] = this;
-        board[row][column + 1] = this;
-        board[row][column - 1] = this;
+        board[row + 1][column+1] = this;       
+        board[row][column +1] = this;
+        board[row][column + 2] = this;
+        board[row + 2][column + 1] = this;
     }
 
     public void O(Piece board[][]) {

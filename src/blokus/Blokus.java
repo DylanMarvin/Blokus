@@ -27,6 +27,8 @@ public class Blokus extends JFrame implements Runnable {
     Image menu1;
     Image board;
     Image menu2;
+    
+    private Piece.Block selectedPiece = null;
 
     Color color;
     Color color2;
@@ -85,8 +87,209 @@ public class Blokus extends JFrame implements Runnable {
                     } else if (gameState == Window.GameState.InGame) {
                         /////////
                         if(Player.GetCurrentPlayer() == Player.getPlayer(1)){
+                            if(selectedPiece != null){
+                                Board.AddPiecePixel(xpos, ypos, selectedPiece);
+                                selectedPiece = null;
+                            }
+                            else{
+                                selectedPiece = null;
+                            }
+                            
                             if(xpos >= 15 && xpos <= 35 && ypos >= 45 && ypos <= 65){
-                                 System.out.println("ONE");
+                                selectedPiece = Piece.Block.ONE;
+                                System.out.println("ONE");
+                            }
+                            else if(xpos >= 45 && xpos <= 88 && ypos >= 47 && ypos <= 65){
+                                selectedPiece = Piece.Block.TWO;
+                                 System.out.println("TWO");
+                            }
+                            else if(xpos >= 98 && xpos <= 160 && ypos >= 47 && ypos <= 65){
+                                selectedPiece = Piece.Block.I3;
+                                 System.out.println("I3");
+                            }
+                            else if(xpos >= 170 && xpos <= 255 && ypos >= 47 && ypos <= 65){
+                                selectedPiece = Piece.Block.I4;
+                                 System.out.println("I4");
+                            }
+                            else if(xpos >= 265 && xpos <= 370 && ypos >= 47 && ypos <= 65){
+                                selectedPiece = Piece.Block.I5;
+                                 System.out.println("I5");
+                            }
+                            else if(xpos >= 380 && xpos <= 420 && ypos >= 47 && ypos <= 88){
+                                selectedPiece = Piece.Block.V3;
+                                 System.out.println("V3");
+                            }
+                            else if(xpos >= 435 && xpos <= 475 && ypos >= 47 && ypos <= 109){
+                                selectedPiece = Piece.Block.L4;
+                                 System.out.println("L4");
+                            }
+                            else if(xpos >= 487 && xpos <= 530 && ypos >= 47 && ypos <= 130){
+                                selectedPiece = Piece.Block.L5;
+                                 System.out.println("L5");
+                            }      
+                            else if(xpos >= 540 && xpos <= 600 && ypos >= 47 && ypos <= 110){
+                                selectedPiece = Piece.Block.T5;
+                                 System.out.println("T5");
+                            }
+                            else if(xpos >= 613 && xpos <= 675 && ypos >= 47 && ypos <= 88){
+                                selectedPiece = Piece.Block.T4;
+                                 System.out.println("T4");
+                            }
+                            else if(xpos >= 15 && xpos <= 55 && ypos >= 75 && ypos <= 115){
+                                selectedPiece = Piece.Block.O;
+                                 System.out.println("O");
+                            }
+                            else if(xpos >= 68 && xpos <= 130 && ypos >= 75 && ypos <= 140){
+                                selectedPiece = Piece.Block.W;
+                                 System.out.println("W");
+                            }
+                            else if(xpos >= 140 && xpos <= 203 && ypos >= 75 && ypos <= 120){
+                                selectedPiece = Piece.Block.U;
+                                 System.out.println("U");
+                            }
+                            else if(xpos >= 215 && xpos <= 275 && ypos >= 75 && ypos <= 140){
+                                selectedPiece = Piece.Block.X;
+                                 System.out.println("X");
+                            }
+                            else if(xpos >= 285 && xpos <= 330 && ypos >= 75 && ypos <= 140){
+                                selectedPiece = Piece.Block.P;
+                                 System.out.println("P");
+                            }
+                            else if(xpos >= 340 && xpos <= 425 && ypos >= 100 && ypos <= 140){
+                                selectedPiece = Piece.Block.Y;
+                                 System.out.println("Y");
+                            }
+                            else if(xpos >= 15 && xpos <= 75 && ypos >= 135 && ypos <= 200){
+                                selectedPiece = Piece.Block.F;
+                                 System.out.println("F");
+                            }
+                            else if(xpos >= 88 && xpos <= 170 && ypos >= 155 && ypos <= 200){
+                                selectedPiece = Piece.Block.N;
+                                 System.out.println("N");
+                            }
+                            else if(xpos >= 180 && xpos <= 225 && ypos >= 135 && ypos <= 200){
+                                selectedPiece = Piece.Block.Z4;
+                                 System.out.println("Z4");
+                            }
+                            else if(xpos >= 540 && xpos <= 600 && ypos >= 135 && ypos <= 200){
+                                selectedPiece = Piece.Block.V5;
+                                 System.out.println("V5");
+                            }
+                            else if(xpos >= 615 && xpos <= 675 && ypos >= 135 && ypos <= 200){
+                                selectedPiece = Piece.Block.Z5;
+                                 System.out.println("Z5");
+                            }
+                         }
+                        
+                        /////////
+                        else if(Player.GetCurrentPlayer() == Player.getPlayer(2)){
+                            if(selectedPiece != null){
+                                Board.AddPiecePixel(xpos, ypos, selectedPiece);
+                                selectedPiece = null;
+                            }
+                            else{
+                                selectedPiece = null;
+                            }
+                            
+                            if(xpos >= 840 && xpos <= 860 && ypos >= 44 && ypos <= 66){
+                                selectedPiece = Piece.Block.ONE;
+                                System.out.println("ONE");
+                            }
+                            else if(xpos >= 840 && xpos <= 860 && ypos >= 76 && ypos <= 118){
+                                selectedPiece = Piece.Block.TWO;
+                                System.out.println("TWO");
+                            }
+                            else if(xpos >= 840 && xpos <= 860 && ypos >= 129 && ypos <= 192){
+                                selectedPiece = Piece.Block.I3;
+                                System.out.println("I3");
+                            }
+                            else if(xpos >= 840 && xpos <= 860 && ypos >= 202 && ypos <= 286){
+                                selectedPiece = Piece.Block.I4;
+                                System.out.println("I4");
+                            }
+                            else if(xpos >= 840 && xpos <= 860 && ypos >= 296 && ypos <= 402){
+                                selectedPiece = Piece.Block.I5;
+                                System.out.println("I5");
+                            }
+                            else if(xpos >= 820 && xpos <= 860 && ypos >= 411 && ypos <= 452){
+                                selectedPiece = Piece.Block.V3;
+                                System.out.println("V3");
+                            }
+                            else if(xpos >= 800 && xpos <= 860 && ypos >= 464 && ypos <= 507){
+                                selectedPiece = Piece.Block.L4;
+                                System.out.println("L4");
+                            }
+                            else if(xpos >= 777 && xpos <= 860 && ypos >= 516 && ypos <= 558){
+                                selectedPiece = Piece.Block.L4;
+                                System.out.println("L5");
+                            }
+                            else if(xpos >= 800 && xpos <= 860 && ypos >= 571 && ypos <= 632){
+                                selectedPiece = Piece.Block.T5;
+                                System.out.println("T5");
+                            }
+                            else if(xpos >= 820 && xpos <= 860 && ypos >= 643 && ypos <= 706){
+                                selectedPiece = Piece.Block.T4;
+                                System.out.println("T4");
+                            }
+                            else if(xpos >= 787 && xpos <= 830 && ypos >= 44 && ypos <= 86){
+                                selectedPiece = Piece.Block.ONE;
+                                System.out.println("O");
+                            }
+                            else if(xpos >= 766 && xpos <= 830 && ypos >= 97 && ypos <= 158){
+                                selectedPiece = Piece.Block.W;
+                                System.out.println("W");
+                            }
+                            else if(xpos >= 787 && xpos <= 830 && ypos >= 170 && ypos <= 234){
+                                selectedPiece = Piece.Block.U;
+                                System.out.println("U");
+                            }
+                            else if(xpos >= 766 && xpos <= 830 && ypos >= 245 && ypos <= 305){
+                                selectedPiece = Piece.Block.X;
+                                System.out.println("x");
+                            }
+                            else if(xpos >= 766 && xpos <= 830 && ypos >= 318 && ypos <= 360){
+                                selectedPiece = Piece.Block.P;
+                                System.out.println("P");
+                            }
+                            else if(xpos >= 766 && xpos <= 808 && ypos >= 369 && ypos <= 453){
+                                selectedPiece = Piece.Block.Y;
+                                System.out.println("Y");
+                            }
+                            else if(xpos >= 709 && xpos <= 773 && ypos >= 44 && ypos <= 107){
+                                selectedPiece = Piece.Block.F;
+                                System.out.println("F");
+                            }
+                            else if(xpos >= 709 && xpos <= 751 && ypos >= 117 && ypos <= 202){
+                                selectedPiece = Piece.Block.N;
+                                System.out.println("N");
+                            }
+                            else if(xpos >= 709 && xpos <= 773 && ypos >= 211 && ypos <= 253){
+                                selectedPiece = Piece.Block.Z4;
+                                System.out.println("Z4");
+                            }
+                            else if(xpos >= 709 && xpos <= 773 && ypos >= 570 && ypos <= 632){
+                                selectedPiece = Piece.Block.V5;
+                                System.out.println("V5");
+                            }
+                            else if(xpos >= 709 && xpos <= 773 && ypos >= 643 && ypos <= 706){
+                                selectedPiece = Piece.Block.Z5;
+                                System.out.println("Z5");
+                            }
+                        }
+                        /////////
+                        
+                        else if(Player.GetCurrentPlayer() == Player.getPlayer(3)){
+                            if(selectedPiece != null){
+                                Board.AddPiecePixel(xpos, ypos, selectedPiece);
+                                selectedPiece = null;
+                            }
+                            else{
+                                selectedPiece = null;
+                            }
+                            
+                            if(xpos >= (15+88) && xpos <= (35+88) && ypos >= (45+323) && ypos <= (65+323)){
+                                selectedPiece = Piece.Block.ONE;
+                                System.out.println("ONE");
                             }
                             else if(xpos >= 45 && xpos <= 88 && ypos >= 47 && ypos <= 65){
                                  System.out.println("TWO");
@@ -151,123 +354,82 @@ public class Blokus extends JFrame implements Runnable {
                          }
                         
                         /////////
-                        if(Player.GetCurrentPlayer() == Player.getPlayer(2)){
-                            if(xpos >= 840 && xpos <= 860 && ypos >= 44 && ypos <= 66){
-                                System.out.println("ONE");
+                        else if(Player.GetCurrentPlayer() == Player.getPlayer(4)){
+                            if(selectedPiece != null){
+                                Board.AddPiecePixel(xpos, ypos, selectedPiece);
+                                selectedPiece = null;
                             }
-                            else if(xpos >= 840 && xpos <= 860 && ypos >= 76 && ypos <= 118){
-                                System.out.println("TWO");
+                            else{
+                                selectedPiece = null;
                             }
-                            else if(xpos >= 840 && xpos <= 860 && ypos >= 129 && ypos <= 192){
-                                System.out.println("I3");
-                            }
-                            else if(xpos >= 840 && xpos <= 860 && ypos >= 202 && ypos <= 286){
-                                System.out.println("I4");
-                            }
-                            else if(xpos >= 840 && xpos <= 860 && ypos >= 296 && ypos <= 402){
-                                System.out.println("I5");
-                            }
-                            else if(xpos >= 820 && xpos <= 860 && ypos >= 411 && ypos <= 452){
-                                System.out.println("V3");
-                            }
-                            else if(xpos >= 800 && xpos <= 860 && ypos >= 464 && ypos <= 507){
-                                System.out.println("L4");
-                            }
-                            else if(xpos >= 777 && xpos <= 860 && ypos >= 516 && ypos <= 558){
-                                System.out.println("L5");
-                            }
-                            else if(xpos >= 800 && xpos <= 860 && ypos >= 571 && ypos <= 632){
-                                System.out.println("T5");
-                            }
-                            else if(xpos >= 820 && xpos <= 860 && ypos >= 643 && ypos <= 706){
-                                System.out.println("T4");
-                            }
-                            else if(xpos >= 787 && xpos <= 830 && ypos >= 44 && ypos <= 86){
-                                System.out.println("O");
-                            }
-                            else if(xpos >= 766 && xpos <= 830 && ypos >= 97 && ypos <= 158){
-                                System.out.println("W");
-                            }
-                            else if(xpos >= 787 && xpos <= 830 && ypos >= 170 && ypos <= 234){
-                                System.out.println("U");
-                            }
-                            else if(xpos >= 766 && xpos <= 830 && ypos >= 245 && ypos <= 305){
-                                System.out.println("UR");
-                            }
-                            else if(xpos >= 766 && xpos <= 830 && ypos >= 318 && ypos <= 360){
-                                System.out.println("X");
-                            }
-                            else if(xpos >= 766 && xpos <= 808 && ypos >= 369 && ypos <= 453){
-                                System.out.println("P");
-                            }
-                            else if(xpos >= 709 && xpos <= 773 && ypos >= 44 && ypos <= 107){
-                                System.out.println("Y");
-                            }
-                            else if(xpos >= 709 && xpos <= 773 && ypos >= 44 && ypos <= 107){
-                                System.out.println("F");
-                            }
-                            else if(xpos >= 709 && xpos <= 751 && ypos >= 117 && ypos <= 202){
-                                System.out.println("N");
-                            }
-                            else if(xpos >= 709 && xpos <= 773 && ypos >= 211 && ypos <= 253){
-                                System.out.println("Z4");
-                            }
-                            else if(xpos >= 709 && xpos <= 773 && ypos >= 570 && ypos <= 632){
-                                System.out.println("V5");
-                            }
-                            else if(xpos >= 709 && xpos <= 773 && ypos >= 643 && ypos <= 706){
-                                System.out.println("Z5");
-                            }
-                        }
-                        /////////
-                        if(Player.GetCurrentPlayer() == Player.getPlayer(4)){
+                            
                             if (xpos >= 15 && xpos <= 35 && ypos >= 860 && ypos <= 885) {
+                                selectedPiece = Piece.Block.ONE;
                                 System.out.println("ONE");
-                            } else if (xpos >= 15 && xpos <= 35 && ypos >= 808 && ypos <= 850) {
+                            } 
+                            else if (xpos >= 15 && xpos <= 35 && ypos >= 808 && ypos <= 850) {
                                 System.out.println("TWO");
-                            } else if (xpos >= 15 && xpos <= 35 && ypos >= 735 && ypos <= 800) {
+                            } 
+                            else if (xpos >= 15 && xpos <= 35 && ypos >= 735 && ypos <= 800) {
                                 System.out.println("I3");
-                            } else if (xpos >= 15 && xpos <= 35 && ypos >= 640 && ypos <= 725) {
+                            } 
+                            else if (xpos >= 15 && xpos <= 35 && ypos >= 640 && ypos <= 725) {
                                 System.out.println("I4");
-                            } else if (xpos >= 15 && xpos <= 35 && ypos >= 525 && ypos <= 630) {
+                            } 
+                            else if (xpos >= 15 && xpos <= 35 && ypos >= 525 && ypos <= 630) {
                                 System.out.println("I5");
-                            } else if (xpos >= 15 && xpos <= 55 && ypos >= 475 && ypos <= 510) {
+                            } 
+                            else if (xpos >= 15 && xpos <= 55 && ypos >= 475 && ypos <= 510) {
                                 System.out.println("V3");
-                            } else if (xpos >= 15 && xpos <= 75 && ypos >= 420 && ypos <= 460) {
+                            } 
+                            else if (xpos >= 15 && xpos <= 75 && ypos >= 420 && ypos <= 460) {
                                 System.out.println("L4");
-                            } else if (xpos >= 15 && xpos <= 100 && ypos >= 370 && ypos <= 400) {
+                            } 
+                            else if (xpos >= 15 && xpos <= 100 && ypos >= 370 && ypos <= 400) {
                                 System.out.println("L5");
-                            } else if (xpos >= 15 && xpos <= 80 && ypos >= 305 && ypos <= 370) {
+                            } 
+                            else if (xpos >= 15 && xpos <= 80 && ypos >= 305 && ypos <= 370) {
                                 System.out.println("T5");
-                            } else if (xpos >= 15 && xpos <= 60 && ypos >= 220 && ypos <= 280) {
+                            } 
+                            else if (xpos >= 15 && xpos <= 60 && ypos >= 220 && ypos <= 280) {
                                 System.out.println("T4");
-                            } else if (xpos >= 50 && xpos <= 85 && ypos >= 840 && ypos <= 880) {
+                            } 
+                            else if (xpos >= 50 && xpos <= 85 && ypos >= 840 && ypos <= 880) {
                                 System.out.println("O");
-                            } else if (xpos >= 50 && xpos <= 85 && ypos >= 840 && ypos <= 880) {
+                            } 
+                            else if (xpos >= 50 && xpos <= 85 && ypos >= 840 && ypos <= 880) {
                                 System.out.println("W");
-                            } else if (xpos >= 50 && xpos <= 90 && ypos >= 700 && ypos <= 760) {
+                            } 
+                            else if (xpos >= 50 && xpos <= 90 && ypos >= 700 && ypos <= 760) {
                                 System.out.println("U");
-                            } else if (xpos >= 50 && xpos <= 110 && ypos >= 620 && ypos <= 680) {
+                            } 
+                            else if (xpos >= 50 && xpos <= 110 && ypos >= 620 && ypos <= 680) {
                                 System.out.println("X");
-                            } else if (xpos >= 50 && xpos <= 110 && ypos >= 620 && ypos <= 680) {
+                            } 
+                            else if (xpos >= 50 && xpos <= 110 && ypos >= 620 && ypos <= 680) {
                                 System.out.println("P");
-                            } else if (xpos >= 65 && xpos <= 111 && ypos >= 475 && ypos <= 555) {
+                            } 
+                            else if (xpos >= 65 && xpos <= 111 && ypos >= 475 && ypos <= 555) {
                                 System.out.println("Y");
-
-                            } else if (xpos >= 100 && xpos <= 165 && ypos >= 820 && ypos <= 880) {
+                            } 
+                            else if (xpos >= 100 && xpos <= 165 && ypos >= 820 && ypos <= 880) {
                                 System.out.println("F");
-                            } else if (xpos >= 125 && xpos <= 165 && ypos >= 725 && ypos <= 805) {
+                            } 
+                            else if (xpos >= 125 && xpos <= 165 && ypos >= 725 && ypos <= 805) {
                                 System.out.println("N");
-                            } else if (xpos >= 105 && xpos <= 165 && ypos >= 660 && ypos <= 700) {
+                            } 
+                            else if (xpos >= 105 && xpos <= 165 && ypos >= 660 && ypos <= 700) {
                                 System.out.println("Z4");
-                            } else if (xpos >= 100 && xpos <= 165 && ypos >= 295 && ypos <= 360) {
+                            } 
+                            else if (xpos >= 100 && xpos <= 165 && ypos >= 295 && ypos <= 360) {
                                 System.out.println("V5");
-                            } else if (xpos >= 100 && xpos <= 165 && ypos >= 220 && ypos <= 285) {
+                            } 
+                            else if (xpos >= 100 && xpos <= 165 && ypos >= 220 && ypos <= 285) {
                                 System.out.println("Z5");
                             }
                         }
                         /////////
-                        Board.AddPiecePixel(e.getX(), e.getY(),Piece.Block.ONE);
+                        
                     }
 
                 }
@@ -292,40 +454,47 @@ public class Blokus extends JFrame implements Runnable {
             public void mouseMoved(MouseEvent e) {
                 int xpos = e.getX();
                 int ypos = e.getY();
-
-                if (xpos >= 270 && xpos <= 570 && ypos >= 600 && ypos <= 650) {
-                    color = Color.yellow;
-                } else {
-                    color = Color.white;
+                
+                if(gameState == Window.GameState.Menu){
+                    if (xpos >= 270 && xpos <= 570 && ypos >= 600 && ypos <= 650) {
+                        color = Color.yellow;
+                    } else {
+                        color = Color.white;
+                    }
                 }
-                if (xpos >= 270 && xpos <= 570 && ypos >= 680 && ypos <= 730) {
-                    color2 = Color.yellow;
-                } else {
-                    color2 = Color.white;
-                }
-                 if(xpos >= 5 && xpos <= 440 && ypos >= 5 && ypos <= 450){
-                             colorTwo = Color.YELLOW;
-                        }
-                 else {
-                    colorTwo = Color.white;
-                }
-                        if(xpos >= 5 && xpos <= 440 && ypos >= 450 && ypos <= 895){
-                               colorThree = Color.YELLOW;
-                        }
-                        else {
-                    colorThree = Color.white;
-                }
-                        if(xpos >= 450 && xpos <= 865 && ypos >= 25 && ypos <= 450){
+                else if(gameState == Window.GameState.Menu2){
+                    if (xpos >= 270 && xpos <= 570 && ypos >= 680 && ypos <= 730) {
+                        color2 = Color.yellow;
+                    } else {
+                        color2 = Color.white;
+                    }
+                     if(xpos >= 5 && xpos <= 440 && ypos >= 5 && ypos <= 450){
                                  colorTwo = Color.YELLOW;
-                        }
-                        else {
-                    colorTwo = Color.white;
+                            }
+                     else {
+                        colorTwo = Color.white;
+                    }
+                            if(xpos >= 5 && xpos <= 440 && ypos >= 450 && ypos <= 895){
+                                   colorThree = Color.YELLOW;
+                            }
+                            else {
+                        colorThree = Color.white;
+                    }
+                            if(xpos >= 450 && xpos <= 865 && ypos >= 25 && ypos <= 450){
+                                     colorTwo = Color.YELLOW;
+                            }
+                            else {
+                        colorTwo = Color.white;
+                    }
+                            if(xpos >= 450 && xpos <= 865 && ypos >= 450 && ypos <= 895){
+                                      colorFour = Color.YELLOW;
+                            }
+                            else {
+                        colorFour = Color.white;
+                    }
                 }
-                        if(xpos >= 450 && xpos <= 865 && ypos >= 450 && ypos <= 895){
-                                  colorFour = Color.YELLOW;
-                        }
-                        else {
-                    colorFour = Color.white;
+                else if(gameState == Window.GameState.InGame){
+
                 }
           
 //          System.out.println(xpos);
@@ -488,6 +657,9 @@ public class Blokus extends JFrame implements Runnable {
             menu2 = Toolkit.getDefaultToolkit().getImage("assets/images/menu2.jpg");
             reset();
 
+        }
+        if(Player.GetCurrentPlayer() == Player.getPlayer(3)){
+            System.out.println("sdfd");
         }
 
     }
