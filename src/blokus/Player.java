@@ -11,8 +11,9 @@ public class Player {
     private static Player players[] = new Player[4];
     private Color color;
     private int playerNum;
-    private Outside_Pieces Pieces; 
+    private  Outside_Pieces Pieces; 
     private int numPieces;
+    private boolean firstPiece;
     
     public static void Reset(){
         
@@ -89,7 +90,14 @@ public class Player {
                 currentTurn = players[0];
            return(currentTurn);
        }
-
+       public boolean firstPlace(){
+         
+           return(firstPiece);
+       }
+       
+       public  Outside_Pieces getOutsidePieces(){
+           return(Pieces);
+       }
     public static Player GetNextPlayer(){             
         return players[(currentTurn.getPlayerNum()+1)];
     }

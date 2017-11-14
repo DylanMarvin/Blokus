@@ -22,6 +22,9 @@ public class Blokus extends JFrame implements Runnable {
     boolean animateFirstTime = true;
     Image image;
     Graphics2D g;
+    Boolean yes;
+    int Xpos;
+    int Ypos;
 
     private Window.GameState gameState = Window.GameState.Menu;
     Image menu1;
@@ -376,7 +379,8 @@ public class Blokus extends JFrame implements Runnable {
             public void mouseMoved(MouseEvent e) {
                 int xpos = e.getX();
                 int ypos = e.getY();
-                
+                Xpos = xpos;
+                Ypos = ypos;
                 if(gameState == Window.GameState.Menu){
                     if (xpos >= 270 && xpos <= 570 && ypos >= 600 && ypos <= 650) {
                         color = Color.yellow;
@@ -416,7 +420,12 @@ public class Blokus extends JFrame implements Runnable {
                     }
                 }
                 else if(gameState == Window.GameState.InGame){
-
+                        if(selectedPiece != null ){
+                            if(selectedPiece == Piece.Block.ONE ){
+                                yes = true;
+                                
+                            }
+                        }
                 }
           
 //          System.out.println(xpos);
@@ -553,6 +562,13 @@ public class Blokus extends JFrame implements Runnable {
 
         Board.Draw(g,board,this);
         Player.Draw(g, this);
+        
+        if(selectedPiece != null ){
+            if( yes == true && selectedPiece == Piece.Block.ONE ){               
+                Player.GetCurrentPlayer().getOutsidePieces().drawPiece1(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+               
+            }
+        }
 
         }
 

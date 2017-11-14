@@ -52,6 +52,14 @@ public class Board {
 
             Piece piece = new Piece(Player.GetCurrentPlayer().getColor(), block, zrow, zcol);
             
+            if(Player.GetCurrentPlayer().firstPlace() == true){
+                if(Player.GetCurrentPlayer() == Player.getPlayer(1)){
+                    if(zrow != 0 && zcol != 0){
+
+                    }
+                }
+            }
+            
             if (piece.getBlock() == Piece.Block.ONE) { 
                 if(checkPieceH(zrow,zcol,1) && checkPieceV(zrow,zcol,1)){
                     board[zrow][zcol] = piece;                           
