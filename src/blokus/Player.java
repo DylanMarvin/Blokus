@@ -24,7 +24,6 @@ public class Player {
         }   
         currentTurn = players[0];
     }
-    
     Player(int _num){       
         playerNum = _num;
         numPieces = 21;

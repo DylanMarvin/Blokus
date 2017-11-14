@@ -503,6 +503,25 @@ public class Blokus extends JFrame implements Runnable {
 // draw border
             g.setColor(Color.black);
             g.drawPolyline(x, y, 5);
+//Color Player's Side when it's their turn
+            if(Player.GetCurrentPlayer() == Player.getPlayer(1)){
+                g.setColor(Color.BLACK);
+                g.fillRect(Window.WINDOW_BORDER - 5, Window.YTITLE + Window.WINDOW_BORDER - 5, 
+                        Window.XBORDER + Window.getHeight2() + 5, Window.WINDOW_BORDER - 8 + Window.YBORDER - 3);
+            }
+            if(Player.GetCurrentPlayer() == Player.getPlayer(2)){
+                g.setColor(Color.BLACK);
+                g.fillRect(688,34,192,677);
+            }
+            if(Player.GetCurrentPlayer() == Player.getPlayer(3)){
+                g.setColor(Color.BLACK);
+                g.fillRect(188,710,700,200);
+            }
+            if(Player.GetCurrentPlayer() == Player.getPlayer(4)){
+                g.setColor(Color.BLACK);
+                g.fillRect(0,211,188,700);
+            }
+///////////////////////
 //draw outline
             g.setColor(Color.BLACK);
             g.drawRect(Window.WINDOW_BORDER - 5, Window.YTITLE + Window.WINDOW_BORDER - 5, Window.WINDOW_WIDTH - 7, Window.WINDOW_HEIGHT - 37);
@@ -520,7 +539,6 @@ public class Blokus extends JFrame implements Runnable {
             g.drawLine(Window.XBORDER + Window.getWidth2() + 8, Window.YTITLE + Window.WINDOW_BORDER - 5 + Window.YBORDER - 3 + Window.getHeight2(),
                     Window.XBORDER + Window.getWidth2() + 20 + Window.XBORDER, Window.YTITLE + Window.WINDOW_BORDER - 5 + Window.YBORDER - 3 + Window.getHeight2());
 /////////////////////
-
 
             if (animateFirstTime) {
                 gOld.drawImage(image, 0, 0, null);
