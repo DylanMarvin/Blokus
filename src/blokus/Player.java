@@ -21,11 +21,12 @@ public class Player {
             for(int i = 0;i<numPlayers;i++){               
                 players[i] = new Player(i+1); 
                 players[i].Pieces = new Outside_Pieces(i+1);
-                players[i].firstPiece = true;
             }
         }   
         currentTurn = players[0];
-        
+        for(int i = 0;i<numPlayers;i++){               
+           players[i].firstPiece = true;
+       }
     }
     Player(int _num){       
         playerNum = _num;

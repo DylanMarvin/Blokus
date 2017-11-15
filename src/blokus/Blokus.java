@@ -277,7 +277,7 @@ public class Blokus extends JFrame implements Runnable {
                             } else if (xpos >= (15 + 185) && xpos <= (55 + 185) && ypos >= (47 + 680) && ypos <= (115 + 680)) {
                                 selectedPiece = Piece.Block.O;
 
-                            } else if (xpos >= (68 + 185) && xpos <= (130 + 185) && ypos >= (75 + 185) && ypos <= (140+680)) {
+                            } else if (xpos >= (68 + 185) && xpos <= (130 + 185) && ypos >= (75 + 680) && ypos <= (140+680)) {
                                 selectedPiece = Piece.Block.W;
 
                             } else if (xpos >= (140 + 185) && xpos <= (203 + 185) && ypos >= (75 + 680) && ypos <= (120 + 680)) {

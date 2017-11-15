@@ -53,9 +53,9 @@ public class Board {
             Piece piece = new Piece(Player.GetCurrentPlayer().getColor(), block, zrow, zcol);
             
             if(Player.GetCurrentPlayer().getFirstPiece() == true){
-                System.out.println("asfd");
+                System.out.println(zcol);
                 if(Player.GetCurrentPlayer() == Player.getPlayer(1)){                    
-                    if(zrow != 0 && zcol != 0){                        
+                    if(zrow != 0 || zcol != 0){                        
                         return;
                     }
                     else{
@@ -63,11 +63,27 @@ public class Board {
                     }
                 }
                 else if(Player.GetCurrentPlayer() == Player.getPlayer(2)){                    
-                    if(zrow != 0 && zcol != 10){                        
+                    if(zrow != 0 || zcol != 19){                        
                         return;
                     }
                     else{
                         Player.getPlayer(2).setFirstPiece();
+                    }
+                }
+                else if(Player.GetCurrentPlayer() == Player.getPlayer(3)){                    
+                    if(zrow != 19 || zcol != 19){                        
+                        return;
+                    }
+                    else{
+                        Player.getPlayer(3).setFirstPiece();
+                    }
+                }
+                else if(Player.GetCurrentPlayer() == Player.getPlayer(4)){                    
+                    if(zrow != 19 || zcol != 0){                        
+                        return;
+                    }
+                    else{
+                        Player.getPlayer(4).setFirstPiece();
                     }
                 }
             }
