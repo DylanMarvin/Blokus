@@ -57,22 +57,22 @@ public void drawAll(double xpos, double ypos,double rot, double xscale,double ys
         gapXDistance+=35;
         drawPieceU(xpos+gapXDistance,ypos+gapYDistance,0,1,1,g,this);
         gapXDistance+=45;
-        drawPieceX(xpos+gapXDistance,ypos+gapYDistance,0,0,0,g,this);
+        drawPieceX(xpos+gapXDistance,ypos+gapYDistance,0,1,1,g,this);
         gapXDistance += 25;
-        drawPieceP(xpos+gapXDistance,ypos+gapYDistance,0,0,0,g,this);
+        drawPieceP(xpos+gapXDistance,ypos+gapYDistance,0,1,1,g,this);
         gapXDistance += 25;
-        drawPieceY(xpos+gapXDistance,ypos+25,0,0,0,g,this);
+        drawPieceY(xpos+gapXDistance,ypos+25,0,1,1,g,this);
         gapXDistance += 115;
-        drawPieceF(xpos+10,ypos+42,0,0,0,g,this);
+        drawPieceF(xpos+10,ypos+42,0,1,1,g,this);
         gapXDistance = 0;
         gapXDistance += 35;
-        drawPieceN(xpos+gapXDistance,ypos+52,0,0,0,g,this);
+        drawPieceN(xpos+gapXDistance,ypos+52,0,1,1,g,this);
         gapXDistance += 50;
-        drawPieceZ4(xpos+gapXDistance-5,ypos+42,0,0,0,g,this);
+        drawPieceZ4(xpos+gapXDistance-5,ypos+42,0,1,1,g,this);
         gapXDistance += 60;
-        drawPieceZ5(xpos+gapXDistance+140,ypos+42,0,0,0,g,this);
+        drawPieceZ5(xpos+gapXDistance+140,ypos+42,0,1,1,g,this);
         gapXDistance += 50;
-        drawPieceV5(xpos+gapXDistance+55,ypos+42,0,0,0,g,this);
+        drawPieceV5(xpos+gapXDistance+55,ypos+42,0,1,1,g,this);
         
         g.scale( 1.0/xscale,1.0/yscale );
         g.rotate(-rot  * Math.PI/180.0);
@@ -172,123 +172,208 @@ public void drawAll(double xpos, double ypos,double rot, double xscale,double ys
     }
 
     public void drawPieceL4(double xpos, double ypos, double rot,double xscale,double yscale, Graphics2D g,Player player) {
+        g.rotate(rot  * Math.PI/180.0);
+        g.scale( xscale , yscale );
+        
         drawCube(xpos,ypos,0,1,1,g);  
         drawCube(xpos,ypos+10,0,1,1,g); 
         drawCube(xpos,ypos+20,0,1,1,g); 
         drawCube(xpos+10,ypos+20,0,1,1,g); 
+        
+        g.scale( 1.0/xscale,1.0/yscale );
+        g.rotate(-rot  * Math.PI/180.0);
     }
 
     public void drawPieceL5(double xpos, double ypos, double rot, double xscale,double yscale,Graphics2D g,Player player) {
+        g.rotate(rot  * Math.PI/180.0);
+        g.scale( xscale , yscale );
+        
         drawCube(xpos,ypos,0,1,1,g);  
         drawCube(xpos,ypos+10,0,1,1,g); 
         drawCube(xpos,ypos+20,0,1,1,g); 
         drawCube(xpos,ypos+30,0,1,1,g);
         drawCube(xpos+10,ypos+30,0,1,1,g); 
+        
+        g.scale( 1.0/xscale,1.0/yscale );
+        g.rotate(-rot  * Math.PI/180.0);
     }
 
     public void drawPieceT4(double xpos, double ypos, double rot, double xscale,double yscale,Graphics2D g,Player player) {
+        g.rotate(rot  * Math.PI/180.0);
+        g.scale( xscale , yscale );
+
         drawCube(xpos,ypos,0,1,1,g);  
         drawCube(xpos+10,ypos,0,1,1,g); 
         drawCube(xpos+10,ypos+10,0,1,1,g); 
         drawCube(xpos+20,ypos,0,1,1,g);
         
+        g.scale( 1.0/xscale,1.0/yscale );
+        g.rotate(-rot  * Math.PI/180.0);
     }
 
     public void drawPieceT5(double xpos, double ypos, double rot,double xscale,double yscale, Graphics2D g,Player player) {
+        g.rotate(rot  * Math.PI/180.0);
+        g.scale( xscale , yscale );
+
         drawCube(xpos,ypos,0,1,1,g);  
         drawCube(xpos+10,ypos,0,1,1,g); 
         drawCube(xpos+10,ypos+10,0,1,1,g); 
         drawCube(xpos+10,ypos+20,0,1,1,g); 
         drawCube(xpos+20,ypos,0,1,1,g);
+        
+        g.scale( 1.0/xscale,1.0/yscale );
+        g.rotate(-rot  * Math.PI/180.0);
     }
 
     public void drawPieceO(double xpos, double ypos, double rot, double xscale,double yscale,Graphics2D g,Player player) {
+        g.rotate(rot  * Math.PI/180.0);
+        g.scale( xscale , yscale );
+
         drawCube(xpos,ypos,0,1,1,g);  
         drawCube(xpos+10,ypos,0,1,1,g); 
         drawCube(xpos+10,ypos+10,0,1,1,g); 
         drawCube(xpos,ypos+10,0,1,1,g); 
         
+        g.scale( 1.0/xscale,1.0/yscale );
+        g.rotate(-rot  * Math.PI/180.0);
     }
 
     public void drawPieceW(double xpos, double ypos, double rot,double xscale,double yscale, Graphics2D g,Player player) {
+        g.rotate(rot  * Math.PI/180.0);
+        g.scale( xscale , yscale );
+
         drawCube(xpos,ypos,0,1,1,g);  
         drawCube(xpos,ypos+10,0,1,1,g); 
         drawCube(xpos+10,ypos+10,0,1,1,g); 
         drawCube(xpos+10,ypos+20,0,1,1,g); 
         drawCube(xpos+20,ypos+20,0,1,1,g);
+        
+        g.scale( 1.0/xscale,1.0/yscale );
+        g.rotate(-rot  * Math.PI/180.0);
     }
 
     public void drawPieceU(double xpos, double ypos, double rot, double xscale,double yscale,Graphics2D g,Player player) {
+        g.rotate(rot  * Math.PI/180.0);
+        g.scale( xscale , yscale );
+
         drawCube(xpos,ypos,0,1,1,g);  
         drawCube(xpos,ypos+10,0,1,1,g); 
         drawCube(xpos+10,ypos+10,0,1,1,g); 
         drawCube(xpos+20,ypos+10,0,1,1,g);
         drawCube(xpos+20,ypos,0,1,1,g);
         
+        g.scale( 1.0/xscale,1.0/yscale );
+        g.rotate(-rot  * Math.PI/180.0);
     }
 
     public void drawPieceX(double xpos, double ypos, double rot, double xscale,double yscale,Graphics2D g,Player player) {
+        g.rotate(rot  * Math.PI/180.0);
+        g.scale( xscale , yscale );
+        
         drawCube(xpos,ypos+10,0,1,1,g);  
         drawCube(xpos,ypos+10+10,0,1,1,g); 
         drawCube(xpos-10,ypos+10,0,1,1,g); 
         drawCube(xpos,ypos-10+10,0,1,1,g);
         drawCube(xpos+10,ypos+10,0,1,1,g);
+        
+        g.scale( 1.0/xscale,1.0/yscale );
+        g.rotate(-rot  * Math.PI/180.0);
     }
 
     public void drawPieceP(double xpos, double ypos, double rot, double xscale,double yscale,Graphics2D g,Player player) {
+        g.rotate(rot  * Math.PI/180.0);
+        g.scale( xscale , yscale );
+        
         drawCube(xpos,ypos,0,1,1,g);  
         drawCube(xpos+10,ypos,0,1,1,g); 
         drawCube(xpos+10,ypos+10,0,1,1,g); 
         drawCube(xpos,ypos+10,0,1,1,g); 
         drawCube(xpos,ypos+20,0,1,1,g);
+        
+        g.scale( 1.0/xscale,1.0/yscale );
+        g.rotate(-rot  * Math.PI/180.0);
     }
 
     public void drawPieceY(double xpos, double ypos, double rot, double xscale,double yscale,Graphics2D g,Player player) {
+        g.rotate(rot  * Math.PI/180.0);
+        g.scale( xscale , yscale );
+        
         drawCube(xpos,ypos,0,1,1,g);
         drawCube(xpos+10,ypos,0,1,1,g);
         drawCube(xpos+20,ypos,0,1,1,g);  
         drawCube(xpos+30,ypos,0,1,1,g); 
         drawCube(xpos+10,ypos+10,0,1,1,g);
+        
+        g.scale( 1.0/xscale,1.0/yscale );
+        g.rotate(-rot  * Math.PI/180.0);
     }
 
     public void drawPieceF(double xpos, double ypos, double rot, double xscale,double yscale,Graphics2D g,Player player) {
+        g.rotate(rot  * Math.PI/180.0);
+        g.scale( xscale , yscale );
+        
         drawCube(xpos,ypos,0,1,1,g);
         drawCube(xpos,ypos+10,0,1,1,g);
         drawCube(xpos-10,ypos+10,0,1,1,g);
         drawCube(xpos+10,ypos+10,0,1,1,g);
         drawCube(xpos-10,ypos+20,0,1,1,g);
         
+        g.scale( 1.0/xscale,1.0/yscale );
+        g.rotate(-rot  * Math.PI/180.0);
     }
 
     public void drawPieceN(double xpos, double ypos, double rot, double xscale,double yscale,Graphics2D g,Player player) {
+        g.rotate(rot  * Math.PI/180.0);
+        g.scale( xscale , yscale );
+        
         drawCube(xpos,ypos+10,0,1,1,g);
         drawCube(xpos+10,ypos+10,0,1,1,g);
         drawCube(xpos+10,ypos,0,1,1,g);
         drawCube(xpos+20,ypos,0,1,1,g);
         drawCube(xpos+30,ypos,0,1,1,g);
+        
+        g.scale( 1.0/xscale,1.0/yscale );
+        g.rotate(-rot  * Math.PI/180.0);
     }
 
     public void drawPieceZ4(double xpos, double ypos, double rot, double xscale,double yscale, Graphics2D g,Player player) {
+        g.rotate(rot  * Math.PI/180.0);
+        g.scale( xscale , yscale );
+        
         drawCube(xpos,ypos,0,1,1,g);
         drawCube(xpos,ypos+10,0,1,1,g);
         drawCube(xpos+10,ypos+10,0,1,1,g);
         drawCube(xpos+10,ypos+20,0,1,1,g);
+        
+        g.scale( 1.0/xscale,1.0/yscale );
+        g.rotate(-rot  * Math.PI/180.0);
     }
 
     public void drawPieceZ5(double xpos, double ypos, double rot, double xscale,double yscale,Graphics2D g,Player player) {
+        g.rotate(rot  * Math.PI/180.0);
+        g.scale( xscale , yscale );
+        
         drawCube(xpos,ypos,0,1,1,g);
         drawCube(xpos,ypos+10,0,1,1,g);
         drawCube(xpos+10,ypos+10,0,1,1,g);
         drawCube(xpos+20,ypos+10,0,1,1,g);
         drawCube(xpos+20,ypos+20,0,1,1,g);
+        
+        g.scale( 1.0/xscale,1.0/yscale );
+        g.rotate(-rot  * Math.PI/180.0);
     }
 
     public void drawPieceV5(double xpos, double ypos, double rot, double xscale,double yscale,Graphics2D g,Player player) {
+        g.rotate(rot  * Math.PI/180.0);
+        g.scale( xscale , yscale );
+        
         drawCube(xpos,ypos,0,1,1,g);  
         drawCube(xpos,ypos+10,0,1,1,g); 
         drawCube(xpos,ypos+20,0,1,1,g); 
         drawCube(xpos+10,ypos+20,0,1,1,g); 
         drawCube(xpos+20,ypos+20,0,1,1,g);
-
+        
+        g.scale( 1.0/xscale,1.0/yscale );
+        g.rotate(-rot  * Math.PI/180.0);
     }
 }
