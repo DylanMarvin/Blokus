@@ -90,9 +90,11 @@ public class Player {
                 currentTurn = players[0];
            return(currentTurn);
        }
-       public boolean firstPlace(){
-         
+       public boolean getFirstPiece(){
            return(firstPiece);
+       }
+       public void setFirstPiece(){
+           firstPiece = false;
        }
        
        public  Outside_Pieces getOutsidePieces(){

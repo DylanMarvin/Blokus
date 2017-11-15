@@ -52,10 +52,14 @@ public class Board {
 
             Piece piece = new Piece(Player.GetCurrentPlayer().getColor(), block, zrow, zcol);
             
-            if(Player.GetCurrentPlayer().firstPlace() == true){
-                if(Player.GetCurrentPlayer() == Player.getPlayer(1)){
-                    if(zrow != 0 && zcol != 0){
-
+            if(Player.GetCurrentPlayer().getFirstPiece() == true){
+                System.out.println("asfd");
+                if(Player.GetCurrentPlayer() == Player.getPlayer(1)){                    
+                    if(zrow != 0 && zcol != 0){                        
+                        return;
+                    }
+                    else{
+                        Player.getPlayer(1).setFirstPiece();
                     }
                 }
             }

@@ -122,26 +122,22 @@ public class Piece {
 
     public void U(Piece board[][]) {
         board[row][column] = this;
-        board[row][column + 1] = this;
-        board[row][column - 1] = this;
-        board[row - 1][column - 1] = this;
-        board[row - 1][column + 1] = this;
+        board[row+1][column] = this;
+        board[row + 1][column + 1] = this;
+        board[row + 1][column + 2] = this;
+        board[row][column + 2] = this;
     }
 
     public void UR(Piece board[][]) {
-        board[row][column] = this;
-        board[row + 1][column] = this;
-        board[row - 1][column] = this;
-        board[row + 1][column + 1] = this;
-        board[row - 1][column + 1] = this;
+
     }
 
     public void X(Piece board[][]) {
         board[row][column] = this;
-        board[row][column + 1] = this;
         board[row + 1][column] = this;
-        board[row][column - 1] = this;
-        board[row - 1][column] = this;
+        board[row + 1][column -1] = this;
+        board[row + 1][column + 1] = this;
+        board[row + 2][column] = this;
     }
 
     public void P(Piece board[][]) {
@@ -179,25 +175,25 @@ public class Piece {
     public void Z4(Piece board[][]) {
 
         board[row][column] = this;
-        board[row - 1][column] = this;
-        board[row - 1][column - 1] = this;
-        board[row - 2][column - 1] = this;
+        board[row + 1][column] = this;
+        board[row + 1][column + 1] = this;
+        board[row + 2][column + 1] = this;
     }
 
     public void Z5(Piece board[][]) {
         board[row][column] = this;
-        board[row - 1][column] = this;
-        board[row - 1][column - 1] = this;
-        board[row - 1][column - 2] = this;
-        board[row - 2][column - 2] = this;
+        board[row + 1][column] = this;
+        board[row + 1][column + 1] = this;
+        board[row + 1][column + 2] = this;
+        board[row + 2][column + 2] = this;
     }
 
     public void V5(Piece board[][]) {
         board[row][column] = this;
-        board[row - 1][column] = this;
-        board[row - 2][column] = this;
-        board[row][column + 1] = this;
-        board[row][column + 2] = this;
+        board[row + 2][column + 1] = this;
+        board[row + 2][column + 2] = this;
+        board[row+1][column] = this;
+        board[row+2][column] = this;
     }
 
 }

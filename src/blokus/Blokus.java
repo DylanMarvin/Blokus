@@ -192,7 +192,7 @@ public class Blokus extends JFrame implements Runnable {
                                 selectedPiece = Piece.Block.L4;
 
                             } else if (xpos >= 777 && xpos <= 860 && ypos >= 516 && ypos <= 558) {
-                                selectedPiece = Piece.Block.L4;
+                                selectedPiece = Piece.Block.L5;
 
                             } else if (xpos >= 800 && xpos <= 860 && ypos >= 571 && ypos <= 632) {
                                 selectedPiece = Piece.Block.T5;
@@ -201,7 +201,7 @@ public class Blokus extends JFrame implements Runnable {
                                 selectedPiece = Piece.Block.T4;
 
                             } else if (xpos >= 787 && xpos <= 830 && ypos >= 44 && ypos <= 86) {
-                                selectedPiece = Piece.Block.ONE;
+                                selectedPiece = Piece.Block.O;
 
                             } else if (xpos >= 766 && xpos <= 830 && ypos >= 97 && ypos <= 158) {
                                 selectedPiece = Piece.Block.W;
@@ -277,7 +277,7 @@ public class Blokus extends JFrame implements Runnable {
                             } else if (xpos >= (15 + 185) && xpos <= (55 + 185) && ypos >= (47 + 680) && ypos <= (115 + 680)) {
                                 selectedPiece = Piece.Block.O;
 
-                            } else if (xpos >= (68 + 185) && xpos <= (130 + 185) && ypos >= (75 + 185) && ypos <= 140) {
+                            } else if (xpos >= (68 + 185) && xpos <= (130 + 185) && ypos >= (75 + 185) && ypos <= (140+680)) {
                                 selectedPiece = Piece.Block.W;
 
                             } else if (xpos >= (140 + 185) && xpos <= (203 + 185) && ypos >= (75 + 680) && ypos <= (120 + 680)) {
@@ -397,7 +397,7 @@ public class Blokus extends JFrame implements Runnable {
         });
 
         addMouseMotionListener(new MouseMotionAdapter() {
-            public void mouseDragged(MouseEvent e) {
+            public void mouseScrolled(MouseEvent e) {
 
                 repaint();
             }
@@ -603,6 +603,9 @@ public class Blokus extends JFrame implements Runnable {
                 else if(selectedPiece == Piece.Block.I5 ){               
                     Player.GetCurrentPlayer().getOutsidePieces().drawPiecei5(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer()); 
                 }
+                else if(selectedPiece == Piece.Block.V3 ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceV3(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
                 else if(selectedPiece == Piece.Block.L4 ){               
                     Player.GetCurrentPlayer().getOutsidePieces().drawPieceL4(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
                 }
@@ -665,6 +668,9 @@ public class Blokus extends JFrame implements Runnable {
                 }
                 else if(selectedPiece == Piece.Block.I5 ){               
                     Player.GetCurrentPlayer().getOutsidePieces().drawPiecei5(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer()); 
+                }
+                else if(selectedPiece == Piece.Block.V3 ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceV3(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
                 }
                 else if(selectedPiece == Piece.Block.L4 ){               
                     Player.GetCurrentPlayer().getOutsidePieces().drawPieceL4(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
@@ -729,6 +735,9 @@ public class Blokus extends JFrame implements Runnable {
                 else if(selectedPiece == Piece.Block.I5 ){               
                     Player.GetCurrentPlayer().getOutsidePieces().drawPiecei5(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer()); 
                 }
+                else if(selectedPiece == Piece.Block.V3 ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceV3(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
                 else if(selectedPiece == Piece.Block.L4 ){               
                     Player.GetCurrentPlayer().getOutsidePieces().drawPieceL4(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
                 }
@@ -791,6 +800,9 @@ public class Blokus extends JFrame implements Runnable {
                 }
                 else if(selectedPiece == Piece.Block.I5 ){               
                     Player.GetCurrentPlayer().getOutsidePieces().drawPiecei5(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer()); 
+                }
+                else if(selectedPiece == Piece.Block.V3 ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceV3(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
                 }
                 else if(selectedPiece == Piece.Block.L4 ){               
                     Player.GetCurrentPlayer().getOutsidePieces().drawPieceL4(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
@@ -868,6 +880,7 @@ public class Blokus extends JFrame implements Runnable {
         gameState = Window.GameState.Menu;
         color = Color.white;
         color2 = Color.white;
+        selectedPiece = null;
     }
 /////////////////////////////////////////////////////////////////////////
 
