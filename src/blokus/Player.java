@@ -21,13 +21,16 @@ public class Player {
             for(int i = 0;i<numPlayers;i++){               
                 players[i] = new Player(i+1); 
                 players[i].Pieces = new Outside_Pieces(i+1);
+                players[i].firstPiece = true;
             }
         }   
         currentTurn = players[0];
+        
     }
     Player(int _num){       
         playerNum = _num;
         numPieces = 21;
+        
         if(playerNum == 1){
             color = Color.blue;            
         }

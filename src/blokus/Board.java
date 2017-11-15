@@ -62,6 +62,14 @@ public class Board {
                         Player.getPlayer(1).setFirstPiece();
                     }
                 }
+                else if(Player.GetCurrentPlayer() == Player.getPlayer(2)){                    
+                    if(zrow != 0 && zcol != 10){                        
+                        return;
+                    }
+                    else{
+                        Player.getPlayer(2).setFirstPiece();
+                    }
+                }
             }
             
             if (piece.getBlock() == Piece.Block.ONE) { 
