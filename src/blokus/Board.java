@@ -146,6 +146,10 @@ public class Board {
                 piece.F(board);
                 Player.switchTurns();
             }
+            else if (piece.getBlock() == Piece.Block.P) {                
+                piece.P(board);              
+                Player.switchTurns();
+            }
             else if (piece.getBlock() == Piece.Block.X) {                
                 piece.X(board);
                 Player.switchTurns();

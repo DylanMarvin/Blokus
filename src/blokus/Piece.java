@@ -147,9 +147,9 @@ public class Piece {
     public void P(Piece board[][]) {
         board[row][column] = this;
         board[row + 1][column] = this;
-        board[row][column - 1] = this;
-        board[row][column - 2] = this;
-        board[row + 1][column - 1] = this;
+        board[row][column + 1] = this;
+        board[row + 1][column + 1] = this;
+        board[row + 2][column] = this;
     }
 
     public void Y(Piece board[][]) {

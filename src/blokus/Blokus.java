@@ -133,24 +133,33 @@ public class Blokus extends JFrame implements Runnable {
                             } else if (xpos >= 68 && xpos <= 130 && ypos >= 75 && ypos <= 140) {
                                 selectedPiece = Piece.Block.W;
 
-                            } else if (xpos >= 140 && xpos <= 203 && ypos >= 75 && ypos <= 120) {
+                            } else if (xpos >= 140 && xpos <= 203 && ypos >= 75 && ypos <= 120) {                                
                                 selectedPiece = Piece.Block.U;
-                            } else if (xpos >= 215 && xpos <= 275 && ypos >= 75 && ypos <= 140) {
+                                
+                            } else if (xpos >= 215 && xpos <= 275 && ypos >= 75 && ypos <= 140) {                                
                                 selectedPiece = Piece.Block.X;
+                                
                             } else if (xpos >= 285 && xpos <= 330 && ypos >= 75 && ypos <= 140) {
                                 selectedPiece = Piece.Block.P;
+                                
                             } else if (xpos >= 340 && xpos <= 425 && ypos >= 100 && ypos <= 140) {
                                 selectedPiece = Piece.Block.Y;
+                                
                             } else if (xpos >= 15 && xpos <= 75 && ypos >= 135 && ypos <= 200) {
                                 selectedPiece = Piece.Block.F;
+                                
                             } else if (xpos >= 88 && xpos <= 170 && ypos >= 155 && ypos <= 200) {
                                 selectedPiece = Piece.Block.N;
+                                
                             } else if (xpos >= 180 && xpos <= 225 && ypos >= 135 && ypos <= 200) {
                                 selectedPiece = Piece.Block.Z4;
+                                
                             } else if (xpos >= 540 && xpos <= 600 && ypos >= 135 && ypos <= 200) {
                                 selectedPiece = Piece.Block.V5;
+                                
                             } else if (xpos >= 615 && xpos <= 675 && ypos >= 135 && ypos <= 200) {
                                 selectedPiece = Piece.Block.Z5;
+                                
                             }
                         } /////////
                         else if (Player.GetCurrentPlayer() == Player.getPlayer(2)) {
@@ -313,42 +322,61 @@ public class Blokus extends JFrame implements Runnable {
 
                             } else if (xpos >= 15 && xpos <= 35 && ypos >= 808 && ypos <= 850) {
                                 selectedPiece = Piece.Block.TWO;
+                                
                             } else if (xpos >= 15 && xpos <= 35 && ypos >= 735 && ypos <= 800) {
                                 selectedPiece = Piece.Block.I3;
+                                
                             } else if (xpos >= 15 && xpos <= 35 && ypos >= 640 && ypos <= 725) {
                                 selectedPiece = Piece.Block.I4;
+                                
                             } else if (xpos >= 15 && xpos <= 35 && ypos >= 525 && ypos <= 630) {
                                 selectedPiece = Piece.Block.I5;
+                                
                             } else if (xpos >= 15 && xpos <= 55 && ypos >= 475 && ypos <= 510) {
                                 selectedPiece = Piece.Block.V3;
+                                
                             } else if (xpos >= 15 && xpos <= 75 && ypos >= 420 && ypos <= 460) {
                                 selectedPiece = Piece.Block.L4;
+                                
                             } else if (xpos >= 15 && xpos <= 100 && ypos >= 370 && ypos <= 400) {
                                 selectedPiece = Piece.Block.L5;
+                                
                             } else if (xpos >= 15 && xpos <= 80 && ypos >= 305 && ypos <= 370) {
                                 selectedPiece = Piece.Block.T5;
+                                
                             } else if (xpos >= 15 && xpos <= 60 && ypos >= 220 && ypos <= 280) {
                                 selectedPiece = Piece.Block.T4;
+                                
                             } else if (xpos >= 50 && xpos <= 85 && ypos >= 840 && ypos <= 880) {
                                 selectedPiece = Piece.Block.O;
+                                
                             } else if (xpos >= 50 && xpos <= 85 && ypos >= 840 && ypos <= 880) {
                                 selectedPiece = Piece.Block.W;
+                                
                             } else if (xpos >= 50 && xpos <= 90 && ypos >= 700 && ypos <= 760) {
                                 selectedPiece = Piece.Block.U;
+                                
                             } else if (xpos >= 50 && xpos <= 110 && ypos >= 620 && ypos <= 680) {
                                 selectedPiece = Piece.Block.X;
-                            } else if (xpos >= 50 && xpos <= 110 && ypos >= 620 && ypos <= 680) {
+                                
+                            } else if (xpos >= 50 && xpos <= 110 && ypos >= 565 && ypos <= 610) {
                                 selectedPiece = Piece.Block.P;
+                                
                             } else if (xpos >= 65 && xpos <= 111 && ypos >= 475 && ypos <= 555) {
                                 selectedPiece = Piece.Block.Y;
+                                
                             } else if (xpos >= 100 && xpos <= 165 && ypos >= 820 && ypos <= 880) {
                                 selectedPiece = Piece.Block.F;
+                                
                             } else if (xpos >= 125 && xpos <= 165 && ypos >= 725 && ypos <= 805) {
                                 selectedPiece = Piece.Block.N;
+                                
                             } else if (xpos >= 105 && xpos <= 165 && ypos >= 660 && ypos <= 700) {
                                 selectedPiece = Piece.Block.Z4;
+                                
                             } else if (xpos >= 100 && xpos <= 165 && ypos >= 295 && ypos <= 360) {
                                 selectedPiece = Piece.Block.V5;
+                                
                             } else if (xpos >= 100 && xpos <= 165 && ypos >= 220 && ypos <= 285) {
                                 selectedPiece = Piece.Block.Z5;
                             }
@@ -420,12 +448,7 @@ public class Blokus extends JFrame implements Runnable {
                     }
                 }
                 else if(gameState == Window.GameState.InGame){
-                        if(selectedPiece != null ){
-                            if(selectedPiece == Piece.Block.ONE ){
-                                //yes = true;
-                                
-                            }
-                        }
+
                 }
           
 //          System.out.println(xpos);
@@ -580,9 +603,241 @@ public class Blokus extends JFrame implements Runnable {
                 else if(selectedPiece == Piece.Block.I5 ){               
                     Player.GetCurrentPlayer().getOutsidePieces().drawPiecei5(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer()); 
                 }
-                else if(selectedPiece == Piece.Block.V3 ){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceV3(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                else if(selectedPiece == Piece.Block.L4 ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceL4(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
                 }
+                else if(selectedPiece == Piece.Block.L5 ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceL5(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.T5 ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceT5(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.T4 ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceT4(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.O ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceO(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.W ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceW(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.U ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceU(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.X ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceX(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.P){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceP(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.Y){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceY(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.F){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceF(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.N){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceN(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.Z4){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceZ4(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.V5){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceV5(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.Z5){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceZ5(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+
+            }
+            else if(Player.GetCurrentPlayer() == Player.getPlayer(2)){
+                if(selectedPiece == Piece.Block.ONE ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPiece1(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.TWO ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPiece2(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.I3 ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPiecei3(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer()); 
+                }
+                else if(selectedPiece == Piece.Block.I4 ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPiecei4(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.I5 ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPiecei5(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer()); 
+                }
+                else if(selectedPiece == Piece.Block.L4 ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceL4(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.L5 ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceL5(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.T5 ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceT5(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.T4 ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceT4(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.O ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceO(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.W ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceW(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.U ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceU(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.X ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceX(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.P){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceP(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.Y){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceY(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.F){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceF(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.N){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceN(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.Z4){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceZ4(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.V5){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceV5(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.Z5){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceZ5(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+
+            }
+            else if(Player.GetCurrentPlayer() == Player.getPlayer(3)){
+                if(selectedPiece == Piece.Block.ONE ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPiece1(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.TWO ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPiece2(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.I3 ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPiecei3(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer()); 
+                }
+                else if(selectedPiece == Piece.Block.I4 ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPiecei4(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.I5 ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPiecei5(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer()); 
+                }
+                else if(selectedPiece == Piece.Block.L4 ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceL4(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.L5 ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceL5(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.T5 ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceT5(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.T4 ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceT4(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.O ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceO(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.W ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceW(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.U ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceU(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.X ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceX(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.P){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceP(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.Y){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceY(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.F){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceF(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.N){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceN(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.Z4){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceZ4(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.V5){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceV5(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.Z5){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceZ5(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+
+            }
+            else if(Player.GetCurrentPlayer() == Player.getPlayer(4)){
+                if(selectedPiece == Piece.Block.ONE ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPiece1(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.TWO ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPiece2(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.I3 ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPiecei3(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer()); 
+                }
+                else if(selectedPiece == Piece.Block.I4 ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPiecei4(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.I5 ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPiecei5(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer()); 
+                }
+                else if(selectedPiece == Piece.Block.L4 ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceL4(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.L5 ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceL5(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.T5 ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceT5(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.T4 ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceT4(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.O ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceO(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.W ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceW(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.U ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceU(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.X ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceX(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.P){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceP(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.Y){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceY(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.F){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceF(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.N){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceN(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.Z4){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceZ4(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.V5){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceV5(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.Z5){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceZ5(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+
             }
         }
 
