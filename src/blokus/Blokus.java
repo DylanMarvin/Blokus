@@ -22,7 +22,7 @@ public class Blokus extends JFrame implements Runnable {
     boolean animateFirstTime = true;
     Image image;
     Graphics2D g;
-    Boolean yes;
+    boolean yes;
     int Xpos;
     int Ypos;
 
@@ -422,7 +422,7 @@ public class Blokus extends JFrame implements Runnable {
                 else if(gameState == Window.GameState.InGame){
                         if(selectedPiece != null ){
                             if(selectedPiece == Piece.Block.ONE ){
-                                yes = true;
+                                //yes = true;
                                 
                             }
                         }
@@ -564,9 +564,25 @@ public class Blokus extends JFrame implements Runnable {
         Player.Draw(g, this);
         
         if(selectedPiece != null ){
-            if( yes == true && selectedPiece == Piece.Block.ONE ){               
-                Player.GetCurrentPlayer().getOutsidePieces().drawPiece1(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
-               
+            if(Player.GetCurrentPlayer() == Player.getPlayer(1)){
+                if(selectedPiece == Piece.Block.ONE ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPiece1(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.TWO ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPiece2(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.I3 ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPiecei3(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer()); 
+                }
+                else if(selectedPiece == Piece.Block.I4 ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPiecei4(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
+                else if(selectedPiece == Piece.Block.I5 ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPiecei5(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer()); 
+                }
+                else if(selectedPiece == Piece.Block.V3 ){               
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceV3(Xpos, Ypos, 0, 1, 1, g, Player.GetCurrentPlayer());
+                }
             }
         }
 
