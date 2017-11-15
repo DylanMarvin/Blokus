@@ -422,7 +422,7 @@ public class Blokus extends JFrame implements Runnable {
                     } else {
                         color2 = Color.white;
                     }
-                     if(xpos >= 5 && xpos <= 440 && ypos >= 5 && ypos <= 450){
+                     if(xpos >= 5 && xpos <= 865 && ypos >= 5 && ypos <= 450){
                                  colorTwo = Color.YELLOW;
                             }
                      else {
@@ -434,12 +434,7 @@ public class Blokus extends JFrame implements Runnable {
                             else {
                         colorThree = Color.white;
                     }
-                            if(xpos >= 450 && xpos <= 865 && ypos >= 25 && ypos <= 450){
-                                     colorTwo = Color.YELLOW;
-                            }
-                            else {
-                        colorTwo = Color.white;
-                    }
+                           
                             if(xpos >= 450 && xpos <= 865 && ypos >= 450 && ypos <= 895){
                                       colorFour = Color.YELLOW;
                             }

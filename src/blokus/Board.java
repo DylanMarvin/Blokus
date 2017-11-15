@@ -126,21 +126,28 @@ public class Board {
                 }           
             
             }
-            else if (piece.getBlock() == Piece.Block.T4) {                
+            else if (piece.getBlock() == Piece.Block.T4) {  
+                 if(checkPieceT4(zrow,zcol,4)){
                 piece.T4(board);
                 Player.switchTurns();
+                 }
             }
-            else if (piece.getBlock() == Piece.Block.T5) {                
+            else if (piece.getBlock() == Piece.Block.T5) {    
+                if(checkPieceT5(zrow,zcol,5)){
                 piece.T5(board);
                 Player.switchTurns();
+                }
             }
-            else if (piece.getBlock() == Piece.Block.U) {                
+            else if (piece.getBlock() == Piece.Block.U) { 
+                
                 piece.U(board);
                 Player.switchTurns();
             }
-            else if (piece.getBlock() == Piece.Block.V3) {                
+            else if (piece.getBlock() == Piece.Block.V3) {
+                if(checkPieceV3(zrow,zcol,5)){                
                 piece.V3(board);
                 Player.switchTurns();
+                }
             }
             else if (piece.getBlock() == Piece.Block.V5) {                
                 piece.V5(board);
@@ -235,7 +242,7 @@ public class Board {
     
     private static boolean checkPieceN(int zrow,int zcol,int val){
         
-            for(int j = 0;j>-2;j--){
+            for(int j = 1;j>-1;j--){
                     if(zrow+j == -1){
                         return false;
                     }               
@@ -279,6 +286,36 @@ public class Board {
         }
         return(true);
     }
+     
+     private static boolean checkPieceT4(int zrow,int zcol,int val){
+        if(board[zrow][zcol] == null &&
+        board[zrow + 1][zcol+1] == null &&       
+        board[zrow][zcol +1] == null &&
+        board[zrow][zcol + 2] == null){
+            return(true);
+        }
+        return(false);
+        }
+     
+      private static boolean checkPieceT5(int zrow,int zcol,int val){
+        if(board[zrow][zcol] == null &&
+        board[zrow + 1][zcol+1] == null &&       
+        board[zrow][zcol +1] == null &&
+        board[zrow][zcol + 2] == null &&
+        board[zrow + 2][zcol + 1] == null){
+            return(true);
+        }
+        return(false);
+        }
+      
+      private static boolean checkPieceV3(int zrow,int zcol,int val){
+        if(board[zrow][zcol] == null &&
+        board[zrow + 1][zcol+1] == null &&       
+        board[zrow + 1][zcol] == null){
+            return(true);
+        }
+        return(false);
+        }
     
     
     public static void Draw(Graphics2D g,Image image,Blokus obj) {

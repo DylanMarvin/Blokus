@@ -90,6 +90,7 @@ public class Player {
                 currentTurn = players[0];
            return(currentTurn);
        }
+
        public boolean getFirstPiece(){
            return(firstPiece);
        }
