@@ -27,7 +27,7 @@ public class Board {
         
     }
     
-    public static void AddPiecePixel(int xpixel, int ypixel,Piece.Block block) {
+    public static void AddPiecePixel(int xpixel, int ypixel,Piece.Block block,int rotation) {
         
         int ydelta = Window.getHeight2() / NUM_ROWS;
         int xdelta = Window.getWidth2() / NUM_COLUMNS;
@@ -97,49 +97,49 @@ public class Board {
             
             else if (piece.getBlock() == Piece.Block.TWO) {
                 if(checkPieceH(zrow,zcol,2) && checkPieceV(zrow,zcol,2)){
-                    piece.Two(board);
+                    piece.Two(board,rotation);
                     Player.switchTurns();
                 }
             }
             else if (piece.getBlock() == Piece.Block.I3) { 
                 if(checkPieceH(zrow,zcol,3 ) && checkPieceV(zrow,zcol,3)){
-                    piece.I3(board);
+                    piece.I3(board,rotation);
                         Player.switchTurns();
                 }
             }
             else if (piece.getBlock() == Piece.Block.I4) {         
                 if(checkPieceH(zrow,zcol,4) && checkPieceV(zrow,zcol,4)){
-                    piece.I4(board);
+                    piece.I4(board,rotation);
                     Player.switchTurns();
                 }
             }
             else if (piece.getBlock() == Piece.Block.I5) {  
                 if(checkPieceH(zrow,zcol,5) && checkPieceV(zrow,zcol,5)){
-                    piece.I5(board);
+                    piece.I5(board,rotation);
                     Player.switchTurns();
                 }
             }
             else if (piece.getBlock() == Piece.Block.L4) {
                 if(checkPieceL(zrow,zcol,3)){
-                    piece.L4(board);
+                    piece.L4(board,rotation);
                     Player.switchTurns();
                 }
             }
             else if (piece.getBlock() == Piece.Block.L5) { 
                 if(checkPieceL(zrow,zcol,4)){
-                    piece.L5(board);
+                    piece.L5(board,rotation);
                     Player.switchTurns();
                 }
             }
             else if (piece.getBlock() == Piece.Block.N) {        
                 if(checkPieceN(zrow,zcol,4)){
-                    piece.N(board);
+                    piece.N(board,rotation);
                     Player.switchTurns();
                 }
             }
             else if (piece.getBlock() == Piece.Block.O) { 
                 if(checkPieceO(zrow,zcol,2)){
-                    piece.O(board);
+                    piece.O(board,rotation);
                     Player.switchTurns();
                 }           
             }
@@ -152,53 +152,53 @@ public class Board {
             }
             else if (piece.getBlock() == Piece.Block.T4) {  
                  if(checkPieceT4(zrow,zcol,4)){
-                piece.T4(board);
+                piece.T4(board,rotation);
                 Player.switchTurns();
                  }
             }
             else if (piece.getBlock() == Piece.Block.T5) {    
                 if(checkPieceT5(zrow,zcol,5)){
-                piece.T5(board);
+                piece.T5(board,rotation);
                 Player.switchTurns();
                 }
             }
             else if (piece.getBlock() == Piece.Block.U) { 
                 
-                piece.U(board);
+                piece.U(board,rotation);
                 Player.switchTurns();
             }
             else if (piece.getBlock() == Piece.Block.V3) {
                 if(checkPieceV3(zrow,zcol,5)){                
-                piece.V3(board);
+                piece.V3(board,rotation);
                 Player.switchTurns();
                 }
             }
             else if (piece.getBlock() == Piece.Block.V5) {                
-                piece.V5(board);
+                piece.V5(board,rotation);
                 Player.switchTurns();
             }
             else if (piece.getBlock() == Piece.Block.F) {                
-                piece.F(board);
+                piece.F(board,rotation);
                 Player.switchTurns();
             }
             else if (piece.getBlock() == Piece.Block.P) {                
-                piece.P(board);              
+                piece.P(board,rotation);              
                 Player.switchTurns();
             }
             else if (piece.getBlock() == Piece.Block.X) {                
-                piece.X(board);
+                piece.X(board,rotation);
                 Player.switchTurns();
             }
             else if (piece.getBlock() == Piece.Block.Y) {                
-                piece.Y(board);
+                piece.Y(board,rotation);
                 Player.switchTurns();
             }
             else if (piece.getBlock() == Piece.Block.Z4) {                
-                piece.Z4(board);
+                piece.Z4(board,rotation);
                 Player.switchTurns();
             }
             else if (piece.getBlock() == Piece.Block.Z5) {                
-                piece.Z5(board);
+                piece.Z5(board,rotation);
                 Player.switchTurns();
             }
             

@@ -25,6 +25,7 @@ public class Blokus extends JFrame implements Runnable {
     boolean yes;
     double Xpos;
     double Ypos;
+    int rotation;
 
     private Window.GameState gameState = Window.GameState.Menu;
     Image menu1;
@@ -91,7 +92,7 @@ public class Blokus extends JFrame implements Runnable {
                         /////////
                         if (Player.GetCurrentPlayer() == Player.getPlayer(1)) {
                             if (selectedPiece != null) {
-                                Board.AddPiecePixel(xpos, ypos, selectedPiece);
+                                Board.AddPiecePixel(xpos, ypos, selectedPiece,rotation);
                                 selectedPiece = null;
                             } else {
                                 selectedPiece = null;
@@ -164,7 +165,7 @@ public class Blokus extends JFrame implements Runnable {
                         } /////////
                         else if (Player.GetCurrentPlayer() == Player.getPlayer(2)) {
                             if (selectedPiece != null) {
-                                Board.AddPiecePixel(xpos, ypos, selectedPiece);
+                                Board.AddPiecePixel(xpos, ypos, selectedPiece,rotation);
                                 selectedPiece = null;
                             } else {
                                 selectedPiece = null;
@@ -238,7 +239,7 @@ public class Blokus extends JFrame implements Runnable {
                         else if (Player.GetCurrentPlayer() == Player.getPlayer(3)) {
 
                             if (selectedPiece != null) {
-                                Board.AddPiecePixel(xpos, ypos, selectedPiece);
+                                Board.AddPiecePixel(xpos, ypos, selectedPiece,rotation);
                                 selectedPiece = null;
                             } else {
                                 selectedPiece = null;
@@ -311,7 +312,7 @@ public class Blokus extends JFrame implements Runnable {
                         } /////////
                         else if (Player.GetCurrentPlayer() == Player.getPlayer(4)) {
                             if (selectedPiece != null) {
-                                Board.AddPiecePixel(xpos, ypos, selectedPiece);
+                                Board.AddPiecePixel(xpos, ypos, selectedPiece,rotation);
                                 selectedPiece = null;
                             } else {
                                 selectedPiece = null;
@@ -459,8 +460,10 @@ public class Blokus extends JFrame implements Runnable {
                 } else if (e.VK_DOWN == e.getKeyCode()) {
                 } else if (e.VK_LEFT == e.getKeyCode()) {
                 } else if (e.VK_RIGHT == e.getKeyCode()) {
-                } else if (e.VK_ESCAPE == e.getKeyCode()) {
-                    reset();
+                } else if (e.VK_R == e.getKeyCode()) {
+                    rotation += 90;
+                    if(rotation >270)
+                        rotation = 0;
                 }
                 repaint();
             }
@@ -587,10 +590,10 @@ public class Blokus extends JFrame implements Runnable {
                     Player.GetCurrentPlayer().getOutsidePieces().drawPiece1(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
                 else if(selectedPiece == Piece.Block.TWO ){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPiece2(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPiece2(Xpos/2.4, Ypos/2.4, rotation, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
                 else if(selectedPiece == Piece.Block.I3 ){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPiecei3(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer()); 
+                    Player.GetCurrentPlayer().getOutsidePieces().drawPiecei3(Xpos/2.4, Ypos/2.4, rotation, 2.4, 2.4, g, Player.GetCurrentPlayer()); 
                 }
                 else if(selectedPiece == Piece.Block.I4 ){               
                     Player.GetCurrentPlayer().getOutsidePieces().drawPiecei4(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
@@ -876,6 +879,7 @@ public class Blokus extends JFrame implements Runnable {
         color = Color.white;
         color2 = Color.white;
         selectedPiece = null;
+        rotation = 0;
     }
 /////////////////////////////////////////////////////////////////////////
 

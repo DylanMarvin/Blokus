@@ -25,7 +25,7 @@ public class Outside_Pieces extends Player {
     }
     
     
-public void drawAll(double xpos, double ypos,double rot, double xscale,double yscale, Graphics2D g) {
+    public void drawAll(double xpos, double ypos,double rot, double xscale,double yscale, Graphics2D g) {
         int gapXDistance = 15;
         int gapYDistance = 15;
         
@@ -102,7 +102,7 @@ public void drawAll(double xpos, double ypos,double rot, double xscale,double ys
         g.rotate(rot  * Math.PI/180.0);
         g.scale( xscale , yscale );
         
-        drawCube(xpos,ypos,0,1,1,g); 
+        drawCube(xpos,ypos,rot,1,1,g); 
     
         g.scale( 1.0/xscale,1.0/yscale );
         g.rotate(-rot  * Math.PI/180.0);
