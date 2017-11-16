@@ -109,48 +109,56 @@ public class Board {
             else if (piece.getBlock() == Piece.Block.I3) { 
                 if(checkPieceH(zrow,zcol,3 ) && checkPieceV(zrow,zcol,3)){
                     piece.I3(board,rotation);
+                    Player.GetCurrentPlayer().getOutsidePieces().changePiece(2);
                         Player.switchTurns();
                 }
             }
             else if (piece.getBlock() == Piece.Block.I4) {         
                 if(checkPieceH(zrow,zcol,4) && checkPieceV(zrow,zcol,4)){
                     piece.I4(board,rotation);
+                    Player.GetCurrentPlayer().getOutsidePieces().changePiece(3);
                     Player.switchTurns();
                 }
             }
             else if (piece.getBlock() == Piece.Block.I5) {  
                 if(checkPieceH(zrow,zcol,5) && checkPieceV(zrow,zcol,5)){
                     piece.I5(board,rotation);
+                    Player.GetCurrentPlayer().getOutsidePieces().changePiece(4);
                     Player.switchTurns();
                 }
             }
             else if (piece.getBlock() == Piece.Block.L4) {
                 if(checkPieceL(zrow,zcol,3)){
                     piece.L4(board,rotation);
+                    Player.GetCurrentPlayer().getOutsidePieces().changePiece(6);
                     Player.switchTurns();
                 }
             }
             else if (piece.getBlock() == Piece.Block.L5) { 
                 if(checkPieceL(zrow,zcol,4)){
                     piece.L5(board,rotation);
+                    Player.GetCurrentPlayer().getOutsidePieces().changePiece(7);
                     Player.switchTurns();
                 }
             }
             else if (piece.getBlock() == Piece.Block.N) {        
                 if(checkPieceN(zrow,zcol,4)){
                     piece.N(board,rotation);
+                    Player.GetCurrentPlayer().getOutsidePieces().changePiece(17);
                     Player.switchTurns();
                 }
             }
             else if (piece.getBlock() == Piece.Block.O) { 
                 if(checkPieceO(zrow,zcol,2)){
                     piece.O(board,rotation);
+                    Player.GetCurrentPlayer().getOutsidePieces().changePiece(10);
                     Player.switchTurns();
                 }           
             }
             else if (piece.getBlock() == Piece.Block.W) {  
                 if(checkPieceW(zrow,zcol,2)){
                     piece.W(board);
+                    Player.GetCurrentPlayer().getOutsidePieces().changePiece(11);
                     Player.switchTurns();
                 }           
             
@@ -158,12 +166,14 @@ public class Board {
             else if (piece.getBlock() == Piece.Block.T4) {  
                  if(checkPieceT4(zrow,zcol,4)){
                 piece.T4(board,rotation);
+                Player.GetCurrentPlayer().getOutsidePieces().changePiece(9);
                 Player.switchTurns();
                  }
             }
             else if (piece.getBlock() == Piece.Block.T5) {    
                 if(checkPieceT5(zrow,zcol,5)){
                 piece.T5(board,rotation);
+                Player.GetCurrentPlayer().getOutsidePieces().changePiece(8);
                 Player.switchTurns();
                 }
             }
@@ -171,13 +181,14 @@ public class Board {
 
                 if(checkPieceU(zrow,zcol,5)){
                     piece.U(board,rotation);
-
+                Player.GetCurrentPlayer().getOutsidePieces().changePiece(12);
                 Player.switchTurns();
                 }
             }
             else if (piece.getBlock() == Piece.Block.V3) {
                 if(checkPieceV3(zrow,zcol,5)){                
                 piece.V3(board,rotation);
+                Player.GetCurrentPlayer().getOutsidePieces().changePiece(5);
                 Player.switchTurns();
                 }
             }
@@ -185,6 +196,7 @@ public class Board {
             else if (piece.getBlock() == Piece.Block.V5) {
               if(checkPieceV5(zrow,zcol,5)){                
                 piece.V5(board,rotation);
+                   Player.GetCurrentPlayer().getOutsidePieces().changePiece(20);
                 Player.switchTurns();
               }
             }
@@ -192,6 +204,7 @@ public class Board {
             else if (piece.getBlock() == Piece.Block.F) {
                 if(checkPieceF(zrow,zcol,5)){                
                 piece.F(board,rotation);
+                   Player.GetCurrentPlayer().getOutsidePieces().changePiece(16);
                 Player.switchTurns();
                 }
             }
@@ -199,7 +212,7 @@ public class Board {
             else if (piece.getBlock() == Piece.Block.P) { 
                 if(checkPieceP(zrow,zcol,5)){
                 piece.P(board,rotation);              
-
+                   Player.GetCurrentPlayer().getOutsidePieces().changePiece(14);
                 Player.switchTurns();
                 }
             }
@@ -207,6 +220,7 @@ public class Board {
             else if (piece.getBlock() == Piece.Block.X) {
                 if(checkPieceX(zrow,zcol,5)){
                 piece.X(board,rotation);
+                   Player.GetCurrentPlayer().getOutsidePieces().changePiece(13);
                 Player.switchTurns();
                 }
             }
@@ -214,13 +228,14 @@ public class Board {
             else if (piece.getBlock() == Piece.Block.Y) {
                 if(checkPieceY(zrow,zcol,5)){                
                 piece.Y(board,rotation);
+                   Player.GetCurrentPlayer().getOutsidePieces().changePiece(15);
                 Player.switchTurns();
             }
             }
             else if (piece.getBlock() == Piece.Block.Z4) {
                  if(checkPieceZ4(zrow,zcol,5)){    
                 piece.Z4(board,rotation);
-
+                   Player.GetCurrentPlayer().getOutsidePieces().changePiece(18);
                 Player.switchTurns();
             }
             }
@@ -228,6 +243,7 @@ public class Board {
 
                 if(checkPieceZ5(zrow,zcol,5)){    
                 piece.Z5(board,rotation);
+                   Player.GetCurrentPlayer().getOutsidePieces().changePiece(19);
 
                 Player.switchTurns();
             }

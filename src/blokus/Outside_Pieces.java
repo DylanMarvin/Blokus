@@ -404,4 +404,8 @@ public class Outside_Pieces extends Player {
     public void changePiece(int num){
         pieces[num] = false;
     }
+    public boolean checkPiece(int num){
+        return(pieces[num]); 
+        
+    }
 }
