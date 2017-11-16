@@ -12,17 +12,17 @@ public class Player {
     private Color color;
     private int playerNum;
     private  Outside_Pieces Pieces; 
-    private int numPieces;
+    protected int numPieces;
     private boolean firstPiece;
     
     public static void Reset(){
         
-        if(players[0] == null){     
+             
             for(int i = 0;i<numPlayers;i++){               
                 players[i] = new Player(i+1); 
                 players[i].Pieces = new Outside_Pieces(i+1);
             }
-        }   
+           
         currentTurn = players[0];
         for(int i = 0;i<numPlayers;i++){               
            players[i].firstPiece = true;
@@ -111,5 +111,6 @@ public class Player {
     public static Player getPlayer(int playerNumber){
         return players[playerNumber-1];
     }
+    
 }
 

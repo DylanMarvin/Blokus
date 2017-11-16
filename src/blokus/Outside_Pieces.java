@@ -9,11 +9,14 @@ import java.awt.Graphics2D;
 
 public class Outside_Pieces extends Player {
 
-    
+    boolean pieces[] = new boolean[numPieces];
     //Graphics2D g;
     
     Outside_Pieces(int num){
         super(num);
+        for(int i = 0;i<numPieces;i++){
+            pieces[i] = true;
+        }
     }
 
     
@@ -32,47 +35,68 @@ public class Outside_Pieces extends Player {
         g.rotate(rot  * Math.PI/180.0);
         g.scale( xscale , yscale );
         
-        drawPiece1(xpos,ypos,0,1,1,g,this);
-        drawPiece2(xpos+gapXDistance,ypos,0,1,1,g,this);
-        gapXDistance+=25;
-        drawPiecei3(xpos+gapXDistance,ypos,0,1,1,g,this);
-        gapXDistance+=35;
-        drawPiecei4(xpos+gapXDistance,ypos,0,1,1,g,this);
-        gapXDistance+=45;
-        drawPiecei5(xpos+gapXDistance,ypos,0,1,1,g,this);
-        gapXDistance+=55;
-        drawPieceV3(xpos+gapXDistance,ypos,0,1,1,g,this);
-        gapXDistance+=25;
-        drawPieceL4(xpos+gapXDistance,ypos,0,1,1,g,this);
-        gapXDistance+=25;
-        drawPieceL5(xpos+gapXDistance,ypos,0,1,1,g,this);
-        gapXDistance+=20;
-        drawPieceT5(xpos+gapXDistance+5,ypos,0,1,1,g,this);
-        gapXDistance+=40;
-        drawPieceT4(xpos+gapXDistance,ypos,0,1,1,g,this);
-        drawPieceO(xpos,ypos+gapYDistance,0,1,1,g,this);
-        gapXDistance=0;
-        gapXDistance+=25;
-        drawPieceW(xpos+gapXDistance,ypos+gapYDistance,0,1,1,g,this);
-        gapXDistance+=35;
-        drawPieceU(xpos+gapXDistance,ypos+gapYDistance,0,1,1,g,this);
-        gapXDistance+=45;
-        drawPieceX(xpos+gapXDistance,ypos+gapYDistance,0,1,1,g,this);
-        gapXDistance += 25;
-        drawPieceP(xpos+gapXDistance,ypos+gapYDistance,0,1,1,g,this);
-        gapXDistance += 25;
-        drawPieceY(xpos+gapXDistance,ypos+25,0,1,1,g,this);
-        gapXDistance += 115;
-        drawPieceF(xpos+10,ypos+42,0,1,1,g,this);
-        gapXDistance = 0;
-        gapXDistance += 35;
-        drawPieceN(xpos+gapXDistance,ypos+52,0,1,1,g,this);
-        gapXDistance += 50;
-        drawPieceZ4(xpos+gapXDistance-5,ypos+42,0,1,1,g,this);
-        gapXDistance += 60;
-        drawPieceZ5(xpos+gapXDistance+140,ypos+42,0,1,1,g,this);
-        gapXDistance += 50;
-        drawPieceV5(xpos+gapXDistance+55,ypos+42,0,1,1,g,this);
+        if(pieces[0] == true)
+            drawPiece1(xpos,ypos,0,1,1,g,this);
+        if(pieces[1] == true)
+            drawPiece2(xpos+gapXDistance,ypos,0,1,1,g,this);
+            gapXDistance+=25;
+        if(pieces[2] == true)
+            drawPiecei3(xpos+gapXDistance,ypos,0,1,1,g,this);
+            gapXDistance+=35;
+        if(pieces[3] == true)
+            drawPiecei4(xpos+gapXDistance,ypos,0,1,1,g,this);
+            gapXDistance+=45;
+        if(pieces[4] == true)
+            drawPiecei5(xpos+gapXDistance,ypos,0,1,1,g,this);
+            gapXDistance+=55;
+        if(pieces[5] == true)
+            drawPieceV3(xpos+gapXDistance,ypos,0,1,1,g,this);
+            gapXDistance+=25;
+        if(pieces[6] == true)
+            drawPieceL4(xpos+gapXDistance,ypos,0,1,1,g,this);
+            gapXDistance+=25;
+        if(pieces[7] == true)
+            drawPieceL5(xpos+gapXDistance,ypos,0,1,1,g,this);
+            gapXDistance+=20;
+        if(pieces[8] == true)
+            drawPieceT5(xpos+gapXDistance+5,ypos,0,1,1,g,this);
+            gapXDistance+=40;
+        if(pieces[9] == true)
+            drawPieceT4(xpos+gapXDistance,ypos,0,1,1,g,this);
+        if(pieces[10] == true)
+            drawPieceO(xpos,ypos+gapYDistance,0,1,1,g,this);
+            gapXDistance=0;
+            gapXDistance+=25;
+        if(pieces[11] == true)
+            drawPieceW(xpos+gapXDistance,ypos+gapYDistance,0,1,1,g,this);
+            gapXDistance+=35;
+        if(pieces[12] == true)
+            drawPieceU(xpos+gapXDistance,ypos+gapYDistance,0,1,1,g,this);
+            gapXDistance+=45;
+        if(pieces[13] == true)
+            drawPieceX(xpos+gapXDistance,ypos+gapYDistance,0,1,1,g,this);
+            gapXDistance += 25;
+        if(pieces[14] == true)
+            drawPieceP(xpos+gapXDistance,ypos+gapYDistance,0,1,1,g,this);
+            gapXDistance += 25;
+        if(pieces[15] == true)
+            drawPieceY(xpos+gapXDistance,ypos+25,0,1,1,g,this);
+            gapXDistance += 115;
+        if(pieces[16] == true)
+            drawPieceF(xpos+10,ypos+42,0,1,1,g,this);
+            gapXDistance = 0;
+            gapXDistance += 35;
+        if(pieces[17] == true)
+            drawPieceN(xpos+gapXDistance,ypos+52,0,1,1,g,this);
+            gapXDistance += 50;
+        if(pieces[18] == true)
+            drawPieceZ4(xpos+gapXDistance-5,ypos+42,0,1,1,g,this);
+            gapXDistance += 60;
+        if(pieces[19] == true)
+            drawPieceZ5(xpos+gapXDistance+140,ypos+42,0,1,1,g,this);
+            gapXDistance += 50;
+        if(pieces[20] == true)
+            drawPieceV5(xpos+gapXDistance+55,ypos+42,0,1,1,g,this);
         
         g.scale( 1.0/xscale,1.0/yscale );
         g.rotate(-rot  * Math.PI/180.0);
@@ -375,5 +399,9 @@ public class Outside_Pieces extends Player {
         
         g.scale( 1.0/xscale,1.0/yscale );
         g.rotate(-rot  * Math.PI/180.0);
+    }
+    
+    public void changePiece(int num){
+        pieces[num] = false;
     }
 }

@@ -42,6 +42,7 @@ public class Blokus extends JFrame implements Runnable {
     Color colorThree;
     Color colorFour;
 
+    
     public static void main(String[] args) {
         Blokus frame = new Blokus();
         frame.setSize(Window.WINDOW_WIDTH, Window.WINDOW_HEIGHT);
@@ -94,6 +95,7 @@ public class Blokus extends JFrame implements Runnable {
                             if (selectedPiece != null) {
                                 Board.AddPiecePixel(xpos, ypos, selectedPiece,rotation);
                                 selectedPiece = null;
+                                rotation = 0;
                             } else {
                                 selectedPiece = null;
                             }
@@ -167,6 +169,7 @@ public class Blokus extends JFrame implements Runnable {
                             if (selectedPiece != null) {
                                 Board.AddPiecePixel(xpos, ypos, selectedPiece,rotation);
                                 selectedPiece = null;
+                                rotation = 0;
                             } else {
                                 selectedPiece = null;
                             }
@@ -241,6 +244,7 @@ public class Blokus extends JFrame implements Runnable {
                             if (selectedPiece != null) {
                                 Board.AddPiecePixel(xpos, ypos, selectedPiece,rotation);
                                 selectedPiece = null;
+                                rotation = 0;
                             } else {
                                 selectedPiece = null;
                             }
@@ -314,6 +318,7 @@ public class Blokus extends JFrame implements Runnable {
                             if (selectedPiece != null) {
                                 Board.AddPiecePixel(xpos, ypos, selectedPiece,rotation);
                                 selectedPiece = null;
+                                rotation = 0;
                             } else {
                                 selectedPiece = null;
                             }
