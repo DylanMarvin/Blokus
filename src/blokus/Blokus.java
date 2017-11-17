@@ -90,305 +90,815 @@ public class Blokus extends JFrame implements Runnable {
                         }
 
                     } else if (gameState == Window.GameState.InGame) {
-                        /////////
-                        if (Player.GetCurrentPlayer() == Player.getPlayer(1)) {
-                            if (selectedPiece != null) {
-                                Board.AddPiecePixel(xpos, ypos, selectedPiece,rotation);
-                                selectedPiece = null;
-                                rotation = 0;
-                            } else {
-                                selectedPiece = null;
-                            }
-
-                            if (xpos >= 15 && xpos <= 35 && ypos >= 45 && ypos <= 65 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(0)) {
-                                selectedPiece = Piece.Block.ONE;
-
-                            } else if (xpos >= 45 && xpos <= 88 && ypos >= 47 && ypos <= 65 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(1)) {
-                                selectedPiece = Piece.Block.TWO;
-
-                            } else if (xpos >= 98 && xpos <= 160 && ypos >= 47 && ypos <= 65 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(2)) {
-                                selectedPiece = Piece.Block.I3;
-
-                            } else if (xpos >= 170 && xpos <= 255 && ypos >= 47 && ypos <= 65 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(3)) {
-                                selectedPiece = Piece.Block.I4;
-
-                            } else if (xpos >= 265 && xpos <= 370 && ypos >= 47 && ypos <= 65 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(4)) {
-                                selectedPiece = Piece.Block.I5;
-
-                            } else if (xpos >= 380 && xpos <= 420 && ypos >= 47 && ypos <= 88 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(5)) {
-                                selectedPiece = Piece.Block.V3;
-
-                            } else if (xpos >= 435 && xpos <= 475 && ypos >= 47 && ypos <= 109 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(6)) {
-                                selectedPiece = Piece.Block.L4;
-
-                            } else if (xpos >= 487 && xpos <= 530 && ypos >= 47 && ypos <= 130 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(7)) {
-                                selectedPiece = Piece.Block.L5;
-
-                            } else if (xpos >= 540 && xpos <= 600 && ypos >= 47 && ypos <= 110 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(8)) {
-                                selectedPiece = Piece.Block.T5;
-
-                            } else if (xpos >= 613 && xpos <= 675 && ypos >= 47 && ypos <= 88 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(9)) {
-                                selectedPiece = Piece.Block.T4;
-
-                            } else if (xpos >= 15 && xpos <= 55 && ypos >= 75 && ypos <= 115 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(10)) {
-                                selectedPiece = Piece.Block.O;
-
-                            } else if (xpos >= 68 && xpos <= 130 && ypos >= 75 && ypos <= 140 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(11)) {
-                                selectedPiece = Piece.Block.W;
-
-                            } else if (xpos >= 140 && xpos <= 203 && ypos >= 75 && ypos <= 120 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(12)) {                                
-                                selectedPiece = Piece.Block.U;
-                                
-                            } else if (xpos >= 215 && xpos <= 275 && ypos >= 75 && ypos <= 140 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(13)) {                                
-                                selectedPiece = Piece.Block.X;
-                                
-                            } else if (xpos >= 285 && xpos <= 330 && ypos >= 75 && ypos <= 140 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(14)) {
-                                selectedPiece = Piece.Block.P;
-                                
-                            } else if (xpos >= 340 && xpos <= 425 && ypos >= 100 && ypos <= 140 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(15)) {
-                                selectedPiece = Piece.Block.Y;
-                                
-                            } else if (xpos >= 15 && xpos <= 75 && ypos >= 135 && ypos <= 200 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(16)) {
-                                selectedPiece = Piece.Block.F;
-                                
-                            } else if (xpos >= 88 && xpos <= 170 && ypos >= 155 && ypos <= 200 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(17)) {
-                                selectedPiece = Piece.Block.N;
-                                
-                            } else if (xpos >= 180 && xpos <= 225 && ypos >= 135 && ypos <= 200 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(18)) {
-                                selectedPiece = Piece.Block.Z4;
-                                
-                            } else if (xpos >= 540 && xpos <= 600 && ypos >= 135 && ypos <= 200 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(19)) {
-                                selectedPiece = Piece.Block.V5;
-                                
-                            } else if (xpos >= 615 && xpos <= 675 && ypos >= 135 && ypos <= 200 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(20)) {
-                                selectedPiece = Piece.Block.Z5;
-                                
-                            }
-                        } /////////
-                        else if (Player.GetCurrentPlayer() == Player.getPlayer(2)) {
-                            if (selectedPiece != null) {
-                                Board.AddPiecePixel(xpos, ypos, selectedPiece,rotation);
-                                selectedPiece = null;
-                                rotation = 0;
-                            } else {
-                                selectedPiece = null;
-                            }
-
-                            if (xpos >= 840 && xpos <= 860 && ypos >= 44 && ypos <= 66 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(0)) {
-                                
-                                selectedPiece = Piece.Block.ONE;
-
-                            } else if (xpos >= 840 && xpos <= 860 && ypos >= 76 && ypos <= 118 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(1)) {
-                                selectedPiece = Piece.Block.TWO;
-
-                            } else if (xpos >= 840 && xpos <= 860 && ypos >= 129 && ypos <= 192 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(2)) {
-                                selectedPiece = Piece.Block.I3;
-
-                            } else if (xpos >= 840 && xpos <= 860 && ypos >= 202 && ypos <= 286 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(3)) {
-                                selectedPiece = Piece.Block.I4;
-
-                            } else if (xpos >= 840 && xpos <= 860 && ypos >= 296 && ypos <= 402 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(4)) {
-                                selectedPiece = Piece.Block.I5;
-
-                            } else if (xpos >= 820 && xpos <= 860 && ypos >= 411 && ypos <= 452 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(5)) {
-                                selectedPiece = Piece.Block.V3;
-
-                            } else if (xpos >= 800 && xpos <= 860 && ypos >= 464 && ypos <= 507 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(6)) {
-                                selectedPiece = Piece.Block.L4;
-
-                            } else if (xpos >= 777 && xpos <= 860 && ypos >= 516 && ypos <= 558 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(7)) {
-                                selectedPiece = Piece.Block.L5;
-
-                            } else if (xpos >= 800 && xpos <= 860 && ypos >= 571 && ypos <= 632 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(8)) {
-                                selectedPiece = Piece.Block.T5;
-
-                            } else if (xpos >= 820 && xpos <= 860 && ypos >= 643 && ypos <= 706 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(9)) {
-                                selectedPiece = Piece.Block.T4;
-
-                            } else if (xpos >= 787 && xpos <= 830 && ypos >= 44 && ypos <= 86 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(10)) {
-                                selectedPiece = Piece.Block.O;
-
-                            } else if (xpos >= 766 && xpos <= 830 && ypos >= 97 && ypos <= 158 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(11)) {
-                                selectedPiece = Piece.Block.W;
-
-                            } else if (xpos >= 787 && xpos <= 830 && ypos >= 170 && ypos <= 234 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(12)) {
-                                selectedPiece = Piece.Block.U;
-
-                            } else if (xpos >= 766 && xpos <= 830 && ypos >= 245 && ypos <= 305 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(13)) {
-                                selectedPiece = Piece.Block.X;
-
-                            } else if (xpos >= 766 && xpos <= 830 && ypos >= 318 && ypos <= 360 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(14)) {
-                                selectedPiece = Piece.Block.P;
-
-                            } else if (xpos >= 766 && xpos <= 808 && ypos >= 369 && ypos <= 453 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(15)) {
-                                selectedPiece = Piece.Block.Y;
-
-                            } else if (xpos >= 709 && xpos <= 773 && ypos >= 44 && ypos <= 107 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(16)) {
-                                selectedPiece = Piece.Block.F;
-
-                            } else if (xpos >= 709 && xpos <= 751 && ypos >= 117 && ypos <= 202 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(17)) {
-                                selectedPiece = Piece.Block.N;
-
-                            } else if (xpos >= 709 && xpos <= 773 && ypos >= 211 && ypos <= 253 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(18)) {
-                                selectedPiece = Piece.Block.Z4;
-
-                            } else if (xpos >= 709 && xpos <= 773 && ypos >= 570 && ypos <= 632 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(19)) {
-                                selectedPiece = Piece.Block.V5;
-
-                            } else if (xpos >= 709 && xpos <= 773 && ypos >= 643 && ypos <= 706 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(20)) {
-                                selectedPiece = Piece.Block.Z5;
-
-                            }
-                        } /////////
-                        else if (Player.GetCurrentPlayer() == Player.getPlayer(3)) {
-
-                            if (selectedPiece != null) {
-                                Board.AddPiecePixel(xpos, ypos, selectedPiece,rotation);
-                                selectedPiece = null;
-                                rotation = 0;
-                            } else {
-                                selectedPiece = null;
-                            }
-
-                            if (xpos >= (15 + 185) && xpos <= (35 + 185) && ypos >= (45 + 680) && ypos <= (65 + 680) && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(0)) {
-                                selectedPiece = Piece.Block.ONE;
-
-                            } else if (xpos >= (45 + 185) && xpos <= (88 + 185) && ypos >= (47 + 680) && ypos <= (65 + 680) && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(1)) {
-                                selectedPiece = Piece.Block.TWO;
-
-                            } else if (xpos >= (98 + 185) && xpos <= (160 + 185) && ypos >= (47 + 680) && ypos <= (65 + 680) && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(2)) {
-                                selectedPiece = Piece.Block.I3;
-
-                            } else if (xpos >= (170 + 185) && xpos <= (255 + 185) && ypos >= (47 + 680) && ypos <= (65 + 680) && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(3)) {
-                                selectedPiece = Piece.Block.I4;
-
-                            } else if (xpos >= (265 + 185) && xpos <= (370 + 185) && ypos >= (47 + 680) && ypos <= (65 + 680) && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(4)) {
-                                selectedPiece = Piece.Block.I5;
-
-                            } else if (xpos >= (380 + 185) && xpos <= (420 + 185) && ypos >= (47 + 680) && ypos <= (88 + 680) && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(5)) {
-                                selectedPiece = Piece.Block.V3;
-
-                            } else if (xpos >= (435 + 185) && xpos <= (475 + 185) && ypos >= (47 + 680) && ypos <= (109 + 680) && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(6)) {
-                                selectedPiece = Piece.Block.L4;
-
-                            } else if (xpos >= (487 + 185) && xpos <= (530 + 185) && ypos >= (47 + 680) && ypos <= (130 + 680) && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(7)) {
-                                selectedPiece = Piece.Block.L5;
-
-                            } else if (xpos >= (540 + 185) && xpos <= (600 + 185) && ypos >= (47 + 680) && ypos <= (110 + 680) && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(8)) {
-                                selectedPiece = Piece.Block.T5;
-
-                            } else if (xpos >= (613 + 185) && xpos <= (675 + 185) && ypos >= (47 + 680) && ypos <= (88 + 680) && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(9)) {
-                                selectedPiece = Piece.Block.T4;
-
-                            } else if (xpos >= (15 + 185) && xpos <= (55 + 185) && ypos >= (47 + 680) && ypos <= (115 + 680) && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(10)) {
-                                selectedPiece = Piece.Block.O;
-
-                            } else if (xpos >= (68 + 185) && xpos <= (130 + 185) && ypos >= (75 + 680) && ypos <= (140+680) && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(11)) {
-                                selectedPiece = Piece.Block.W;
-
-                            } else if (xpos >= (140 + 185) && xpos <= (203 + 185) && ypos >= (75 + 680) && ypos <= (120 + 680) && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(12)) {
-                                selectedPiece = Piece.Block.U;
-
-                            } else if (xpos >= (215 + 185) && xpos <= (275 + 185) && ypos >= (75 + 680) && ypos <= (140 + 680) && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(13)) {
-                                selectedPiece = Piece.Block.X;
-
-                            } else if (xpos >= (285 + 185) && xpos <= (330 + 185) && ypos >= (75 + 680) && ypos <= (140 + 680) && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(14)) {
-                                selectedPiece = Piece.Block.P;
-
-                            } else if (xpos >= (340 + 185) && xpos <= (425 + 185) && ypos >= (100 + 680) && ypos <= (140 + 680) && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(15)) {
-                                selectedPiece = Piece.Block.Y;
-
-                            } else if (xpos >= (15 + 185) && xpos <= (75 + 185) && ypos >= (135 + 680) && ypos <= (200 + 680) && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(16)) {
-                                selectedPiece = Piece.Block.F;
-
-                            } else if (xpos >= (88 + 185) && xpos <= (170 + 185) && ypos >= (155 + 680) && ypos <= (200 + 680) && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(17)) {
-                                selectedPiece = Piece.Block.N;
-
-                            } else if (xpos >= (180 + 185) && xpos <= (225 + 185) && ypos >= (135 + 680) && ypos <= (200 + 680) && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(18)) {
-                                selectedPiece = Piece.Block.Z4;
-
-                            } else if (xpos >= (540 + 185) && xpos <= (600 + 185) && ypos >= (135 + 680) && ypos <= (200 + 680) && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(19)) {
-                                selectedPiece = Piece.Block.V5;
-
-                            } else if (xpos >= (615 + 185) && xpos <= (675 + 185) && ypos >= (135 + 680) && ypos <= (200 + 680) && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(20)) {
-                                selectedPiece = Piece.Block.Z5;
-
-                            }
-                        } /////////
-                        else if (Player.GetCurrentPlayer() == Player.getPlayer(4)) {
-                            if (selectedPiece != null) {
-                                Board.AddPiecePixel(xpos, ypos, selectedPiece,rotation);
-                                selectedPiece = null;
-                                rotation = 0;
-                            } else {
-                                selectedPiece = null;
-                            }
-
-                            if (xpos >= 15 && xpos <= 35 && ypos >= 860 && ypos <= 885 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(0)) {
-                                selectedPiece = Piece.Block.ONE;
-
-                            } else if (xpos >= 15 && xpos <= 35 && ypos >= 808 && ypos <= 850 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(1)) {
-                                selectedPiece = Piece.Block.TWO;
-                                
-                            } else if (xpos >= 15 && xpos <= 35 && ypos >= 735 && ypos <= 800 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(2)) {
-                                selectedPiece = Piece.Block.I3;
-                                
-                            } else if (xpos >= 15 && xpos <= 35 && ypos >= 640 && ypos <= 725 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(3)) {
-                                selectedPiece = Piece.Block.I4;
-                                
-                            } else if (xpos >= 15 && xpos <= 35 && ypos >= 525 && ypos <= 630 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(4)) {
-                                selectedPiece = Piece.Block.I5;
-                                
-                            } else if (xpos >= 15 && xpos <= 55 && ypos >= 475 && ypos <= 510 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(5)) {
-                                selectedPiece = Piece.Block.V3;
-                                
-                            } else if (xpos >= 15 && xpos <= 75 && ypos >= 420 && ypos <= 460 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(6)) {
-                                selectedPiece = Piece.Block.L4;
-                                
-                            } else if (xpos >= 15 && xpos <= 100 && ypos >= 370 && ypos <= 400 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(7)) {
-                                selectedPiece = Piece.Block.L5;
-                                
-                            } else if (xpos >= 15 && xpos <= 80 && ypos >= 305 && ypos <= 370 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(8)) {
-                                selectedPiece = Piece.Block.T5;
-                                
-                            } else if (xpos >= 15 && xpos <= 60 && ypos >= 220 && ypos <= 280 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(9)) {
-                                selectedPiece = Piece.Block.T4;
-                                
-                            } else if (xpos >= 50 && xpos <= 85 && ypos >= 840 && ypos <= 880 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(10)) {
-                                selectedPiece = Piece.Block.O;
-                                
-                            } else if (xpos >= 50 && xpos <= 110 && ypos >= 766 && ypos <= 830 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(11)) {
-                                selectedPiece = Piece.Block.W;
-                                
-                            } else if (xpos >= 50 && xpos <= 90 && ypos >= 700 && ypos <= 760 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(12)) {
-                                selectedPiece = Piece.Block.U;
-                                
-                            } else if (xpos >= 50 && xpos <= 110 && ypos >= 620 && ypos <= 680 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(13)) {
-                                selectedPiece = Piece.Block.X;
-                                
-                            } else if (xpos >= 50 && xpos <= 110 && ypos >= 565 && ypos <= 610 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(14)) {
-                                selectedPiece = Piece.Block.P;
-                                
-                            } else if (xpos >= 65 && xpos <= 111 && ypos >= 475 && ypos <= 555 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(15)) {
-                                selectedPiece = Piece.Block.Y;
-                                
-                            } else if (xpos >= 100 && xpos <= 165 && ypos >= 820 && ypos <= 880 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(16)) {
-                                selectedPiece = Piece.Block.F;
-                                
-                            } else if (xpos >= 125 && xpos <= 165 && ypos >= 725 && ypos <= 805 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(17)) {
-                                selectedPiece = Piece.Block.N;
-                                
-                            } else if (xpos >= 105 && xpos <= 165 && ypos >= 660 && ypos <= 700 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(18)) {
-                                selectedPiece = Piece.Block.Z4;
-                                
-                            } else if (xpos >= 100 && xpos <= 165 && ypos >= 295 && ypos <= 360 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(19)) {
-                                selectedPiece = Piece.Block.V5;
-                                
-                            } else if (xpos >= 100 && xpos <= 165 && ypos >= 220 && ypos <= 285 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(20)) {
-                                selectedPiece = Piece.Block.Z5;
-                            }
+                        
+                    if(Challenge.getCurrentChallenge() != null && Challenge.getCurrentChallenge().getActive() == true){
+                        if(xpos >= 588 && xpos <= (588+25) && ypos >= 260 && ypos <= (260+25)){
+                            Challenge.getCurrentChallenge().setActive(false);
                         }
-                        /////////
+                    }
+                    if(Challenge.getCurrentChallenge() == null || Challenge.getCurrentChallenge().getActive() == false){
+                            if (Player.GetCurrentPlayer() == Player.getPlayer(1)) {
+                                if (selectedPiece != null) {
+                                    Board.AddPiecePixel(xpos, ypos, selectedPiece,rotation);                                   
+                                    selectedPiece = null;
+                                    rotation = 0;
+                                } else {
+                                    selectedPiece = null;
+                                }
+
+                                if (xpos >= 15 && xpos <= 35 && ypos >= 45 && ypos <= 65 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(0)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                        Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.ONE;
+
+                                } else if (xpos >= 45 && xpos <= 88 && ypos >= 47 && ypos <= 65 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(1)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                        Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.TWO;
+
+                                } else if (xpos >= 98 && xpos <= 160 && ypos >= 47 && ypos <= 65 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(2)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                        Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.I3;
+
+                                } else if (xpos >= 170 && xpos <= 255 && ypos >= 47 && ypos <= 65 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(3)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                        Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.I4;
+
+                                } else if (xpos >= 265 && xpos <= 370 && ypos >= 47 && ypos <= 65 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(4)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                        Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.I5;
+
+                                } else if (xpos >= 380 && xpos <= 420 && ypos >= 47 && ypos <= 88 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(5)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                        Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.V3;
+
+                                } else if (xpos >= 435 && xpos <= 475 && ypos >= 47 && ypos <= 109 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(6)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                        Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.L4;
+
+                                } else if (xpos >= 487 && xpos <= 530 && ypos >= 47 && ypos <= 130 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(7)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                        Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.L5;
+
+                                } else if (xpos >= 540 && xpos <= 600 && ypos >= 47 && ypos <= 110 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(8)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                        Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.T5;
+
+                                } else if (xpos >= 613 && xpos <= 675 && ypos >= 47 && ypos <= 88 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(9)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                        Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.T4;
+
+                                } else if (xpos >= 15 && xpos <= 55 && ypos >= 75 && ypos <= 115 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(10)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                        Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.O;
+
+                                } else if (xpos >= 68 && xpos <= 130 && ypos >= 75 && ypos <= 140 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(11)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                        Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.W;
+
+                                } else if (xpos >= 140 && xpos <= 203 && ypos >= 75 && ypos <= 120 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(12)) {                                
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                        Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.U;
+
+                                } else if (xpos >= 215 && xpos <= 275 && ypos >= 75 && ypos <= 140 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(13)) {                                
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.X;
+
+                                } else if (xpos >= 285 && xpos <= 330 && ypos >= 75 && ypos <= 140 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(14)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                        Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.P;
+
+                                } else if (xpos >= 340 && xpos <= 425 && ypos >= 100 && ypos <= 140 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(15)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                        Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.Y;
+
+                                } else if (xpos >= 15 && xpos <= 75 && ypos >= 135 && ypos <= 200 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(16)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                        Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.F;
+
+                                } else if (xpos >= 88 && xpos <= 170 && ypos >= 155 && ypos <= 200 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(17)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                        Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.N;
+
+                                } else if (xpos >= 180 && xpos <= 225 && ypos >= 135 && ypos <= 200 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(18)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                        Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.Z4;
+
+                                } else if (xpos >= 540 && xpos <= 600 && ypos >= 135 && ypos <= 200 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(19)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                        Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.V5;
+
+                                } else if (xpos >= 615 && xpos <= 675 && ypos >= 135 && ypos <= 200 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(20)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                        Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.Z5;
+
+                                }
+                            } /////////
+                            else if (Player.GetCurrentPlayer() == Player.getPlayer(2)) {
+                                if (selectedPiece != null) {
+                                    Board.AddPiecePixel(xpos, ypos, selectedPiece,rotation);
+                                    selectedPiece = null;
+                                    rotation = 0;
+                                } else {
+                                    selectedPiece = null;
+                                }
+
+                                if (xpos >= 840 && xpos <= 860 && ypos >= 44 && ypos <= 66 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(0)) {
+
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                        Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.ONE;
+
+                                } else if (xpos >= 840 && xpos <= 860 && ypos >= 76 && ypos <= 118 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(1)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                        Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.TWO;
+
+                                } else if (xpos >= 840 && xpos <= 860 && ypos >= 129 && ypos <= 192 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(2)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                        Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.I3;
+
+                                } else if (xpos >= 840 && xpos <= 860 && ypos >= 202 && ypos <= 286 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(3)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                        Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.I4;
+
+                                } else if (xpos >= 840 && xpos <= 860 && ypos >= 296 && ypos <= 402 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(4)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                        Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.I5;
+
+                                } else if (xpos >= 820 && xpos <= 860 && ypos >= 411 && ypos <= 452 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(5)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                        Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.V3;
+
+                                } else if (xpos >= 800 && xpos <= 860 && ypos >= 464 && ypos <= 507 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(6)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                        Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.L4;
+
+                                } else if (xpos >= 777 && xpos <= 860 && ypos >= 516 && ypos <= 558 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(7)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                        Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.L5;
+
+                                } else if (xpos >= 800 && xpos <= 860 && ypos >= 571 && ypos <= 632 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(8)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                        Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.T5;
+
+                                } else if (xpos >= 820 && xpos <= 860 && ypos >= 643 && ypos <= 706 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(9)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                        Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.T4;
+
+                                } else if (xpos >= 787 && xpos <= 830 && ypos >= 44 && ypos <= 86 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(10)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                        Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.O;
+
+                                } else if (xpos >= 766 && xpos <= 830 && ypos >= 97 && ypos <= 158 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(11)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                        Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.W;
+
+                                } else if (xpos >= 787 && xpos <= 830 && ypos >= 170 && ypos <= 234 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(12)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                        Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.U;
+
+                                } else if (xpos >= 766 && xpos <= 830 && ypos >= 245 && ypos <= 305 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(13)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                        Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.X;
+
+                                } else if (xpos >= 766 && xpos <= 830 && ypos >= 318 && ypos <= 360 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(14)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                        Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.P;
+
+                                } else if (xpos >= 766 && xpos <= 808 && ypos >= 369 && ypos <= 453 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(15)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                        Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.Y;
+
+                                } else if (xpos >= 709 && xpos <= 773 && ypos >= 44 && ypos <= 107 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(16)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                        Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.F;
+
+                                } else if (xpos >= 709 && xpos <= 751 && ypos >= 117 && ypos <= 202 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(17)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                        Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.N;
+
+                                } else if (xpos >= 709 && xpos <= 773 && ypos >= 211 && ypos <= 253 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(18)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                        Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.Z4;
+
+                                } else if (xpos >= 709 && xpos <= 773 && ypos >= 570 && ypos <= 632 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(19)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                        Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.V5;
+
+                                } else if (xpos >= 709 && xpos <= 773 && ypos >= 643 && ypos <= 706 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(20)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                        Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.Z5;
+
+                                }
+                            } /////////
+                            else if (Player.GetCurrentPlayer() == Player.getPlayer(3)) {
+
+                                if (selectedPiece != null) {
+                                    Board.AddPiecePixel(xpos, ypos, selectedPiece,rotation);
+                                    selectedPiece = null;
+                                    rotation = 0;
+                                } else {
+                                    selectedPiece = null;
+                                }
+
+                                if (xpos >= (15 + 185) && xpos <= (35 + 185) && ypos >= (45 + 680) && ypos <= (65 + 680) && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(0)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                        Player.switchTurns();
+                                    }
+                                    else
+                                        selectedPiece = Piece.Block.ONE;
+
+                                } else if (xpos >= (45 + 185) && xpos <= (88 + 185) && ypos >= (47 + 680) && ypos <= (65 + 680) && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(1)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(1);
+                                    Player.setCompletedC(false);
+                                    Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.TWO;
+
+                                } else if (xpos >= (98 + 185) && xpos <= (160 + 185) && ypos >= (47 + 680) && ypos <= (65 + 680) && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(2)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(2);
+                                    Player.setCompletedC(false);
+                                    Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.I3;
+
+                                } else if (xpos >= (170 + 185) && xpos <= (255 + 185) && ypos >= (47 + 680) && ypos <= (65 + 680) && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(3)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(3);
+                                    Player.setCompletedC(false);
+                                    Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.I4;
+
+                                } else if (xpos >= (265 + 185) && xpos <= (370 + 185) && ypos >= (47 + 680) && ypos <= (65 + 680) && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(4)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(4);
+                                    Player.setCompletedC(false);
+                                    Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.I5;
+
+                                } else if (xpos >= (380 + 185) && xpos <= (420 + 185) && ypos >= (47 + 680) && ypos <= (88 + 680) && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(5)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(5);
+                                        Player.setCompletedC(false);
+                                    Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.V3;
+
+                                } else if (xpos >= (435 + 185) && xpos <= (475 + 185) && ypos >= (47 + 680) && ypos <= (109 + 680) && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(6)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(6);
+                                        Player.setCompletedC(false);
+                                    Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.L4;
+
+                                } else if (xpos >= (487 + 185) && xpos <= (530 + 185) && ypos >= (47 + 680) && ypos <= (130 + 680) && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(7)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(7);
+                                        Player.setCompletedC(false);
+                                    Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.L5;
+
+                                } else if (xpos >= (540 + 185) && xpos <= (600 + 185) && ypos >= (47 + 680) && ypos <= (110 + 680) && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(8)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(8);
+                                        Player.setCompletedC(false);
+                                    Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.T5;
+
+                                } else if (xpos >= (613 + 185) && xpos <= (675 + 185) && ypos >= (47 + 680) && ypos <= (88 + 680) && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(9)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(9);
+                                        Player.setCompletedC(false);
+                                    Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.T4;
+
+                                } else if (xpos >= (15 + 185) && xpos <= (55 + 185) && ypos >= (47 + 680) && ypos <= (115 + 680) && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(10)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(10);
+                                        Player.setCompletedC(false);
+                                    Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.O;
+
+                                } else if (xpos >= (68 + 185) && xpos <= (130 + 185) && ypos >= (75 + 680) && ypos <= (140+680) && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(11)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(11);
+                                        Player.setCompletedC(false);
+                                    Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.W;
+
+                                } else if (xpos >= (140 + 185) && xpos <= (203 + 185) && ypos >= (75 + 680) && ypos <= (120 + 680) && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(12)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(12);
+                                        Player.setCompletedC(false);
+                                    Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.U;
+
+                                } else if (xpos >= (215 + 185) && xpos <= (275 + 185) && ypos >= (75 + 680) && ypos <= (140 + 680) && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(13)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(13);
+                                        Player.setCompletedC(false);
+                                    Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.X;
+
+                                } else if (xpos >= (285 + 185) && xpos <= (330 + 185) && ypos >= (75 + 680) && ypos <= (140 + 680) && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(14)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(14);
+                                        Player.setCompletedC(false);
+                                    Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.P;
+
+                                } else if (xpos >= (340 + 185) && xpos <= (425 + 185) && ypos >= (100 + 680) && ypos <= (140 + 680) && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(15)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(15);
+                                        Player.setCompletedC(false);
+                                    Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.Y;
+
+                                } else if (xpos >= (15 + 185) && xpos <= (75 + 185) && ypos >= (135 + 680) && ypos <= (200 + 680) && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(16)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(16);
+                                        Player.setCompletedC(false);
+                                    Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.F;
+
+                                } else if (xpos >= (88 + 185) && xpos <= (170 + 185) && ypos >= (155 + 680) && ypos <= (200 + 680) && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(17)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(17);
+                                        Player.setCompletedC(false);
+                                    Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.N;
+
+                                } else if (xpos >= (180 + 185) && xpos <= (225 + 185) && ypos >= (135 + 680) && ypos <= (200 + 680) && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(18)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(18);
+                                        Player.setCompletedC(false);
+                                    Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.Z4;
+
+                                } else if (xpos >= (540 + 185) && xpos <= (600 + 185) && ypos >= (135 + 680) && ypos <= (200 + 680) && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(19)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(19);
+                                        Player.setCompletedC(false);
+                                    Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.V5;
+
+                                } else if (xpos >= (615 + 185) && xpos <= (675 + 185) && ypos >= (135 + 680) && ypos <= (200 + 680) && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(20)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(20);
+                                        Player.setCompletedC(false);
+                                    Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.Z5;
+
+                                }
+                            } /////////
+                            else if (Player.GetCurrentPlayer() == Player.getPlayer(4)) {
+                                if (selectedPiece != null) {
+                                    Board.AddPiecePixel(xpos, ypos, selectedPiece,rotation);
+                                    selectedPiece = null;
+                                    rotation = 0;
+                                } else {
+                                    selectedPiece = null;
+                                }
+
+                                if (xpos >= 15 && xpos <= 35 && ypos >= 860 && ypos <= 885 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(0)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                    Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.ONE;
+
+                                } else if (xpos >= 15 && xpos <= 35 && ypos >= 808 && ypos <= 850 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(1)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                    Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.TWO;
+
+                                } else if (xpos >= 15 && xpos <= 35 && ypos >= 735 && ypos <= 800 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(2)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                    Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.I3;
+
+                                } else if (xpos >= 15 && xpos <= 35 && ypos >= 640 && ypos <= 725 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(3)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                    Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.I4;
+
+                                } else if (xpos >= 15 && xpos <= 35 && ypos >= 525 && ypos <= 630 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(4)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                    Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.I5;
+
+                                } else if (xpos >= 15 && xpos <= 55 && ypos >= 475 && ypos <= 510 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(5)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                    Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.V3;
+
+                                } else if (xpos >= 15 && xpos <= 75 && ypos >= 420 && ypos <= 460 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(6)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                    Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.L4;
+
+                                } else if (xpos >= 15 && xpos <= 100 && ypos >= 370 && ypos <= 400 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(7)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                    Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.L5;
+
+                                } else if (xpos >= 15 && xpos <= 80 && ypos >= 305 && ypos <= 370 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(8)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                    Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.T5;
+
+                                } else if (xpos >= 15 && xpos <= 60 && ypos >= 220 && ypos <= 280 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(9)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                    Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.T4;
+
+                                } else if (xpos >= 50 && xpos <= 85 && ypos >= 840 && ypos <= 880 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(10)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                    Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.O;
+
+                                } else if (xpos >= 50 && xpos <= 110 && ypos >= 766 && ypos <= 830 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(11)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                    Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.W;
+
+                                } else if (xpos >= 50 && xpos <= 90 && ypos >= 700 && ypos <= 760 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(12)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                    Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.U;
+
+                                } else if (xpos >= 50 && xpos <= 110 && ypos >= 620 && ypos <= 680 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(13)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                    Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.X;
+
+                                } else if (xpos >= 50 && xpos <= 110 && ypos >= 565 && ypos <= 610 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(14)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                    Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.P;
+
+                                } else if (xpos >= 65 && xpos <= 111 && ypos >= 475 && ypos <= 555 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(15)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                    Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.Y;
+
+                                } else if (xpos >= 100 && xpos <= 165 && ypos >= 820 && ypos <= 880 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(16)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                    Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.F;
+
+                                } else if (xpos >= 125 && xpos <= 165 && ypos >= 725 && ypos <= 805 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(17)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                    Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.N;
+
+                                } else if (xpos >= 105 && xpos <= 165 && ypos >= 660 && ypos <= 700 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(18)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                    Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.Z4;
+
+                                } else if (xpos >= 100 && xpos <= 165 && ypos >= 295 && ypos <= 360 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(19)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                    Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.V5;
+
+                                } else if (xpos >= 100 && xpos <= 165 && ypos >= 220 && ypos <= 285 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(20)) {
+                                    if(Player.getCompletedC() == true){
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.setCompletedC(false);
+                                    Player.switchTurns();
+                                    }
+                                    else
+                                    selectedPiece = Piece.Block.Z5;
+                                }
+                            }
+                            /////////
+                        }
 
                     }
 
@@ -465,7 +975,8 @@ public class Blokus extends JFrame implements Runnable {
                 if (e.VK_UP == e.getKeyCode()) {
                 } else if (e.VK_DOWN == e.getKeyCode()) {
                 } else if (e.VK_LEFT == e.getKeyCode()) {
-                } else if (e.VK_RIGHT == e.getKeyCode()) {
+                } else if (e.VK_C == e.getKeyCode()) {
+                    Challenge.getCurrentChallenge().setActive(true);
                 } else if (e.VK_R == e.getKeyCode()) {
                     rotation += 90;
                     if(rotation >270)
@@ -541,20 +1052,32 @@ public class Blokus extends JFrame implements Runnable {
             g.drawPolyline(x, y, 5);
 //Color Player's Side when it's their turn
             if(Player.GetCurrentPlayer() == Player.getPlayer(1)){
-                g.setColor(Color.BLACK);
+                if(Player.getCompletedC() == true)
+                    g.setColor(Color.MAGENTA);
+                else
+                    g.setColor(Color.BLACK);
                 g.fillRect(Window.WINDOW_BORDER - 5, Window.YTITLE + Window.WINDOW_BORDER - 5, 
                         Window.XBORDER + Window.getHeight2() + 5, Window.WINDOW_BORDER - 8 + Window.YBORDER - 3);
             }
             if(Player.GetCurrentPlayer() == Player.getPlayer(2)){
-                g.setColor(Color.BLACK);
+                if(Player.getCompletedC() == true)
+                    g.setColor(Color.MAGENTA);
+                else
+                    g.setColor(Color.BLACK);
                 g.fillRect(688,34,192,677);
             }
             if(Player.GetCurrentPlayer() == Player.getPlayer(3)){
-                g.setColor(Color.BLACK);
+                if(Player.getCompletedC() == true)
+                    g.setColor(Color.MAGENTA);
+                else
+                    g.setColor(Color.BLACK);
                 g.fillRect(188,710,700,200);
             }
             if(Player.GetCurrentPlayer() == Player.getPlayer(4)){
-                g.setColor(Color.BLACK);
+                if(Player.getCompletedC() == true)
+                    g.setColor(Color.MAGENTA);
+                else
+                    g.setColor(Color.BLACK);
                 g.fillRect(0,211,188,700);
             }
 ///////////////////////
@@ -1417,6 +1940,8 @@ public class Blokus extends JFrame implements Runnable {
             }
         }
 
+        if(Challenge.getCurrentChallenge() != null)
+            Challenge.getCurrentChallenge().Draw(g);
         }
 
         gOld.drawImage(image, 0, 0, null);
@@ -1442,6 +1967,8 @@ public class Blokus extends JFrame implements Runnable {
         Player.Reset();
         Board.Reset();
         gameState = Window.GameState.Menu;
+        Challenge.setChallenges(Player.getPlayer(1).getOutsidePieces());
+        Challenge.setCurrentChallenge();
         color = Color.white;
         color2 = Color.white;
         selectedPiece = null;

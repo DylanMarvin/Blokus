@@ -93,7 +93,7 @@ public class Board {
                     board[zrow][zcol] = piece;
                     Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
                     Player.switchTurns();
-                    
+                    Challenge.setChallenges(Player.GetCurrentPlayer().getOutsidePieces());
                 }
             }
             
@@ -103,14 +103,15 @@ public class Board {
                     piece.Two(board,rotation);
                     Player.GetCurrentPlayer().getOutsidePieces().changePiece(1);
                     Player.switchTurns();
-                    
+                    Challenge.setChallenges(Player.GetCurrentPlayer().getOutsidePieces());
                 }
             }
             else if (piece.getBlock() == Piece.Block.I3) { 
                 if(checkPieceH(zrow,zcol,3 ) && checkPieceV(zrow,zcol,3)){
                     piece.I3(board,rotation);
                     Player.GetCurrentPlayer().getOutsidePieces().changePiece(2);
-                        Player.switchTurns();
+                    Player.switchTurns();
+                    Challenge.setChallenges(Player.GetCurrentPlayer().getOutsidePieces());
                 }
             }
             else if (piece.getBlock() == Piece.Block.I4) {         
@@ -118,6 +119,7 @@ public class Board {
                     piece.I4(board,rotation);
                     Player.GetCurrentPlayer().getOutsidePieces().changePiece(3);
                     Player.switchTurns();
+                    Challenge.setChallenges(Player.GetCurrentPlayer().getOutsidePieces());
                 }
             }
             else if (piece.getBlock() == Piece.Block.I5) {  
@@ -125,6 +127,7 @@ public class Board {
                     piece.I5(board,rotation);
                     Player.GetCurrentPlayer().getOutsidePieces().changePiece(4);
                     Player.switchTurns();
+                    Challenge.setChallenges(Player.GetCurrentPlayer().getOutsidePieces());
                 }
             }
             else if (piece.getBlock() == Piece.Block.L4) {
@@ -132,13 +135,17 @@ public class Board {
                     piece.L4(board,rotation);
                     Player.GetCurrentPlayer().getOutsidePieces().changePiece(6);
                     Player.switchTurns();
+                    Challenge.setChallenges(Player.GetCurrentPlayer().getOutsidePieces());
                 }
             }
             else if (piece.getBlock() == Piece.Block.L5) { 
                 if(checkPieceL(zrow,zcol,4)){
-                    piece.L5(board,rotation);
-                    Player.GetCurrentPlayer().getOutsidePieces().changePiece(7);
-                    Player.switchTurns();
+                    piece.L5(board,rotation);                    
+                    Player.GetCurrentPlayer().getOutsidePieces().changePiece(7); 
+                    Player.GetCurrentPlayer().setCompletedC(Challenge.checkChallenge());
+                    if(Player.getCompletedC() == false)
+                        Player.switchTurns();
+                    Challenge.setChallenges(Player.GetCurrentPlayer().getOutsidePieces());
                 }
             }
             else if (piece.getBlock() == Piece.Block.N) {        
@@ -146,6 +153,7 @@ public class Board {
                     piece.N(board,rotation);
                     Player.GetCurrentPlayer().getOutsidePieces().changePiece(17);
                     Player.switchTurns();
+                    Challenge.setChallenges(Player.GetCurrentPlayer().getOutsidePieces());
                 }
             }
             else if (piece.getBlock() == Piece.Block.O) { 
@@ -153,6 +161,7 @@ public class Board {
                     piece.O(board,rotation);
                     Player.GetCurrentPlayer().getOutsidePieces().changePiece(10);
                     Player.switchTurns();
+                    Challenge.setChallenges(Player.GetCurrentPlayer().getOutsidePieces());
                 }           
             }
             else if (piece.getBlock() == Piece.Block.W) {  
@@ -160,6 +169,7 @@ public class Board {
                     piece.W(board);
                     Player.GetCurrentPlayer().getOutsidePieces().changePiece(11);
                     Player.switchTurns();
+                    Challenge.setChallenges(Player.GetCurrentPlayer().getOutsidePieces());
                 }           
             
             }
@@ -168,13 +178,15 @@ public class Board {
                 piece.T4(board,rotation);
                 Player.GetCurrentPlayer().getOutsidePieces().changePiece(9);
                 Player.switchTurns();
+                Challenge.setChallenges(Player.GetCurrentPlayer().getOutsidePieces());
                  }
             }
             else if (piece.getBlock() == Piece.Block.T5) {    
                 if(checkPieceT5(zrow,zcol,5)){
-                piece.T5(board,rotation);
-                Player.GetCurrentPlayer().getOutsidePieces().changePiece(8);
+                piece.T5(board,rotation);              
+                Player.GetCurrentPlayer().getOutsidePieces().changePiece(8);          
                 Player.switchTurns();
+                Challenge.setChallenges(Player.GetCurrentPlayer().getOutsidePieces());
                 }
             }
             else if (piece.getBlock() == Piece.Block.U) {
@@ -183,13 +195,17 @@ public class Board {
                     piece.U(board,rotation);
                 Player.GetCurrentPlayer().getOutsidePieces().changePiece(12);
                 Player.switchTurns();
+                Challenge.setChallenges(Player.GetCurrentPlayer().getOutsidePieces());
                 }
             }
             else if (piece.getBlock() == Piece.Block.V3) {
                 if(checkPieceV3(zrow,zcol,5)){                
                 piece.V3(board,rotation);
                 Player.GetCurrentPlayer().getOutsidePieces().changePiece(5);
-                Player.switchTurns();
+                Player.GetCurrentPlayer().setCompletedC(Challenge.checkChallenge());
+                if(Player.getCompletedC() == false)
+                    Player.switchTurns();
+                Challenge.setChallenges(Player.GetCurrentPlayer().getOutsidePieces());
                 }
             }
 
@@ -198,6 +214,7 @@ public class Board {
                 piece.V5(board,rotation);
                    Player.GetCurrentPlayer().getOutsidePieces().changePiece(20);
                 Player.switchTurns();
+                Challenge.setChallenges(Player.GetCurrentPlayer().getOutsidePieces());
               }
             }
 
@@ -206,6 +223,7 @@ public class Board {
                 piece.F(board,rotation);
                    Player.GetCurrentPlayer().getOutsidePieces().changePiece(16);
                 Player.switchTurns();
+                Challenge.setChallenges(Player.GetCurrentPlayer().getOutsidePieces());
                 }
             }
 
@@ -222,6 +240,7 @@ public class Board {
                 piece.X(board,rotation);
                    Player.GetCurrentPlayer().getOutsidePieces().changePiece(13);
                 Player.switchTurns();
+                Challenge.setChallenges(Player.GetCurrentPlayer().getOutsidePieces());
                 }
             }
 
@@ -230,22 +249,27 @@ public class Board {
                 piece.Y(board,rotation);
                    Player.GetCurrentPlayer().getOutsidePieces().changePiece(15);
                 Player.switchTurns();
+                Challenge.setChallenges(Player.GetCurrentPlayer().getOutsidePieces());
             }
             }
             else if (piece.getBlock() == Piece.Block.Z4) {
                  if(checkPieceZ4(zrow,zcol,5)){    
                 piece.Z4(board,rotation);
                    Player.GetCurrentPlayer().getOutsidePieces().changePiece(18);
-                Player.switchTurns();
+                if(Player.getCompletedC() == false)
+                    Player.switchTurns();
+                Challenge.setChallenges(Player.GetCurrentPlayer().getOutsidePieces());
             }
             }
             else if (piece.getBlock() == Piece.Block.Z5) {                
 
                 if(checkPieceZ5(zrow,zcol,5)){    
                 piece.Z5(board,rotation);
-                   Player.GetCurrentPlayer().getOutsidePieces().changePiece(19);
-
+                Player.GetCurrentPlayer().getOutsidePieces().changePiece(19);
+                Player.GetCurrentPlayer().setCompletedC(Challenge.checkChallenge());
+                if(Player.getCompletedC() == false)
                 Player.switchTurns();
+                Challenge.setChallenges(Player.GetCurrentPlayer().getOutsidePieces());
             }
             }
             

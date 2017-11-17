@@ -14,6 +14,7 @@ public class Player {
     private  Outside_Pieces Pieces; 
     protected int numPieces;
     private boolean firstPiece;
+    private static boolean completedC;
     
     public static void Reset(){
         
@@ -21,12 +22,11 @@ public class Player {
             for(int i = 0;i<numPlayers;i++){               
                 players[i] = new Player(i+1); 
                 players[i].Pieces = new Outside_Pieces(i+1);
-            }
-           
+                players[i].firstPiece = true;
+            }   
         currentTurn = players[0];
-        for(int i = 0;i<numPlayers;i++){               
-           players[i].firstPiece = true;
-       }
+        completedC = false;
+
     }
     Player(int _num){       
         playerNum = _num;
@@ -110,6 +110,14 @@ public class Player {
     }
     public static Player getPlayer(int playerNumber){
         return players[playerNumber-1];
+    }
+    
+    public static void setCompletedC(boolean _chal){
+        completedC = _chal;
+    }
+    
+    public static boolean getCompletedC(){
+        return completedC;
     }
     
 }
