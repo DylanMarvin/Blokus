@@ -153,18 +153,18 @@ public class Piece {
         }
         else if(rotation == 90){
             board[row][column] = this;
-            board[row ][column + 1] = this;
-            board[row + 1][column] = this;
+            board[row ][column -1] = this;
+            board[row + 1][column-1] = this;
         }
         else if(rotation == 180){
             board[row][column] = this;
-            board[row + 1][column - 1] = this;
-            board[row + 1][column] = this;
+            board[row - 1][column - 1] = this;
+            board[row - 1][column] = this;
         }
         else if(rotation == 270){
             board[row][column] = this;
-            board[row ][column - 1] = this;
-            board[row + 1][column] = this;
+            board[row ][column + 1] = this;
+            board[row - 1][column+1] = this;
         }
     }
 
@@ -177,21 +177,21 @@ public class Piece {
         }
         else if(rotation == 90){
             board[row][column] = this;
-        board[row ][column+1] = this;
-        board[row ][column+2] = this;
-        board[row + 1][column ] = this;
+        board[row ][column-1] = this;
+        board[row ][column-2] = this;
+        board[row + 1][column-2 ] = this;
         }
         else if(rotation == 180){
             board[row][column] = this;
-        board[row + 1][column] = this;
-        board[row + 2][column] = this;
-        board[row + 2][column -1] = this;
+        board[row -1][column] = this;
+        board[row -2][column] = this;
+        board[row -2][column -1] = this;
         }
         else if(rotation == 270){
             board[row][column] = this;
-        board[row ][column-1] = this;
-        board[row ][column-2] = this;
-        board[row + 1][column ] = this;
+        board[row][column+1] = this;
+        board[row ][column+2] = this;
+        board[row -1][column +2] = this;
             
         }
     }
@@ -206,24 +206,24 @@ public class Piece {
         }
         else if(rotation == 90){
             board[row][column] = this;
-        board[row ][column+1] = this;
-        board[row ][column+2] = this;
-        board[row + 1][column ] = this;
-        board[row ][column + 3] = this;
+        board[row ][column-1] = this;
+        board[row ][column-2] = this;
+        board[row ][column-3 ] = this;
+        board[row+1 ][column - 3] = this;
         }
         else if(rotation == 180){
             board[row][column] = this;
-        board[row + 1][column] = this;
-        board[row + 2][column] = this;
-        board[row + 3][column] = this;
-        board[row + 3][column - 1] = this;
+        board[row - 1][column] = this;
+        board[row - 2][column] = this;
+        board[row - 3][column] = this;
+        board[row - 3][column - 1] = this;
         }
         else if(rotation == 270){
             board[row][column] = this;
-        board[row ][column-1] = this;
-        board[row ][column-2] = this;
-        board[row + 1][column ] = this;
-        board[row ][column - 3] = this;
+        board[row ][column+1] = this;
+        board[row ][column+2] = this;
+        board[row ][column+3 ] = this;
+        board[row-1 ][column + 3] = this;
         }
     }
 
@@ -236,15 +236,15 @@ public class Piece {
         }
         else if(rotation == 90){
              board[row][column] = this;
-        board[row -1][column] = this;       
-        board[row-2][column] = this;
-        board[row-1][column - 1] = this;
+        board[row +1][column] = this;       
+        board[row+2][column] = this;
+        board[row+1][column - 1] = this;
         }
         else if(rotation == 180){
             board[row][column] = this;
-        board[row - 1][column+1] = this;       
-        board[row][column +1] = this;
-        board[row][column + 2] = this;
+        board[row - 1][column-1] = this;       
+        board[row][column -1] = this;
+        board[row][column - 2] = this;
         }
         else if(rotation == 270){
             board[row][column] = this;
@@ -264,17 +264,17 @@ public class Piece {
         }
         else if(rotation == 90){
             board[row][column] = this;
-            board[row -1][column] = this;       
-            board[row-2][column] = this;
-            board[row-1][column - 1] = this;
-            board[row - 1][column - 2] = this;
+            board[row +1][column] = this;       
+            board[row+2][column] = this;
+            board[row+1][column - 1] = this;
+            board[row + 1][column - 2] = this;
         }
         else if(rotation == 180){
             board[row][column] = this;
-            board[row -1][column] = this;       
-            board[row-2][column] = this;
-            board[row-1][column + 1] = this;
-            board[row - 1][column + 2] = this;
+            board[row ][column -1] = this;       
+            board[row][column-2] = this;
+            board[row-1][column - 1] = this;
+            board[row - 2][column -1] = this;
         }
         else if(rotation == 270){
             board[row][column] = this;
@@ -292,12 +292,36 @@ public class Piece {
         board[row + 1][column + 1] = this;
     }
 
-    public void W(Piece board[][]) {
-        board[row][column] = this;
+    public void W(Piece board[][], int rotation) {
+       
+        if(rotation == 0){
+            board[row][column] = this;
         board[row + 1][column] = this;
         board[row + 1][column + 1] = this;
         board[row + 2][column + 1] = this;
         board[row + 2][column + 2] = this;
+        }
+        else if(rotation == 90){
+            board[row][column] = this;
+        board[row ][column-1] = this;
+        board[row + 1][column -1] = this;
+        board[row + 1][column -2] = this;
+        board[row + 2][column - 2] = this;
+        }
+        else if(rotation == 180){
+           board[row][column] = this;
+        board[row - 1][column] = this;
+        board[row - 1][column - 1] = this;
+        board[row -2][column - 1] = this;
+        board[row - 2][column -2] = this;
+        }
+        else if(rotation == 270){
+            board[row][column] = this;
+        board[row ][column+1] = this;
+        board[row - 1][column + 1] = this;
+        board[row - 1][column + 2] = this;
+        board[row - 2][column + 2] = this;
+        }
     }
 
     public void U(Piece board[][],int rotation) {
@@ -319,7 +343,7 @@ public class Piece {
             board[row][column] = this;
             board[row-1][column] = this;
             board[row - 1][column -1] = this;
-            board[row - 2][column - 2] = this;
+            board[row - 1][column - 2] = this;
             board[row][column-2] = this;
         }
         else if(rotation == 270){
@@ -332,11 +356,35 @@ public class Piece {
     }
 
     public void X(Piece board[][],int rotation) {
-        board[row][column] = this;
+       
+        if(rotation == 0){
+           board[row][column] = this;
         board[row + 1][column] = this;
         board[row + 1][column -1] = this;
         board[row + 1][column + 1] = this;
         board[row + 2][column] = this;
+        }
+        else if(rotation == 90){
+           board[row][column] = this;
+        board[row + 1][column-1] = this;
+        board[row - 1][column -1] = this;
+        board[row][column - 1] = this;
+        board[row ][column-2] = this;
+        }
+        else if(rotation == 180){
+            board[row][column] = this;
+        board[row -1][column] = this;
+        board[row -2][column ] = this;
+        board[row -1][column + 1] = this;
+        board[row - 1][column -1] = this;
+        }
+        else if(rotation == 270){
+            board[row][column] = this;
+        board[row + 1][column+1] = this;
+        board[row - 1][column +1] = this;
+        board[row ][column + 1] = this;
+        board[row ][column+2] = this;
+        }
     }
 
     public void P(Piece board[][],int rotation) {
@@ -356,15 +404,15 @@ public class Piece {
         }
         else if(rotation == 180){
             board[row][column] = this;
-            board[row + 1][column] = this;
-            board[row+2][column ] = this;
-            board[row + 1][column - 1] = this;
+            board[row - 1][column] = this;
+            board[row-2][column ] = this;
+            board[row - 1][column - 1] = this;
             board[row ][column-1] = this;
         }
         else if(rotation == 270){
             board[row][column] = this;
-            board[row + 1][column] = this;
-            board[row+1][column + 1] = this;
+            board[row - 1][column] = this;
+            board[row-1][column + 1] = this;
             board[row ][column + 1] = this;
             board[row ][column+2] = this;
 
@@ -382,23 +430,23 @@ public class Piece {
         else if(rotation == 90){
             board[row][column] = this;
             board[row+1][column] = this;
-            board[row -1][column] = this;
-            board[row-2][column ] = this;
-            board[row][column -1] = this;
+            board[row +2][column] = this;
+            board[row+3][column ] = this;
+            board[row+1][column -1] = this;
         }
         else if(rotation == 180){
+                    board[row][column] = this;
+        board[row][column-1 ] = this;
+        board[row ][column -2] = this;
+        board[row][column -3] = this;
+        board[row-1][column -1] = this;
+        }
+        else if(rotation == 270){
                     board[row][column] = this;
         board[row-1][column ] = this;
         board[row -2][column ] = this;
         board[row-3][column ] = this;
-        board[row-2][column +1] = this;
-        }
-        else if(rotation == 270){
-                    board[row][column] = this;
-        board[row+1][column ] = this;
-        board[row ][column + 1] = this;
-        board[row][column -1] = this;
-        board[row][column - 2] = this;
+        board[row-1][column +1] = this;
         }
     }
 
@@ -412,24 +460,24 @@ public class Piece {
         }
         else if(rotation == 90){
                     board[row][column] = this;
-        board[row+1][column ] = this;
-        board[row - 1][column] = this;
+        board[row+1][column -1] = this;
+        board[row ][column-1] = this;
         board[row-1][column - 1] = this;
-        board[row ][column + 1] = this;
+        board[row -1][column -2] = this;
         }
         else if(rotation == 180){
                     board[row][column] = this;
-        board[row][column + 1] = this;
-        board[row - 1][column] = this;
-        board[row][column - 1] = this;
-        board[row + 1][column - 1] = this;
+        board[row-1][column ] = this;
+        board[row - 1][column+1] = this;
+        board[row-1][column - 1] = this;
+        board[row - 2][column + 1] = this;
         }
         else if(rotation == 270){
                     board[row][column] = this;
         board[row][column + 1] = this;
         board[row - 1][column+1] = this;
-        board[row][column - 1] = this;
-        board[row + 1][column ] = this;
+        board[row+1][column + 1] = this;
+        board[row + 1][column+2 ] = this;
         }
     }
 
