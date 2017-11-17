@@ -13,7 +13,7 @@ class Window {
     static final int WINDOW_HEIGHT = YTITLE + WINDOW_BORDER + 2 * YBORDER + 500;
     
     public static enum GameState{
-        Menu,Menu2,InGame
+        Menu,InGame
     };
     
         

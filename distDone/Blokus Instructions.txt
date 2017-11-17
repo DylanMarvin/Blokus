@@ -1,0 +1,28 @@
+How to play Blokus
+
+PLAYERS REQUIRED:
+4
+
+OBJECTIVE:
+To place all your pieces on the board. If no one can place a piece on the board,
+the player with the least amount of pieces left wins. (The game will not indicate if you
+win. You will have have to decide that yourself)
+
+SPECIFICATIONS:
+When the game starts, there will be 4 sides with 21 pieces. The side that
+is black will indicate that player's turn.
+
+RULES:
+The first piece must be placed in their color specific corner. The first click MUST BE
+on the corner.
+You must position your piece so that it touches another piece of your same color.
+Those pieces CANNOT touch sides; they can only meet at corners.
+Make sure your piece preview does not go outside of the board or else you have to restart.
+DO NOT put pieces on top of other pieces.
+If you wish to rotate a piece, select your piece and press R to rotate your piece 90 
+degrees.
+
+CHALLENGES:
+IF YOU COMPLETE A CHALLENGE, YOUR REWARD IS REMOVING ANY ONE OF YOUR PIECES.
+There will be random challenges throughout the rounds. If you complete a challenge, your
+side will turn pink and this will allow you to select one of your pieces to remove them.

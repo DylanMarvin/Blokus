@@ -17,6 +17,11 @@ import java.io.*;
 import java.awt.*;
 import java.awt.geom.*;
 import java.awt.event.*;
+import javax.sound.sampled.AudioFormat;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.DataLine;
+import javax.sound.sampled.SourceDataLine;
 import javax.swing.*;
 
 public class Blokus extends JFrame implements Runnable {
@@ -44,6 +49,7 @@ public class Blokus extends JFrame implements Runnable {
     Color colorThree;
     Color colorFour;
 
+    sound bgSound = null;
     
     public static void main(String[] args) {
         Blokus frame = new Blokus();
@@ -68,31 +74,14 @@ public class Blokus extends JFrame implements Runnable {
                     if (gameState == Window.GameState.Menu) {
 
                         if (xpos >= 270 && xpos <= 570 && ypos >= 600 && ypos <= 650) {
-                            gameState = Window.GameState.Menu2;
+                            gameState = Window.GameState.InGame;
                         }
                         if (xpos >= 270 && xpos <= 570 && ypos >= 680 && ypos <= 730) {
                             System.exit(0);
                         }
-                        
-
                     }
-                    else if (gameState == Window.GameState.Menu2) {
-                        if(xpos >= 5 && xpos <= 440 && ypos >= 5 && ypos <= 450){
-                             gameState = Window.GameState.InGame;
-                        }
-                        if(xpos >= 5 && xpos <= 440 && ypos >= 450 && ypos <= 895){
-                             gameState = Window.GameState.InGame;
-                        }
-                        if(xpos >= 450 && xpos <= 865 && ypos >= 25 && ypos <= 450){
-                             gameState = Window.GameState.InGame;
-                        }
-                        if(xpos >= 450 && xpos <= 865 && ypos >= 450 && ypos <= 895){
-                             gameState = Window.GameState.InGame;
-
-                        }
-
-                    } else if (gameState == Window.GameState.InGame) {
-                        
+                    else if (gameState == Window.GameState.InGame) {
+                      
                     if(Challenge.getCurrentChallenge() != null && Challenge.getCurrentChallenge().getActive() == true){
                         if(xpos >= 588 && xpos <= (588+25) && ypos >= 260 && ypos <= (260+25)){
                             Challenge.getCurrentChallenge().setActive(false);
@@ -931,38 +920,14 @@ public class Blokus extends JFrame implements Runnable {
                 if(gameState == Window.GameState.Menu){
                     if (xpos >= 270 && xpos <= 570 && ypos >= 600 && ypos <= 650) {
                         color = Color.yellow;
-                    } else {
-                        color = Color.white;
                     }
-                }
-                else if(gameState == Window.GameState.Menu2){
-                    if (xpos >= 270 && xpos <= 570 && ypos >= 680 && ypos <= 730) {
+                    else if(xpos >= 270 && xpos <= 570 && ypos >= 680 && ypos <= 730){
                         color2 = Color.yellow;
-                    } else {
+                    }
+                    else {
+                        color = Color.white;
                         color2 = Color.white;
                     }
-                     if(xpos >= 5 && xpos <= 865 && ypos >= 5 && ypos <= 450){
-                                 colorTwo = Color.YELLOW;
-                            }
-                     else {
-                        colorTwo = Color.white;
-                    }
-                            if(xpos >= 5 && xpos <= 440 && ypos >= 450 && ypos <= 895){
-                                   colorThree = Color.YELLOW;
-                            }
-                            else {
-                        colorThree = Color.white;
-                    }
-                           
-                            if(xpos >= 450 && xpos <= 865 && ypos >= 450 && ypos <= 895){
-                                      colorFour = Color.YELLOW;
-                            }
-                            else {
-                        colorFour = Color.white;
-                    }
-                }
-                else if(gameState == Window.GameState.InGame){
-
                 }
           
 //          System.out.println(xpos);
@@ -1024,21 +989,7 @@ public class Blokus extends JFrame implements Runnable {
             g.setFont(new Font("Arial", Font.PLAIN, 40));
             g.drawString("Play", 380, 638);
             g.drawString("Quit", 380, 718);
-        } else if (gameState == Window.GameState.Menu2) {
-            g.setColor(Color.black);
-            g.drawImage(menu2, 1, 1, Window.WINDOW_WIDTH, Window.WINDOW_HEIGHT, this);
-            g.setFont(new Font("Arial", Font.PLAIN, 65));
-            g.drawString("Select Number of Players", 80, 100);
-            g.setColor(colorOne);
-            g.setFont(new Font("Arial", Font.BOLD, 150));
-            
-             g.setColor(colorTwo);
-            g.drawString("2", 400, 275);
-             g.setColor(colorThree);
-            g.drawString("3", 150, 700);
-             g.setColor(colorFour);
-            g.drawString("4", 600, 700);
-        } else if (gameState == Window.GameState.InGame) {
+        }   else if (gameState == Window.GameState.InGame) {
 //fill background
 
             g.setColor(Color.white);
@@ -1991,11 +1942,10 @@ public class Blokus extends JFrame implements Runnable {
             board = Toolkit.getDefaultToolkit().getImage("assets/images/board.png");
             menu2 = Toolkit.getDefaultToolkit().getImage("assets/images/menu2.jpg");
             reset();
-
+            bgSound = new sound("blokus.wav");
         }
-        if(Player.GetCurrentPlayer() == Player.getPlayer(3)){
-            
-        }
+        if (bgSound.donePlaying)       
+            bgSound = new sound("blokus.wav");
 
     }
 
@@ -2016,4 +1966,44 @@ public class Blokus extends JFrame implements Runnable {
     }
 /////////////////////////////////////////////////////////////////////////
 
+}
+
+class sound implements Runnable {
+    Thread myThread;
+    File soundFile;
+    public boolean donePlaying = false;
+    sound(String _name)
+    {
+        soundFile = new File(_name);
+        myThread = new Thread(this);
+        myThread.start();
+    }
+    public void run()
+    {
+        try {
+        AudioInputStream ais = AudioSystem.getAudioInputStream(soundFile);
+        AudioFormat format = ais.getFormat();
+    //    System.out.println("Format: " + format);
+        DataLine.Info info = new DataLine.Info(SourceDataLine.class, format);
+        SourceDataLine source = (SourceDataLine) AudioSystem.getLine(info);
+        source.open(format);
+        source.start();
+        int read = 0;
+        byte[] audioData = new byte[16384];
+        while (read > -1){
+            read = ais.read(audioData,0,audioData.length);
+            if (read >= 0) {
+                source.write(audioData,0,read);
+            }
+        }
+        donePlaying = true;
+
+        source.drain();
+        source.close();
+        }
+        catch (Exception exc) {
+            System.out.println("error: " + exc.getMessage());
+            exc.printStackTrace();
+        }
+    }
 }
