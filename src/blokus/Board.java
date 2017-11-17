@@ -89,7 +89,7 @@ public class Board {
             }
             
             if (piece.getBlock() == Piece.Block.ONE) { 
-               
+                
                     board[zrow][zcol] = piece;
                     Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
                     Player.switchTurns();
@@ -98,7 +98,7 @@ public class Board {
             }
             
             else if (piece.getBlock() == Piece.Block.TWO) {
-               
+                
 
                     piece.Two(board,rotation);
                     Player.GetCurrentPlayer().getOutsidePieces().changePiece(1);
@@ -115,7 +115,7 @@ public class Board {
                 
             }
             else if (piece.getBlock() == Piece.Block.I4) {         
-               
+                
                     piece.I4(board,rotation);
                     Player.GetCurrentPlayer().getOutsidePieces().changePiece(3);
                     Player.switchTurns();
@@ -123,7 +123,7 @@ public class Board {
                 
             }
             else if (piece.getBlock() == Piece.Block.I5) {  
-              
+                
                     piece.I5(board,rotation);
                     Player.GetCurrentPlayer().getOutsidePieces().changePiece(4);
                     Player.switchTurns();
@@ -136,20 +136,27 @@ public class Board {
                     Player.GetCurrentPlayer().getOutsidePieces().changePiece(6);
                     Player.switchTurns();
                     Challenge.setChallenges(Player.GetCurrentPlayer().getOutsidePieces());
-                }
-            
+                
+            }
             else if (piece.getBlock() == Piece.Block.L5) { 
-               
+                
                     piece.L5(board,rotation);                    
-                    Player.GetCurrentPlayer().getOutsidePieces().changePiece(7); 
-                    Player.GetCurrentPlayer().setCompletedC(Challenge.checkChallenge());
-                    if(Player.getCompletedC() == false)
+                    if(Challenge.getCurrentChallenge() != null){
+                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(7);
+                        Player.GetCurrentPlayer().setCompletedC(Challenge.checkChallenge());
+                        if(Player.GetCurrentPlayer().getCompletedC() == true){
+                            
+                        }
+                        else if(Player.getCompletedC() == false)
+                        Player.switchTurns();
+                    }
+                    else 
                         Player.switchTurns();
                     Challenge.setChallenges(Player.GetCurrentPlayer().getOutsidePieces());
                 
             }
             else if (piece.getBlock() == Piece.Block.N) {        
-              
+                
                     piece.N(board,rotation);
                     Player.GetCurrentPlayer().getOutsidePieces().changePiece(17);
                     Player.switchTurns();
@@ -157,12 +164,12 @@ public class Board {
                 
             }
             else if (piece.getBlock() == Piece.Block.O) { 
-               
+                
                     piece.O(board,rotation);
                     Player.GetCurrentPlayer().getOutsidePieces().changePiece(10);
                     Player.switchTurns();
                     Challenge.setChallenges(Player.GetCurrentPlayer().getOutsidePieces());
-                          
+                           
             }
             else if (piece.getBlock() == Piece.Block.W) {  
                 
@@ -174,12 +181,12 @@ public class Board {
             
             }
             else if (piece.getBlock() == Piece.Block.T4) {  
-                 
+                
                 piece.T4(board,rotation);
                 Player.GetCurrentPlayer().getOutsidePieces().changePiece(9);
                 Player.switchTurns();
                 Challenge.setChallenges(Player.GetCurrentPlayer().getOutsidePieces());
-                 
+                
             }
             else if (piece.getBlock() == Piece.Block.T5) {    
                 
@@ -199,18 +206,26 @@ public class Board {
                 
             }
             else if (piece.getBlock() == Piece.Block.V3) {
+
+                                
+                    piece.V3(board,rotation);
+                    if(Challenge.getCurrentChallenge() != null){
+                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(5);
+                        Player.GetCurrentPlayer().setCompletedC(Challenge.checkChallenge());
+                        if(Player.GetCurrentPlayer().getCompletedC() == true){
                             
-                piece.V3(board,rotation);
-                Player.GetCurrentPlayer().getOutsidePieces().changePiece(5);
-                Player.GetCurrentPlayer().setCompletedC(Challenge.checkChallenge());
-                if(Player.getCompletedC() == false)
-                    Player.switchTurns();
+                        }
+                        else if(Player.getCompletedC() == false)
+                        Player.switchTurns();
+                    }
+                    else 
+                        Player.switchTurns();
                 Challenge.setChallenges(Player.GetCurrentPlayer().getOutsidePieces());
                 
             }
 
             else if (piece.getBlock() == Piece.Block.V5) {
-                              
+              
                 piece.V5(board,rotation);
                    Player.GetCurrentPlayer().getOutsidePieces().changePiece(20);
                 Player.switchTurns();
@@ -219,7 +234,7 @@ public class Board {
             }
 
             else if (piece.getBlock() == Piece.Block.F) {
-                               
+                        
                 piece.F(board,rotation);
                    Player.GetCurrentPlayer().getOutsidePieces().changePiece(16);
                 Player.switchTurns();
@@ -228,7 +243,7 @@ public class Board {
             }
 
             else if (piece.getBlock() == Piece.Block.P) { 
-               
+                
                 piece.P(board,rotation);              
                    Player.GetCurrentPlayer().getOutsidePieces().changePiece(14);
                 Player.switchTurns();
@@ -236,7 +251,7 @@ public class Board {
             }
 
             else if (piece.getBlock() == Piece.Block.X) {
-               
+                
                 piece.X(board,rotation);
                    Player.GetCurrentPlayer().getOutsidePieces().changePiece(13);
                 Player.switchTurns();
@@ -245,7 +260,7 @@ public class Board {
             }
 
             else if (piece.getBlock() == Piece.Block.Y) {
-                       
+                
                 piece.Y(board,rotation);
                    Player.GetCurrentPlayer().getOutsidePieces().changePiece(15);
                 Player.switchTurns();
@@ -253,7 +268,7 @@ public class Board {
             
             }
             else if (piece.getBlock() == Piece.Block.Z4) {
-                
+            
                 piece.Z4(board,rotation);
                    Player.GetCurrentPlayer().getOutsidePieces().changePiece(18);
                 if(Player.getCompletedC() == false)
@@ -263,13 +278,20 @@ public class Board {
             }
             else if (piece.getBlock() == Piece.Block.Z5) {                
 
-                 
+                  
                 piece.Z5(board,rotation);
                 Player.GetCurrentPlayer().getOutsidePieces().changePiece(19);
-                Player.GetCurrentPlayer().setCompletedC(Challenge.checkChallenge());
-                if(Player.getCompletedC() == false)
-                Player.switchTurns();
-                Challenge.setChallenges(Player.GetCurrentPlayer().getOutsidePieces());
+                    if(Challenge.getCurrentChallenge() != null){                        
+                        Player.GetCurrentPlayer().setCompletedC(Challenge.checkChallenge());
+                        if(Player.GetCurrentPlayer().getCompletedC() == true){
+                            
+                        }
+                        else if(Player.getCompletedC() == false)
+                        Player.switchTurns();
+                    }
+                    else 
+                        Player.switchTurns();
+                
             
             }
             
@@ -277,30 +299,64 @@ public class Board {
         }
     }
    //////////////////////////////////////////////////////////////////////////////
-   
-   
+    private static boolean checkPieceH(int zrow,int zcol,int val,int rotation){
+        for(int i = 0;i<val;i++){
+            if(zcol+i == NUM_COLUMNS){
+                return false;
+            }
+            if(board[zrow][zcol+i] != null){
+                       return false;
+            }    
+        }
+        return(true);
+    }
+    private static boolean checkPieceV(int zrow,int zcol,int val,int rotation){
+        for(int i = 0;i<val;i++){
+            if(zrow+i == NUM_ROWS){
+                return false;
+            }
+            if(board[zrow+i][zcol] != null){
+                       return false;
+            }    
+        }
+        return(true);
+    }
+    private static boolean checkPieceL(int zrow,int zcol,int val,int rotation){
+        
+            for(int j = 0;j<2;j++){
+                    if(zcol+j == NUM_COLUMNS){
+                        return false;
+                    }               
+                for(int i = 0;i<val;i++){
+                    if(zrow+i == NUM_ROWS){
+                        return false;
+                    }
+                    if(j >0){
+                        i = val-1;
+                    }
+                    if(board[zrow+i][zcol+j] != null){
+                               return false;
+                    }    
+                }
+            }
+            return true;
+        }
     private static boolean checkPieceO(int zrow,int zcol,int val,int rotation){
-          
-             if(board[zrow][zcol] == null &&
-        board[zrow][zcol + 1] == null &&
-        board[zrow + 1][zcol] == null &&
-        board[zrow + 1][zcol + 1] == null){
-            return(true);
+        for(int j = 0;j<val;j++){
+            if(zcol+j == NUM_COLUMNS){
+                    return false;
+                }
+            for(int i = 0;i<val;i++){
+                if(zrow+i == NUM_ROWS){
+                    return false;
+                }
+                if(board[zrow+i][zcol+j] != null){
+                           return false;
+                }    
+            }
         }
-       
-             
-        return(false);
-        }
-    private static boolean checkPieceOne(int zrow,int zcol,int val,int rotation){
-          
-             if(
-         board[zrow][zcol] == null){
-            return(true);
-        }
-       
-             
-        return(false);
-        }
+        return(true);
+    }
    ////////////////////////////////////////////////////////////////////////////////////////////// 
     private static boolean checkPieceN(int zrow,int zcol,int val,int rotation){
         if(rotation == 00){
@@ -803,5 +859,3 @@ public class Board {
     }
 
 }
-
-       

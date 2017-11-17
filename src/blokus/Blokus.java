@@ -1,3 +1,5 @@
+
+
 package blokus;
 
 import java.awt.Color;
@@ -117,7 +119,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 45 && xpos <= 88 && ypos >= 47 && ypos <= 65 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(1)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(1);
                                         Player.setCompletedC(false);
                                         Player.switchTurns();
                                     }
@@ -126,7 +128,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 98 && xpos <= 160 && ypos >= 47 && ypos <= 65 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(2)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(2);
                                         Player.setCompletedC(false);
                                         Player.switchTurns();
                                     }
@@ -135,7 +137,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 170 && xpos <= 255 && ypos >= 47 && ypos <= 65 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(3)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(3);
                                         Player.setCompletedC(false);
                                         Player.switchTurns();
                                     }
@@ -144,7 +146,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 265 && xpos <= 370 && ypos >= 47 && ypos <= 65 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(4)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(4);
                                         Player.setCompletedC(false);
                                         Player.switchTurns();
                                     }
@@ -153,7 +155,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 380 && xpos <= 420 && ypos >= 47 && ypos <= 88 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(5)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(5);
                                         Player.setCompletedC(false);
                                         Player.switchTurns();
                                     }
@@ -162,7 +164,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 435 && xpos <= 475 && ypos >= 47 && ypos <= 109 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(6)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(6);
                                         Player.setCompletedC(false);
                                         Player.switchTurns();
                                     }
@@ -171,7 +173,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 487 && xpos <= 530 && ypos >= 47 && ypos <= 130 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(7)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(7);
                                         Player.setCompletedC(false);
                                         Player.switchTurns();
                                     }
@@ -180,7 +182,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 540 && xpos <= 600 && ypos >= 47 && ypos <= 110 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(8)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(8);
                                         Player.setCompletedC(false);
                                         Player.switchTurns();
                                     }
@@ -189,7 +191,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 613 && xpos <= 675 && ypos >= 47 && ypos <= 88 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(9)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(9);
                                         Player.setCompletedC(false);
                                         Player.switchTurns();
                                     }
@@ -198,7 +200,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 15 && xpos <= 55 && ypos >= 75 && ypos <= 115 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(10)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(10);
                                         Player.setCompletedC(false);
                                         Player.switchTurns();
                                     }
@@ -207,7 +209,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 68 && xpos <= 130 && ypos >= 75 && ypos <= 140 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(11)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(11);
                                         Player.setCompletedC(false);
                                         Player.switchTurns();
                                     }
@@ -216,7 +218,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 140 && xpos <= 203 && ypos >= 75 && ypos <= 120 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(12)) {                                
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(12);
                                         Player.setCompletedC(false);
                                         Player.switchTurns();
                                     }
@@ -225,7 +227,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 215 && xpos <= 275 && ypos >= 75 && ypos <= 140 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(13)) {                                
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(13);
                                         Player.setCompletedC(false);
                                     }
                                     else
@@ -233,7 +235,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 285 && xpos <= 330 && ypos >= 75 && ypos <= 140 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(14)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(14);
                                         Player.setCompletedC(false);
                                         Player.switchTurns();
                                     }
@@ -242,7 +244,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 340 && xpos <= 425 && ypos >= 100 && ypos <= 140 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(15)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(15);
                                         Player.setCompletedC(false);
                                         Player.switchTurns();
                                     }
@@ -251,7 +253,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 15 && xpos <= 75 && ypos >= 135 && ypos <= 200 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(16)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(16);
                                         Player.setCompletedC(false);
                                         Player.switchTurns();
                                     }
@@ -260,7 +262,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 88 && xpos <= 170 && ypos >= 155 && ypos <= 200 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(17)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(17);
                                         Player.setCompletedC(false);
                                         Player.switchTurns();
                                     }
@@ -269,25 +271,25 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 180 && xpos <= 225 && ypos >= 135 && ypos <= 200 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(18)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(18);
                                         Player.setCompletedC(false);
                                         Player.switchTurns();
                                     }
                                     else
                                     selectedPiece = Piece.Block.Z4;
 
-                                } else if (xpos >= 540 && xpos <= 600 && ypos >= 135 && ypos <= 200 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(19)) {
+                                } else if (xpos >= 540 && xpos <= 600 && ypos >= 135 && ypos <= 200 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(20)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(20);
                                         Player.setCompletedC(false);
                                         Player.switchTurns();
                                     }
                                     else
                                     selectedPiece = Piece.Block.V5;
 
-                                } else if (xpos >= 615 && xpos <= 675 && ypos >= 135 && ypos <= 200 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(20)) {
+                                } else if (xpos >= 615 && xpos <= 675 && ypos >= 135 && ypos <= 200 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(19)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(19);
                                         Player.setCompletedC(false);
                                         Player.switchTurns();
                                     }
@@ -317,7 +319,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 840 && xpos <= 860 && ypos >= 76 && ypos <= 118 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(1)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(1);
                                         Player.setCompletedC(false);
                                         Player.switchTurns();
                                     }
@@ -326,7 +328,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 840 && xpos <= 860 && ypos >= 129 && ypos <= 192 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(2)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(2);
                                         Player.setCompletedC(false);
                                         Player.switchTurns();
                                     }
@@ -335,7 +337,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 840 && xpos <= 860 && ypos >= 202 && ypos <= 286 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(3)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(3);
                                         Player.setCompletedC(false);
                                         Player.switchTurns();
                                     }
@@ -344,7 +346,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 840 && xpos <= 860 && ypos >= 296 && ypos <= 402 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(4)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(4);
                                         Player.setCompletedC(false);
                                         Player.switchTurns();
                                     }
@@ -353,7 +355,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 820 && xpos <= 860 && ypos >= 411 && ypos <= 452 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(5)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(5);
                                         Player.setCompletedC(false);
                                         Player.switchTurns();
                                     }
@@ -362,7 +364,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 800 && xpos <= 860 && ypos >= 464 && ypos <= 507 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(6)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(6);
                                         Player.setCompletedC(false);
                                         Player.switchTurns();
                                     }
@@ -371,7 +373,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 777 && xpos <= 860 && ypos >= 516 && ypos <= 558 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(7)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(7);
                                         Player.setCompletedC(false);
                                         Player.switchTurns();
                                     }
@@ -380,7 +382,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 800 && xpos <= 860 && ypos >= 571 && ypos <= 632 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(8)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(8);
                                         Player.setCompletedC(false);
                                         Player.switchTurns();
                                     }
@@ -389,7 +391,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 820 && xpos <= 860 && ypos >= 643 && ypos <= 706 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(9)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(9);
                                         Player.setCompletedC(false);
                                         Player.switchTurns();
                                     }
@@ -398,7 +400,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 787 && xpos <= 830 && ypos >= 44 && ypos <= 86 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(10)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(10);
                                         Player.setCompletedC(false);
                                         Player.switchTurns();
                                     }
@@ -407,7 +409,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 766 && xpos <= 830 && ypos >= 97 && ypos <= 158 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(11)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(11);
                                         Player.setCompletedC(false);
                                         Player.switchTurns();
                                     }
@@ -416,7 +418,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 787 && xpos <= 830 && ypos >= 170 && ypos <= 234 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(12)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(12);
                                         Player.setCompletedC(false);
                                         Player.switchTurns();
                                     }
@@ -425,7 +427,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 766 && xpos <= 830 && ypos >= 245 && ypos <= 305 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(13)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(13);
                                         Player.setCompletedC(false);
                                         Player.switchTurns();
                                     }
@@ -434,7 +436,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 766 && xpos <= 830 && ypos >= 318 && ypos <= 360 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(14)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(14);
                                         Player.setCompletedC(false);
                                         Player.switchTurns();
                                     }
@@ -443,7 +445,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 766 && xpos <= 808 && ypos >= 369 && ypos <= 453 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(15)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(15);
                                         Player.setCompletedC(false);
                                         Player.switchTurns();
                                     }
@@ -452,7 +454,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 709 && xpos <= 773 && ypos >= 44 && ypos <= 107 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(16)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(16);
                                         Player.setCompletedC(false);
                                         Player.switchTurns();
                                     }
@@ -461,7 +463,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 709 && xpos <= 751 && ypos >= 117 && ypos <= 202 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(17)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(17);
                                         Player.setCompletedC(false);
                                         Player.switchTurns();
                                     }
@@ -470,25 +472,25 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 709 && xpos <= 773 && ypos >= 211 && ypos <= 253 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(18)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(18);
                                         Player.setCompletedC(false);
                                         Player.switchTurns();
                                     }
                                     else
                                     selectedPiece = Piece.Block.Z4;
 
-                                } else if (xpos >= 709 && xpos <= 773 && ypos >= 570 && ypos <= 632 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(19)) {
+                                } else if (xpos >= 709 && xpos <= 773 && ypos >= 570 && ypos <= 632 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(20)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(20);
                                         Player.setCompletedC(false);
                                         Player.switchTurns();
                                     }
                                     else
                                     selectedPiece = Piece.Block.V5;
 
-                                } else if (xpos >= 709 && xpos <= 773 && ypos >= 643 && ypos <= 706 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(20)) {
+                                } else if (xpos >= 709 && xpos <= 773 && ypos >= 643 && ypos <= 706 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(19)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(19);
                                         Player.setCompletedC(false);
                                         Player.switchTurns();
                                     }
@@ -678,7 +680,7 @@ public class Blokus extends JFrame implements Runnable {
                                     else
                                     selectedPiece = Piece.Block.Z4;
 
-                                } else if (xpos >= (540 + 185) && xpos <= (600 + 185) && ypos >= (135 + 680) && ypos <= (200 + 680) && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(19)) {
+                                } else if (xpos >= (540 + 185) && xpos <= (600 + 185) && ypos >= (135 + 680) && ypos <= (200 + 680) && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(20)) {
                                     if(Player.getCompletedC() == true){
                                         Player.GetCurrentPlayer().getOutsidePieces().changePiece(19);
                                         Player.setCompletedC(false);
@@ -687,7 +689,7 @@ public class Blokus extends JFrame implements Runnable {
                                     else
                                     selectedPiece = Piece.Block.V5;
 
-                                } else if (xpos >= (615 + 185) && xpos <= (675 + 185) && ypos >= (135 + 680) && ypos <= (200 + 680) && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(20)) {
+                                } else if (xpos >= (615 + 185) && xpos <= (675 + 185) && ypos >= (135 + 680) && ypos <= (200 + 680) && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(19)) {
                                     if(Player.getCompletedC() == true){
                                         Player.GetCurrentPlayer().getOutsidePieces().changePiece(20);
                                         Player.setCompletedC(false);
@@ -718,7 +720,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 15 && xpos <= 35 && ypos >= 808 && ypos <= 850 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(1)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(1);
                                         Player.setCompletedC(false);
                                     Player.switchTurns();
                                     }
@@ -727,7 +729,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 15 && xpos <= 35 && ypos >= 735 && ypos <= 800 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(2)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(2);
                                         Player.setCompletedC(false);
                                     Player.switchTurns();
                                     }
@@ -736,7 +738,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 15 && xpos <= 35 && ypos >= 640 && ypos <= 725 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(3)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(3);
                                         Player.setCompletedC(false);
                                     Player.switchTurns();
                                     }
@@ -745,7 +747,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 15 && xpos <= 35 && ypos >= 525 && ypos <= 630 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(4)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(4);
                                         Player.setCompletedC(false);
                                     Player.switchTurns();
                                     }
@@ -754,7 +756,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 15 && xpos <= 55 && ypos >= 475 && ypos <= 510 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(5)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(5);
                                         Player.setCompletedC(false);
                                     Player.switchTurns();
                                     }
@@ -763,7 +765,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 15 && xpos <= 75 && ypos >= 420 && ypos <= 460 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(6)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(6);
                                         Player.setCompletedC(false);
                                     Player.switchTurns();
                                     }
@@ -772,7 +774,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 15 && xpos <= 100 && ypos >= 370 && ypos <= 400 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(7)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(7);
                                         Player.setCompletedC(false);
                                     Player.switchTurns();
                                     }
@@ -781,7 +783,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 15 && xpos <= 80 && ypos >= 305 && ypos <= 370 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(8)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(8);
                                         Player.setCompletedC(false);
                                     Player.switchTurns();
                                     }
@@ -790,7 +792,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 15 && xpos <= 60 && ypos >= 220 && ypos <= 280 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(9)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(9);
                                         Player.setCompletedC(false);
                                     Player.switchTurns();
                                     }
@@ -799,7 +801,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 50 && xpos <= 85 && ypos >= 840 && ypos <= 880 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(10)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(10);
                                         Player.setCompletedC(false);
                                     Player.switchTurns();
                                     }
@@ -808,7 +810,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 50 && xpos <= 110 && ypos >= 766 && ypos <= 830 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(11)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(11);
                                         Player.setCompletedC(false);
                                     Player.switchTurns();
                                     }
@@ -817,7 +819,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 50 && xpos <= 90 && ypos >= 700 && ypos <= 760 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(12)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(12);
                                         Player.setCompletedC(false);
                                     Player.switchTurns();
                                     }
@@ -826,7 +828,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 50 && xpos <= 110 && ypos >= 620 && ypos <= 680 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(13)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(13);
                                         Player.setCompletedC(false);
                                     Player.switchTurns();
                                     }
@@ -835,7 +837,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 50 && xpos <= 110 && ypos >= 565 && ypos <= 610 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(14)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(14);
                                         Player.setCompletedC(false);
                                     Player.switchTurns();
                                     }
@@ -844,7 +846,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 65 && xpos <= 111 && ypos >= 475 && ypos <= 555 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(15)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(15);
                                         Player.setCompletedC(false);
                                     Player.switchTurns();
                                     }
@@ -853,7 +855,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 100 && xpos <= 165 && ypos >= 820 && ypos <= 880 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(16)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(16);
                                         Player.setCompletedC(false);
                                     Player.switchTurns();
                                     }
@@ -862,7 +864,7 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 125 && xpos <= 165 && ypos >= 725 && ypos <= 805 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(17)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(17);
                                         Player.setCompletedC(false);
                                     Player.switchTurns();
                                     }
@@ -871,25 +873,25 @@ public class Blokus extends JFrame implements Runnable {
 
                                 } else if (xpos >= 105 && xpos <= 165 && ypos >= 660 && ypos <= 700 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(18)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(18);
                                         Player.setCompletedC(false);
                                     Player.switchTurns();
                                     }
                                     else
                                     selectedPiece = Piece.Block.Z4;
 
-                                } else if (xpos >= 100 && xpos <= 165 && ypos >= 295 && ypos <= 360 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(19)) {
+                                } else if (xpos >= 100 && xpos <= 165 && ypos >= 295 && ypos <= 360 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(20)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(20);
                                         Player.setCompletedC(false);
                                     Player.switchTurns();
                                     }
                                     else
                                     selectedPiece = Piece.Block.V5;
 
-                                } else if (xpos >= 100 && xpos <= 165 && ypos >= 220 && ypos <= 285 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(20)) {
+                                } else if (xpos >= 100 && xpos <= 165 && ypos >= 220 && ypos <= 285 && Player.GetCurrentPlayer().getOutsidePieces().checkPiece(19)) {
                                     if(Player.getCompletedC() == true){
-                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(0);
+                                        Player.GetCurrentPlayer().getOutsidePieces().changePiece(19);
                                         Player.setCompletedC(false);
                                     Player.switchTurns();
                                     }
@@ -976,7 +978,8 @@ public class Blokus extends JFrame implements Runnable {
                 } else if (e.VK_DOWN == e.getKeyCode()) {
                 } else if (e.VK_LEFT == e.getKeyCode()) {
                 } else if (e.VK_C == e.getKeyCode()) {
-                    Challenge.getCurrentChallenge().setActive(true);
+                    if(Challenge.getCurrentChallenge() != null)
+                        Challenge.getCurrentChallenge().setActive(true);
                 } else if (e.VK_R == e.getKeyCode()) {
                     rotation += 90;
                     if(rotation >270)

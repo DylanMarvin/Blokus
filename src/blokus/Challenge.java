@@ -64,6 +64,8 @@ public class Challenge {
                 }
             }
         }
+        else
+            Challenge.NullChallenge();
     }
     public static boolean checkChallenge(){
         if(currentChallenge.challengeNum == 1){
@@ -126,7 +128,17 @@ public class Challenge {
     public static Challenge getCurrentChallenge(){
         return currentChallenge;
     }
+    public static void NullChallenge(){
+        currentChallenge = null;
+    }
 
 }
 
        
+
+
+
+
+
+
+

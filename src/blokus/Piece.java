@@ -555,11 +555,11 @@ public class Piece {
         board[row + 2][column - 2] = this;
         }
         else if(rotation == 180){
-                    board[row][column] = this;
-        board[row ][column-1] = this;
-        board[row + 1][column -1] = this;
-        board[row + 2][column -1] = this;
-        board[row + 2][column - 2] = this;
+        board[row][column] = this;
+        board[row - 1][column-1] = this;
+        board[row -1][column] = this;
+        board[row - 1][column -2] = this;
+        board[row - 2][column - 2] = this;
         }
         else if(rotation == 270){
                     board[row][column] = this;
