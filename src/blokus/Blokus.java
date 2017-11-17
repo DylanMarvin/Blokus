@@ -594,10 +594,6 @@ public class Blokus extends JFrame implements Runnable {
             if(Player.GetCurrentPlayer() == Player.getPlayer(1)){
                 if(selectedPiece == Piece.Block.ONE ){
                     Player.GetCurrentPlayer().getOutsidePieces().drawPiece1(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
-//                        if(rotationYes){
-//                            rotationYes = false;
-//                            System.out.println("Rotation Yes");
-//                        }
                 }
                 else if(selectedPiece == Piece.Block.TWO ){   
                     if(rotation == 0)
@@ -670,14 +666,14 @@ public class Blokus extends JFrame implements Runnable {
                         Player.GetCurrentPlayer().getOutsidePieces().drawPieceL5rot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
                 else if(selectedPiece == Piece.Block.T5 ){               
-//                    if(rotation == 0)
-//                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceT5(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
-//                    if(rotation == 90)
-//                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceT5rot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
-//                    if(rotation == 180)
-//                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceT5rot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
-//                    if(rotation == 270)
-//                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceT5rot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceT5(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceT5rot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceT5rot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceT5rot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
                 else if(selectedPiece == Piece.Block.T4 ){               
                     if(rotation == 0)
@@ -690,37 +686,114 @@ public class Blokus extends JFrame implements Runnable {
                         Player.GetCurrentPlayer().getOutsidePieces().drawPieceT4rot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
                 else if(selectedPiece == Piece.Block.O ){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceO(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceO(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceOrot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceOrot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceOrot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
                 else if(selectedPiece == Piece.Block.W ){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceW(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceW(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceWrot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceWrot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceWrot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
                 else if(selectedPiece == Piece.Block.U ){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceU(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceU(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceUrot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceUrot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceUrot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
                 else if(selectedPiece == Piece.Block.X ){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceX(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceX(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceXrot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceXrot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceXrot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
                 else if(selectedPiece == Piece.Block.P){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceP(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceP(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceProt90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceProt180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceProt270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
                 else if(selectedPiece == Piece.Block.Y){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceY(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceY(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceYrot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceYrot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceYrot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
-                else if(selectedPiece == Piece.Block.F){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceF(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                else if(selectedPiece == Piece.Block.F){      
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceF(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceFrot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceFrot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceFrot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
-                else if(selectedPiece == Piece.Block.N){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceN(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                else if(selectedPiece == Piece.Block.N){   
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceN(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceNrot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceNrot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceNrot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
-                else if(selectedPiece == Piece.Block.Z4){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceZ4(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                else if(selectedPiece == Piece.Block.Z4){     
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceZ4(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceZ4rot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceZ4rot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceZ4rot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
-                else if(selectedPiece == Piece.Block.V5){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceV5(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                else if(selectedPiece == Piece.Block.V5){   
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceV5(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceV5rot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceV5rot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceV5rot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
-                else if(selectedPiece == Piece.Block.Z5){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceZ5(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                else if(selectedPiece == Piece.Block.Z5){    
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceZ5(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceZ5rot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceZ5rot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceZ5rot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
 
             }
@@ -728,65 +801,205 @@ public class Blokus extends JFrame implements Runnable {
                 if(selectedPiece == Piece.Block.ONE ){               
                     Player.GetCurrentPlayer().getOutsidePieces().drawPiece1(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
-                else if(selectedPiece == Piece.Block.TWO ){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPiece2(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                else if(selectedPiece == Piece.Block.TWO ){   
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPiece2(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPiece2rot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPiece2rot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPiece2rot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
-                else if(selectedPiece == Piece.Block.I3 ){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPiecei3(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer()); 
+                else if(selectedPiece == Piece.Block.I3 ){        
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPiecei3(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPiecei3rot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPiecei3rot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPiecei3rot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
                 else if(selectedPiece == Piece.Block.I4 ){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPiecei4(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPiecei4(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPiecei4rot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPiecei4rot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPiecei4rot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
                 else if(selectedPiece == Piece.Block.I5 ){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPiecei5(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer()); 
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPiecei5(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPiecei5rot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPiecei5rot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPiecei5rot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
                 else if(selectedPiece == Piece.Block.V3 ){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceV3(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceV3(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceV3rot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceV3rot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceV3rot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
                 else if(selectedPiece == Piece.Block.L4 ){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceL4(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceL4(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceL4rot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceL4rot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceL4rot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
-                else if(selectedPiece == Piece.Block.L5 ){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceL5(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                else if(selectedPiece == Piece.Block.L5 ){              
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceL5(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceL5rot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceL5rot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceL5rot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
                 else if(selectedPiece == Piece.Block.T5 ){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceT5(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceT5(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceT5rot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceT5rot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceT5rot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
                 else if(selectedPiece == Piece.Block.T4 ){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceT4(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceT4(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceT4rot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceT4rot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceT4rot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
                 else if(selectedPiece == Piece.Block.O ){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceO(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceO(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceOrot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceOrot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceOrot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
                 else if(selectedPiece == Piece.Block.W ){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceW(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceW(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceWrot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceWrot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceWrot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
                 else if(selectedPiece == Piece.Block.U ){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceU(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceU(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceUrot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceUrot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceUrot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
                 else if(selectedPiece == Piece.Block.X ){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceX(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceX(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceXrot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceXrot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceXrot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
                 else if(selectedPiece == Piece.Block.P){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceP(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceP(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceProt90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceProt180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceProt270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
                 else if(selectedPiece == Piece.Block.Y){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceY(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceY(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceYrot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceYrot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceYrot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
-                else if(selectedPiece == Piece.Block.F){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceF(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                else if(selectedPiece == Piece.Block.F){      
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceF(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceFrot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceFrot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceFrot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
-                else if(selectedPiece == Piece.Block.N){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceN(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                else if(selectedPiece == Piece.Block.N){   
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceN(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceNrot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceNrot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceNrot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
-                else if(selectedPiece == Piece.Block.Z4){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceZ4(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                else if(selectedPiece == Piece.Block.Z4){     
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceZ4(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceZ4rot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceZ4rot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceZ4rot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
-                else if(selectedPiece == Piece.Block.V5){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceV5(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                else if(selectedPiece == Piece.Block.V5){   
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceV5(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceV5rot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceV5rot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceV5rot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
-                else if(selectedPiece == Piece.Block.Z5){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceZ5(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                else if(selectedPiece == Piece.Block.Z5){    
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceZ5(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceZ5rot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceZ5rot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceZ5rot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
 
             }
@@ -794,65 +1007,205 @@ public class Blokus extends JFrame implements Runnable {
                 if(selectedPiece == Piece.Block.ONE ){               
                     Player.GetCurrentPlayer().getOutsidePieces().drawPiece1(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
-                else if(selectedPiece == Piece.Block.TWO ){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPiece2(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                else if(selectedPiece == Piece.Block.TWO ){   
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPiece2(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPiece2rot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPiece2rot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPiece2rot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
-                else if(selectedPiece == Piece.Block.I3 ){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPiecei3(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer()); 
+                else if(selectedPiece == Piece.Block.I3 ){        
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPiecei3(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPiecei3rot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPiecei3rot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPiecei3rot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
                 else if(selectedPiece == Piece.Block.I4 ){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPiecei4(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPiecei4(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPiecei4rot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPiecei4rot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPiecei4rot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
                 else if(selectedPiece == Piece.Block.I5 ){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPiecei5(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer()); 
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPiecei5(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPiecei5rot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPiecei5rot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPiecei5rot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
                 else if(selectedPiece == Piece.Block.V3 ){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceV3(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceV3(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceV3rot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceV3rot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceV3rot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
                 else if(selectedPiece == Piece.Block.L4 ){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceL4(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceL4(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceL4rot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceL4rot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceL4rot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
-                else if(selectedPiece == Piece.Block.L5 ){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceL5(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                else if(selectedPiece == Piece.Block.L5 ){              
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceL5(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceL5rot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceL5rot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceL5rot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
                 else if(selectedPiece == Piece.Block.T5 ){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceT5(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceT5(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceT5rot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceT5rot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceT5rot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
                 else if(selectedPiece == Piece.Block.T4 ){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceT4(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceT4(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceT4rot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceT4rot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceT4rot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
                 else if(selectedPiece == Piece.Block.O ){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceO(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceO(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceOrot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceOrot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceOrot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
                 else if(selectedPiece == Piece.Block.W ){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceW(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceW(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceWrot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceWrot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceWrot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
                 else if(selectedPiece == Piece.Block.U ){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceU(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceU(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceUrot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceUrot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceUrot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
                 else if(selectedPiece == Piece.Block.X ){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceX(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceX(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceXrot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceXrot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceXrot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
                 else if(selectedPiece == Piece.Block.P){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceP(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceP(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceProt90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceProt180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceProt270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
                 else if(selectedPiece == Piece.Block.Y){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceY(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceY(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceYrot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceYrot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceYrot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
-                else if(selectedPiece == Piece.Block.F){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceF(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                else if(selectedPiece == Piece.Block.F){      
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceF(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceFrot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceFrot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceFrot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
-                else if(selectedPiece == Piece.Block.N){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceN(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                else if(selectedPiece == Piece.Block.N){   
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceN(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceNrot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceNrot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceNrot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
-                else if(selectedPiece == Piece.Block.Z4){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceZ4(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                else if(selectedPiece == Piece.Block.Z4){     
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceZ4(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceZ4rot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceZ4rot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceZ4rot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
-                else if(selectedPiece == Piece.Block.V5){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceV5(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                else if(selectedPiece == Piece.Block.V5){   
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceV5(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceV5rot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceV5rot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceV5rot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
-                else if(selectedPiece == Piece.Block.Z5){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceZ5(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                else if(selectedPiece == Piece.Block.Z5){    
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceZ5(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceZ5rot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceZ5rot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceZ5rot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
 
             }
@@ -860,65 +1213,205 @@ public class Blokus extends JFrame implements Runnable {
                 if(selectedPiece == Piece.Block.ONE ){               
                     Player.GetCurrentPlayer().getOutsidePieces().drawPiece1(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
-                else if(selectedPiece == Piece.Block.TWO ){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPiece2(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                else if(selectedPiece == Piece.Block.TWO ){   
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPiece2(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPiece2rot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPiece2rot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPiece2rot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
-                else if(selectedPiece == Piece.Block.I3 ){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPiecei3(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer()); 
+                else if(selectedPiece == Piece.Block.I3 ){        
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPiecei3(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPiecei3rot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPiecei3rot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPiecei3rot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
                 else if(selectedPiece == Piece.Block.I4 ){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPiecei4(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPiecei4(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPiecei4rot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPiecei4rot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPiecei4rot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
                 else if(selectedPiece == Piece.Block.I5 ){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPiecei5(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer()); 
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPiecei5(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPiecei5rot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPiecei5rot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPiecei5rot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
                 else if(selectedPiece == Piece.Block.V3 ){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceV3(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceV3(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceV3rot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceV3rot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceV3rot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
                 else if(selectedPiece == Piece.Block.L4 ){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceL4(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceL4(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceL4rot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceL4rot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceL4rot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
-                else if(selectedPiece == Piece.Block.L5 ){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceL5(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                else if(selectedPiece == Piece.Block.L5 ){              
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceL5(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceL5rot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceL5rot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceL5rot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
                 else if(selectedPiece == Piece.Block.T5 ){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceT5(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceT5(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceT5rot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceT5rot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceT5rot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
                 else if(selectedPiece == Piece.Block.T4 ){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceT4(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceT4(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceT4rot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceT4rot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceT4rot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
                 else if(selectedPiece == Piece.Block.O ){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceO(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceO(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceOrot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceOrot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceOrot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
                 else if(selectedPiece == Piece.Block.W ){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceW(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceW(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceWrot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceWrot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceWrot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
                 else if(selectedPiece == Piece.Block.U ){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceU(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceU(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceUrot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceUrot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceUrot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
                 else if(selectedPiece == Piece.Block.X ){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceX(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceX(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceXrot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceXrot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceXrot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
                 else if(selectedPiece == Piece.Block.P){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceP(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceP(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceProt90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceProt180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceProt270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
                 else if(selectedPiece == Piece.Block.Y){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceY(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceY(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceYrot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceYrot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceYrot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
-                else if(selectedPiece == Piece.Block.F){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceF(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                else if(selectedPiece == Piece.Block.F){      
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceF(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceFrot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceFrot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceFrot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
-                else if(selectedPiece == Piece.Block.N){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceN(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                else if(selectedPiece == Piece.Block.N){   
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceN(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceNrot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceNrot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceNrot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
-                else if(selectedPiece == Piece.Block.Z4){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceZ4(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                else if(selectedPiece == Piece.Block.Z4){     
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceZ4(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceZ4rot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceZ4rot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceZ4rot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
-                else if(selectedPiece == Piece.Block.V5){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceV5(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                else if(selectedPiece == Piece.Block.V5){   
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceV5(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceV5rot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceV5rot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceV5rot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
-                else if(selectedPiece == Piece.Block.Z5){               
-                    Player.GetCurrentPlayer().getOutsidePieces().drawPieceZ5(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                else if(selectedPiece == Piece.Block.Z5){    
+                    if(rotation == 0)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceZ5(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 90)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceZ5rot90(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 180)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceZ5rot180(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
+                    if(rotation == 270)
+                        Player.GetCurrentPlayer().getOutsidePieces().drawPieceZ5rot270(Xpos/2.4, Ypos/2.4, 0, 2.4, 2.4, g, Player.GetCurrentPlayer());
                 }
 
             }
